@@ -1,0 +1,71 @@
+# run the below command in terminal with some non zero value(1 to 3) to get anti-aliased font.
+# defaults write org.alacritty AppleFontSmoothing -int 0
+
+[general]
+# import = [
+#    "~/.config/alacritty/themes/themes/black_metal.toml"
+# ]
+
+[env]
+# TERM="xterm-256color"
+# [window]
+# padding.x = 10
+# padding.y = 10
+# opacity = 0.85
+# blur =true
+# decorations = "Buttonless"
+# startup_mode = "SimpleFullscreen"
+
+[colors.cursor]
+# text = "#000000"    # The color of the text underneath the cursor
+cursor = "#ffffff"  # The color of the cursor itself
+
+
+[colors]
+# If `true`, bold text is drawn using the bright color variants.
+# draw_bold_text_with_bright_colors = true
+#decorations = "Transparent"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+# normal.family = "JetBrains Mono"
+# normal.family = "JetBrainsMono Nerd Font"
+#regular
+size = 22
+
+[colors.primary]
+# background = '#0c0c0c'
+# background = '#181818'
+background = '#000000'
+# background = '#1c1e20'
+
+[window.padding]
+x = 5
+y = 0
+
+[window.dimensions]
+columns = 250
+lines = 90
+
+[window.position]
+x = 800
+y = 150
+
+#for video
+# size = 35.0
+
+[keyboard]
+bindings = [
+  { key = "F",     mods = "Alt", action = "ToggleSimpleFullscreen" },
+  { key = "Q",     mods = "Command",  action = "None" },
+  # Bindings below allow word skipping with "Alt + Arrow" in tmux,
+  # but interfere with pane resizing using Alt. Instead, use Ctrl + Arrow
+  # to resize panes (this alternative is available by default).
+  { key = "Right",  mods = "Alt", chars = "\u001BF" },
+  { key = "Left",   mods = "Alt", chars = "\u001BB" },
+
+]
+
+[window]
+# startup_mode = "SimpleFullscreen"
+option_as_alt = "Both"

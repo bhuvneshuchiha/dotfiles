@@ -1,0 +1,229 @@
+Neovim Keybindings:
+========================================
+
+Mode: n
+----------------------------------------
+LHS:  ft	RHS: <N/A>	Desc: Trigger LSP formatting
+LHS:  sr	RHS: :%s/\<lt><C-R><C-W>\>//g<Left><Left>	Desc: <No description>
+LHS:  u	RHS: <N/A>	Desc: <No description>
+LHS:  -	RHS: <N/A>	Desc: <No description>
+LHS:  gs	RHS: <N/A>	Desc: <No description>
+LHS:  8	RHS: <N/A>	Desc: <No description>
+LHS:  7	RHS: <N/A>	Desc: <No description>
+LHS:  6	RHS: <N/A>	Desc: <No description>
+LHS:  5	RHS: <N/A>	Desc: <No description>
+LHS:  4	RHS: <N/A>	Desc: <No description>
+LHS:  3	RHS: <N/A>	Desc: <No description>
+LHS:  2	RHS: <N/A>	Desc: <No description>
+LHS:  1	RHS: <N/A>	Desc: <No description>
+LHS:  h	RHS: <N/A>	Desc: <No description>
+LHS:  a	RHS: <N/A>	Desc: <No description>
+LHS:  ps	RHS: <N/A>	Desc: <No description>
+LHS:  fW	RHS: <N/A>	Desc: <No description>
+LHS:  fw	RHS: <N/A>	Desc: <No description>
+LHS:  b	RHS: <N/A>	Desc: <No description>
+LHS:  fh	RHS: <N/A>	Desc: <No description>
+LHS:  fb	RHS: <N/A>	Desc: <No description>
+LHS:  fk	RHS: <N/A>	Desc: <No description>
+LHS:  fg	RHS: <N/A>	Desc: <No description>
+LHS:   	RHS: <N/A>	Desc: <No description>
+LHS:  tt	RHS: <N/A>	Desc: Diagnostics (Trouble)
+LHS:  tQ	RHS: <N/A>	Desc: Quickfix List (Trouble)
+LHS:  tL	RHS: <N/A>	Desc: Location List (Trouble)
+LHS:  tl	RHS: <N/A>	Desc: LSP Definitions / references / ... (Trouble)
+LHS:  ts	RHS: <N/A>	Desc: Symbols (Trouble)
+LHS:  tx	RHS: <N/A>	Desc: Buffer Diagnostics (Trouble)
+LHS:  \	RHS: <C-^>	Desc: <No description>
+LHS:  mr	RHS: <Cmd>CellularAutomaton make_it_rain<CR>	Desc: <No description>
+LHS:  x	RHS: <Cmd>!chmod +x %<CR>	Desc: <No description>
+LHS:  s	RHS: :%s/\<lt><C-R><C-W>\>/<C-R><C-W>/gI<Left><Left><Left>	Desc: <No description>
+LHS:  j	RHS: <Cmd>lprev<CR>zz	Desc: <No description>
+LHS:  k	RHS: <Cmd>lnext<CR>zz	Desc: <No description>
+LHS:  f	RHS: <N/A>	Desc: <No description>
+LHS:  d	RHS: "_d	Desc: <No description>
+LHS:  Y	RHS: "+Y	Desc: <No description>
+LHS:  y	RHS: "+y	Desc: <No description>
+LHS:  e	RHS: :Neotree toggle<CR>	Desc: <No description>
+LHS:  l	RHS: :Lazy<CR>	Desc: <No description>
+LHS:  cm	RHS: :Mason<CR>	Desc: <No description>
+LHS:  svwm	RHS: <N/A>	Desc: <No description>
+LHS:  vwm	RHS: <N/A>	Desc: <No description>
+LHS:  pv	RHS: <N/A>	Desc: <No description>
+LHS: %	RHS: <Plug>(MatchitNormalForward)	Desc: <No description>
+LHS: &	RHS: :&&<CR>	Desc: :help &-default
+LHS: -	RHS: <Cmd>Oil<CR>	Desc: Open parent directory
+LHS: J	RHS: mzJ`z	Desc: <No description>
+LHS: N	RHS: Nzzzv	Desc: <No description>
+LHS: Q	RHS: 	Desc: <No description>
+LHS: Y	RHS: "+Y	Desc: <No description>
+LHS: [%	RHS: <Plug>(MatchitNormalMultiBackward)	Desc: <No description>
+LHS: [t	RHS: <N/A>	Desc: <No description>
+LHS: [d	RHS: <N/A>	Desc: Jump to the previous diagnostic
+LHS: ]%	RHS: <Plug>(MatchitNormalMultiForward)	Desc: <No description>
+LHS: ]t	RHS: <N/A>	Desc: <No description>
+LHS: ]d	RHS: <N/A>	Desc: Jump to the next diagnostic
+LHS: g%	RHS: <Plug>(MatchitNormalBackward)	Desc: <No description>
+LHS: gh	RHS: <Cmd>diffget //3<CR>	Desc: <No description>
+LHS: gf	RHS: <Cmd>diffget //2<CR>	Desc: <No description>
+LHS: gcc	RHS: <N/A>	Desc: Toggle comment line
+LHS: gc	RHS: <N/A>	Desc: Toggle comment
+LHS: gx	RHS: <N/A>	Desc: Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+LHS: n	RHS: nzzzv	Desc: <No description>
+LHS: y	RHS: "+y	Desc: <No description>
+LHS: <Plug>(MatchitNormalMultiForward)	RHS: :<C-U>call matchit#MultiMatch("W",  "n")<CR>	Desc: <No description>
+LHS: <Plug>(MatchitNormalMultiBackward)	RHS: :<C-U>call matchit#MultiMatch("bW", "n")<CR>	Desc: <No description>
+LHS: <Plug>(MatchitNormalBackward)	RHS: :<C-U>call matchit#Match_wrapper('',0,'n')<CR>	Desc: <No description>
+LHS: <Plug>(MatchitNormalForward)	RHS: :<C-U>call matchit#Match_wrapper('',1,'n')<CR>	Desc: <No description>
+LHS: <Plug>fugitive:	RHS: 	Desc: <No description>
+LHS: <Plug>fugitive:y<C-G>	RHS: :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>	Desc: <No description>
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+LHS: <Plug>luasnip-delete-check	RHS: <N/A>	Desc: LuaSnip: Removes current snippet from jumplist
+LHS: <C-S-N>	RHS: <N/A>	Desc: <No description>
+LHS: <C-S-P>	RHS: <N/A>	Desc: <No description>
+LHS: <C-H>	RHS: <N/A>	Desc: Open harpoon window
+LHS: <C-P>	RHS: <N/A>	Desc: <No description>
+LHS: <Plug>PlenaryTestFile	RHS: :lua require('plenary.test_harness').test_file(vim.fn.expand("%:p"))<CR>	Desc: <No description>
+LHS: <C-J>	RHS: <Cmd>cprev<CR>zz	Desc: <No description>
+LHS: <C-K>	RHS: <Cmd>cnext<CR>zz	Desc: <No description>
+LHS: <C-F>	RHS: <Cmd>silent !tmux neww tmux-sessionizer<CR>	Desc: <No description>
+LHS: <C-U>	RHS: <C-U>zz	Desc: <No description>
+LHS: <C-D>	RHS: <C-D>zz	Desc: <No description>
+LHS: <Right>	RHS: 	Desc: <No description>
+LHS: <Left>	RHS: 	Desc: <No description>
+LHS: <Down>	RHS: 	Desc: <No description>
+LHS: <Up>	RHS: 	Desc: <No description>
+LHS: <C-W><C-D>	RHS: <C-W>d	Desc: Show diagnostics under the cursor
+LHS: <C-W>d	RHS: <N/A>	Desc: Show diagnostics under the cursor
+LHS: <C-L>	RHS: <Cmd>nohlsearch|diffupdate|normal! <C-L><CR>	Desc: :help CTRL-L-default
+
+Mode: v
+----------------------------------------
+LHS:  d	RHS: "_d	Desc: <No description>
+LHS:  y	RHS: "+y	Desc: <No description>
+LHS:  p	RHS: "_dP	Desc: <No description>
+LHS: #	RHS: <N/A>	Desc: :help v_#-default
+LHS: %	RHS: <Plug>(MatchitVisualForward)	Desc: <No description>
+LHS: *	RHS: <N/A>	Desc: :help v_star-default
+LHS: @	RHS: mode() ==# 'V' ? ':normal! @'.getcharstr().'<CR>' : '@'	Desc: :help v_@-default
+LHS: J	RHS: :m '>+1<CR>gv=gv	Desc: <No description>
+LHS: K	RHS: :m '<lt>-2<CR>gv=gv	Desc: <No description>
+LHS: Q	RHS: mode() ==# 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q'	Desc: :help v_Q-default
+LHS: [%	RHS: <Plug>(MatchitVisualMultiBackward)	Desc: <No description>
+LHS: ]%	RHS: <Plug>(MatchitVisualMultiForward)	Desc: <No description>
+LHS: a%	RHS: <Plug>(MatchitVisualTextObject)	Desc: <No description>
+LHS: g%	RHS: <Plug>(MatchitVisualBackward)	Desc: <No description>
+LHS: gc	RHS: <N/A>	Desc: Toggle comment
+LHS: gx	RHS: <N/A>	Desc: Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+LHS: y	RHS: "+y	Desc: <No description>
+LHS: <Plug>(MatchitVisualTextObject)	RHS: <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)	Desc: <No description>
+LHS: <Plug>(MatchitVisualMultiForward)	RHS: :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualMultiBackward)	RHS: :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualBackward)	RHS: :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualForward)	RHS: :<C-U>call matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal! m'" | endif<CR>gv``	Desc: <No description>
+LHS: <C-E>	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>,	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>;	RHS: <N/A>	Desc: <No description>
+LHS: <Plug>luasnip-jump-prev	RHS: <N/A>	Desc: LuaSnip: Jump to the previous node
+LHS: <Plug>luasnip-jump-next	RHS: <N/A>	Desc: LuaSnip: Jump to the next node
+LHS: <Plug>luasnip-prev-choice	RHS: <N/A>	Desc: LuaSnip: Change to the previous choice from the choiceNode
+LHS: <Plug>luasnip-next-choice	RHS: <N/A>	Desc: LuaSnip: Change to the next choice from the choiceNode
+LHS: <Plug>luasnip-expand-snippet	RHS: <N/A>	Desc: LuaSnip: Expand the current snippet
+LHS: <Plug>luasnip-expand-or-jump	RHS: <N/A>	Desc: LuaSnip: Expand or jump in the current snippet
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+
+Mode: i
+----------------------------------------
+LHS: <C-N>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-Y>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-F>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-P>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-Space>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-B>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-E>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-S>,	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>;	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>e	RHS: <N/A>	Desc: <No description>
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+LHS: <Plug>luasnip-delete-check	RHS: <N/A>	Desc: LuaSnip: Removes current snippet from jumplist
+LHS: <Plug>luasnip-jump-prev	RHS: <N/A>	Desc: LuaSnip: Jump to the previous node
+LHS: <Plug>luasnip-jump-next	RHS: <N/A>	Desc: LuaSnip: Jump to the next node
+LHS: <Plug>luasnip-prev-choice	RHS: <N/A>	Desc: LuaSnip: Change to the previous choice from the choiceNode
+LHS: <Plug>luasnip-next-choice	RHS: <N/A>	Desc: LuaSnip: Change to the next choice from the choiceNode
+LHS: <Plug>luasnip-expand-snippet	RHS: <N/A>	Desc: LuaSnip: Expand the current snippet
+LHS: <Plug>luasnip-expand-or-jump	RHS: <N/A>	Desc: LuaSnip: Expand or jump in the current snippet
+LHS: <C-C>	RHS: <Esc>	Desc: <No description>
+LHS: <Right>	RHS: 	Desc: <No description>
+LHS: <Left>	RHS: 	Desc: <No description>
+LHS: <Down>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <Up>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <C-W>	RHS: <C-G>u<C-W>	Desc: :help i_CTRL-W-default
+LHS: <C-U>	RHS: <C-G>u<C-U>	Desc: :help i_CTRL-U-default
+LHS: <Tab>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+LHS: <CR>	RHS: <N/A>	Desc: cmp.utils.keymap.set_map
+
+Mode: c
+----------------------------------------
+LHS: <C-R><C-G>	RHS: fnameescape(fugitive#Object(@%))	Desc: <No description>
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+LHS: <Plug>luasnip-delete-check	RHS: <N/A>	Desc: LuaSnip: Removes current snippet from jumplist
+LHS: <Plug>(TelescopeFuzzyCommandSearch)	RHS: <C-\>e "lua require('telescope.builtin').command_history { default_text = [=[" . escape(getcmdline(), '"') . "]=] }"<CR><CR>	Desc: <No description>
+
+Mode: x
+----------------------------------------
+LHS:  d	RHS: "_d	Desc: <No description>
+LHS:  y	RHS: "+y	Desc: <No description>
+LHS:  p	RHS: "_dP	Desc: <No description>
+LHS: #	RHS: <N/A>	Desc: :help v_#-default
+LHS: %	RHS: <Plug>(MatchitVisualForward)	Desc: <No description>
+LHS: *	RHS: <N/A>	Desc: :help v_star-default
+LHS: @	RHS: mode() ==# 'V' ? ':normal! @'.getcharstr().'<CR>' : '@'	Desc: :help v_@-default
+LHS: J	RHS: :m '>+1<CR>gv=gv	Desc: <No description>
+LHS: K	RHS: :m '<lt>-2<CR>gv=gv	Desc: <No description>
+LHS: Q	RHS: mode() ==# 'V' ? ':normal! @<C-R>=reg_recorded()<CR><CR>' : 'Q'	Desc: :help v_Q-default
+LHS: [%	RHS: <Plug>(MatchitVisualMultiBackward)	Desc: <No description>
+LHS: ]%	RHS: <Plug>(MatchitVisualMultiForward)	Desc: <No description>
+LHS: a%	RHS: <Plug>(MatchitVisualTextObject)	Desc: <No description>
+LHS: g%	RHS: <Plug>(MatchitVisualBackward)	Desc: <No description>
+LHS: gc	RHS: <N/A>	Desc: Toggle comment
+LHS: gx	RHS: <N/A>	Desc: Opens filepath or URI under cursor with the system handler (file explorer, web browser, …)
+LHS: y	RHS: "+y	Desc: <No description>
+LHS: <Plug>(MatchitVisualTextObject)	RHS: <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)	Desc: <No description>
+LHS: <Plug>(MatchitVisualMultiForward)	RHS: :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualMultiBackward)	RHS: :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualBackward)	RHS: :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``	Desc: <No description>
+LHS: <Plug>(MatchitVisualForward)	RHS: :<C-U>call matchit#Match_wrapper('',1,'v')<CR>:if col("''") != col("$") | exe ":normal! m'" | endif<CR>gv``	Desc: <No description>
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+
+Mode: s
+----------------------------------------
+LHS:  d	RHS: "_d	Desc: <No description>
+LHS:  y	RHS: "+y	Desc: <No description>
+LHS: J	RHS: :m '>+1<CR>gv=gv	Desc: <No description>
+LHS: K	RHS: :m '<lt>-2<CR>gv=gv	Desc: <No description>
+LHS: y	RHS: "+y	Desc: <No description>
+LHS: <C-E>	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>,	RHS: <N/A>	Desc: <No description>
+LHS: <C-S>;	RHS: <N/A>	Desc: <No description>
+LHS: <Plug>luasnip-jump-prev	RHS: <N/A>	Desc: LuaSnip: Jump to the previous node
+LHS: <Plug>luasnip-jump-next	RHS: <N/A>	Desc: LuaSnip: Jump to the next node
+LHS: <Plug>luasnip-prev-choice	RHS: <N/A>	Desc: LuaSnip: Change to the previous choice from the choiceNode
+LHS: <Plug>luasnip-next-choice	RHS: <N/A>	Desc: LuaSnip: Change to the next choice from the choiceNode
+LHS: <Plug>luasnip-expand-snippet	RHS: <N/A>	Desc: LuaSnip: Expand the current snippet
+LHS: <Plug>luasnip-expand-or-jump	RHS: <N/A>	Desc: LuaSnip: Expand or jump in the current snippet
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+
+Mode: o
+----------------------------------------
+LHS: %	RHS: <Plug>(MatchitOperationForward)	Desc: <No description>
+LHS: [%	RHS: <Plug>(MatchitOperationMultiBackward)	Desc: <No description>
+LHS: ]%	RHS: <Plug>(MatchitOperationMultiForward)	Desc: <No description>
+LHS: g%	RHS: <Plug>(MatchitOperationBackward)	Desc: <No description>
+LHS: gc	RHS: <N/A>	Desc: Comment textobject
+LHS: <Plug>(MatchitOperationMultiForward)	RHS: :<C-U>call matchit#MultiMatch("W",  "o")<CR>	Desc: <No description>
+LHS: <Plug>(MatchitOperationMultiBackward)	RHS: :<C-U>call matchit#MultiMatch("bW", "o")<CR>	Desc: <No description>
+LHS: <Plug>(MatchitOperationBackward)	RHS: :<C-U>call matchit#Match_wrapper('',0,'o')<CR>	Desc: <No description>
+LHS: <Plug>(MatchitOperationForward)	RHS: :<C-U>call matchit#Match_wrapper('',1,'o')<CR>	Desc: <No description>
+LHS: <Plug>luasnip-expand-repeat	RHS: <N/A>	Desc: LuaSnip: Repeat last node expansion
+
+Mode: t
+----------------------------------------
