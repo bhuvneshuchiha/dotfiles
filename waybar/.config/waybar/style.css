@@ -1,8 +1,8 @@
-@import "mocha.css"; 
+@import "mocha.css";
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";
-    font-size: 16px;
+    font-size: 10px;
     min-height: 0;
     font-weight: bold;
 }
@@ -35,7 +35,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 2px;
 }
 
 #workspaces button.focused {
@@ -47,7 +47,7 @@ button:hover {
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
     color: @mauve;
-    border-top: 2px solid @mauve;
+    border-top: 1px solid @mauve;
 }
 
 #workspaces button.urgent {

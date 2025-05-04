@@ -20,10 +20,10 @@ cursor-style-blink = false
 font-thicken= false
 fullscreen=true
 # font-family = MesloLGS Nerd Font Mono
-#font-family = MesloLGS Nerd Font Mono
+font-family = MesloLGS Nerd Font Mono
 #font-family-italic = "MesloLGS Nerd Font Mono"
 #font-family-bold-italic = "MesloLGS Nerd Font Mono"
-font-family = JetBrains Mono
+# font-family = JetBrains Mono
 # font-family = MonoLisa
 # font-family = CascadiaCove Nerd Font
 #font-family-italic = "MesloLGS Nerd Font Mono"
@@ -35,7 +35,7 @@ window-padding-y = 0,0
 #adjust-cell-width=-6%
 confirm-close-surface = false
 macos-option-as-alt = true
-# background-opacity = 0.80
+background-opacity = 0.75
 # background-blur-radius = 40
 
 # File which is responsible for ghostty-custom-theme(its in this same folder)

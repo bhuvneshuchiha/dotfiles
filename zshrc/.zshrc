@@ -2,10 +2,10 @@
 # Path to your oh-my-zsh installation.
 
 export PATH=/usr/bin:$PATH
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 PATH="$PATH":"$HOME/.local/scripts/"
-GOPATH=$HOME/go
-PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+# GOPATH=$HOME/go
+# PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # To stop using 256 colors ->
 # export TERM=xterm
@@ -14,10 +14,7 @@ PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Uncomment this if you need to create a virtual env with a new python version.
 # export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
 
-
-
 alias vim="nvim"
-
 bindkey -s ^f "tmux-sessionizer\n"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -134,12 +131,12 @@ alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
-alias python='python3'
-alias pip='pip3'
+# alias python='python3'
+# alias pip='pip3'
 # eval "$(starship init zsh)"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

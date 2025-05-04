@@ -11,7 +11,7 @@
 # [window]
 # padding.x = 10
 # padding.y = 10
-# opacity = 0.85
+# opacity = "0.85"
 # blur =true
 # decorations = "Buttonless"
 # startup_mode = "SimpleFullscreen"
@@ -31,7 +31,7 @@ normal.family = "MesloLGS Nerd Font Mono"
 # normal.family = "JetBrains Mono"
 # normal.family = "JetBrainsMono Nerd Font"
 #regular
-size = 22
+size = 20
 
 [colors.primary]
 # background = '#0c0c0c'
@@ -51,6 +51,8 @@ lines = 90
 x = 800
 y = 150
 
+
+
 #for video
 # size = 35.0
 
@@ -68,4 +70,5 @@ bindings = [
 
 [window]
 # startup_mode = "SimpleFullscreen"
+opacity=0.75
 option_as_alt = "Both"
