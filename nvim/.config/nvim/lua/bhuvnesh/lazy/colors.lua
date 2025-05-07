@@ -1,5 +1,7 @@
 function ColorMyPencils(color)
     color = color or "rose-pine-moon"
+    -- color = color or "sonokai"
+    -- color = color or "onedark"
     -- color = color or "rose-pine"
     -- color = color or "tokyonight"
     -- color = color or "kanagawa"
@@ -17,6 +19,30 @@ return {
         config = function()
             ColorMyPencils()
         end
+    },
+
+    {
+        "navarasu/onedark.nvim",
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            require('onedark').setup {
+                style = 'darker'
+            }
+            -- Enable theme
+            require('onedark').load()
+        end
+    },
+
+    {
+        -- Disabled term gui colors in init.lua
+        "sainnhe/sonokai",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.g.sonokai_enable_italic = "0"
+            vim.g.sonokai_disable_italic_comment = 1
+            vim.g.sonokai_style = 'andromeda' -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
+        end,
     },
 
     {

@@ -36,7 +36,7 @@ size = 20
 [colors.primary]
 # background = '#0c0c0c'
 # background = '#181818'
-background = '#000000'
+# background = '#000000'
 # background = '#1c1e20'
 
 [window.padding]
