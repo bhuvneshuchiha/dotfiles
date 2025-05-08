@@ -1,0 +1,143 @@
+/**
+ * Rofi Clipboard Manager Theme
+ * A compact theme optimized for clipboard history
+ * User - ArkboiX
+ */
+/* https://github.com/arkboix/dotfiles */
+
+
+@import '../wallust/colors-rofi.rasi'
+
+* {
+    /* Theme Settings */
+    spacing: 0;
+    background-color: transparent;
+    text-color: @foreground;
+    font: "JetBrains Mono 11";
+}
+
+window {
+    transparency: "real";
+    background-color: @background;
+    border: 2px;
+    border-color: @border;
+    border-radius: 10px;
+    padding: 15px;
+    width: 600px;
+}
+
+mainbox {
+    padding: 5px;
+    spacing: 10px;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+    background-color: @alternate-active-background;
+    border-radius: 6px;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: @selected;
+    text-color: @background;
+}
+
+entry {
+    padding: 5px 10px;
+    placeholder: "Search clipboard...";
+    placeholder-color: @background;
+}
+
+listview {
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    spacing: 5px;
+    lines: 10;
+    cycle: false;
+}
+
+scrollbar {
+    handle-width: 2px;
+    handle-color: @active-background;
+    border-radius: 3px;
+}
+
+element {
+    padding: 8px 10px;
+    spacing: 10px;
+    border-radius: 6px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 16px;
+    padding: 0px 8px 0px 0px;
+}
+
+element normal.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
+
+element alternate.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+/* Alternative Colorschemes - To use, replace variables at top */
+
+/* Tokyo Night
+background:     #1a1b26;
+background-alt: #24283b;
+foreground:     #a9b1d6;
+selected:       #7aa2f7;
+active:         #9ece6a;
+urgent:         #f7768e;
+border:         #414868;
+*/
+
+/* Solarized Dark
+background:     #002b36;
+background-alt: #073642;
+foreground:     #839496;
+selected:       #268bd2;
+active:         #859900;
+urgent:         #dc322f;
+border:         #586e75;
+*/
+
+/* Monokai Pro
+background:     #2d2a2e;
+background-alt: #403e41;
+foreground:     #fcfcfa;
+selected:       #a9dc76;
+active:         #78dce8;
+urgent:         #ff6188;
+border:         #727072;
+*/
+
+    /* Gruvbox Dark Colors
+    background:     #282828;
+    background-alt: #3c3836;
+    foreground:     #ebdbb2;
+    selected:       #458588;
+    active:         #b8bb26;
+    urgent:         #fb4934;
+    border:         #504945;
+*/

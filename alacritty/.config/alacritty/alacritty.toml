@@ -7,12 +7,11 @@
 # ]
 
 [env]
-# TERM="xterm-256color"
+TERM="xterm-256color"
 # [window]
 # padding.x = 10
 # padding.y = 10
 # opacity = "0.85"
-# blur =true
 # decorations = "Buttonless"
 # startup_mode = "SimpleFullscreen"
 
@@ -31,7 +30,7 @@ normal.family = "MesloLGS Nerd Font Mono"
 # normal.family = "JetBrains Mono"
 # normal.family = "JetBrainsMono Nerd Font"
 #regular
-size = 20
+size = 17
 
 [colors.primary]
 # background = '#0c0c0c'
