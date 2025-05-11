@@ -443,14 +443,23 @@ return {
             }),
         })
 
+        -- Command line ":" completion menu
+        cmp.setup.cmdline({ '/', '?' }, {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+                { name = 'buffer' }
+            }
+        })
+
+
         vim.diagnostic.config({
-            virtual_text = true,
+            -- virtual_text = true,
             underline = false,
             -- update_in_insert = true,
             -- Below virtual text and sign setting helps in pylsp
-            -- virtual_text = {
-            --    severity = { min = vim.diagnostic.severity.ERROR},
-            --  },
+            virtual_text = {
+               severity = { min = vim.diagnostic.severity.ERROR},
+             },
             --  signs = {
             --    severity = { min = vim.diagnostic.severity.ERROR},
              -- },
