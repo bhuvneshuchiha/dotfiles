@@ -69,5 +69,5 @@ bindings = [
 
 [window]
 # startup_mode = "SimpleFullscreen"
-# opacity=0.9
+opacity=0.85
 option_as_alt = "Both"
