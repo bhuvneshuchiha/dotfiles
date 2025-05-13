@@ -1,8 +1,8 @@
 function ColorMyPencils(color)
-    color = color or "rose-pine-moon"
+    -- color = color or "rose-pine-moon"
     -- color = color or "rose-pine"
-    -- color = color or "tokyonight"
-    -- color = color or "kanagawa"
+    color = color or "tokyonight"
+    -- color = color or "gruvbox"
     -- color = color or "gruvbuddy"
     vim.cmd.colorscheme(color)
     -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -17,6 +17,37 @@ return {
         config = function()
             ColorMyPencils()
         end
+    },
+
+    {
+        "ellisonleao/gruvbox.nvim",
+        name = "gruvbox",
+        config = function()
+            require("gruvbox").setup({
+                terminal_colors = true, -- add neovim terminal colors
+                undercurl = false,
+                underline = false,
+                bold = true,
+                italic = {
+                    strings = false,
+                    emphasis = false,
+                    comments = false,
+                    operators = false,
+                    folds = false,
+                },
+                strikethrough = true,
+                invert_selection = false,
+                invert_signs = false,
+                invert_tabline = false,
+                invert_intend_guides = false,
+                inverse = true, -- invert background for search, diffs, statuslines and errors
+                contrast = "", -- can be "hard", "soft" or empty string
+                palette_overrides = {},
+                overrides = {},
+                dim_inactive = false,
+                transparent_mode = true,
+            })
+        end,
     },
 
     {
@@ -36,7 +67,7 @@ return {
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 style = "storm",
-                transparent = false,    -- Enable this to disable setting the background color
+                transparent = true,    -- Enable this to disable setting the background color
                 terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
                 styles = {
                     -- Style to be applied to different syntax groups

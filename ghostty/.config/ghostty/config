@@ -25,8 +25,8 @@ window-title-font-family = JetBrains Mono
 window-padding-y = 0,0
 confirm-close-surface = false
 macos-option-as-alt = true
-background-opacity = 0.9
-background-blur-radius = 40
+background-opacity = 0.8
+background-blur-radius = true
 
 # File which is responsible for ghostty-custom-theme(its in this same folder)
 # config-file = ghostty-theme
