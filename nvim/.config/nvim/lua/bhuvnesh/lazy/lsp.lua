@@ -130,6 +130,7 @@ return {
                     lspconfig.gopls.setup({
                         capabilities = capabilities,
                     })
+
                 end,
 
                 ["omnisharp"] = function()
@@ -443,14 +444,14 @@ return {
             }),
         })
 
-        -- Command line ":" completion menu
-        cmp.setup.cmdline({ '/', '?' }, {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-                { name = 'buffer' }
-            }
-        })
-
+        -- Command line "/" completion menu
+        -- cmp.setup.cmdline({ '/', '?' }, {
+        --     mapping = cmp.mapping.preset.cmdline(),
+        --     sources = {
+        --         { name = 'buffer' }
+        --     }
+        -- })
+        --
 
         vim.diagnostic.config({
             -- virtual_text = true,

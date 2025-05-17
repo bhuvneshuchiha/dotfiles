@@ -33,7 +33,7 @@ return {
             },
 
             -- enable indentation
-            indent = { enable = true},
+            indent = { enable = true },
             -- enable autotagging (w/ nvim-ts-autotag plugin)
             autotag = {
                 enable = true,
