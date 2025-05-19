@@ -84,6 +84,7 @@ return {
 
 
  -----  THIS WAS THE PRIMEAGEN DAP SETUP ----------
+
 -- vim.api.nvim_create_augroup("DapGroup", { clear = true })
 --
 -- local function navigate(args)
