@@ -81,6 +81,9 @@
 -- end,
 -- }
 
+
+---- PRIMEAGEN CONFIG STARTS FROM HERE -----
+
 vim.api.nvim_create_augroup("DapGroup", { clear = true })
 
 local function navigate(args)
