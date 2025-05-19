@@ -40,9 +40,16 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 -- vim.opt.textwidth = 80
 
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     pattern = "*",
+--     command = "set formatoptions-=o",
+-- })
+
 -- Stop adding comment leader to new lines.
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*",
-    command = "set formatoptions-=o",
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
 })
 

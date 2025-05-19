@@ -1,15 +1,16 @@
 function ColorMyPencils(color)
-    color = color or "rose-pine-moon"
+    -- color = color or "rose-pine-moon"
+    -- color = color or "ash"
     -- color = color or "oldworld"
     -- color = color or "gruber-darker"
     -- color = color or "sonokai"
     -- color = color or "onedark"
-    -- color = color or "tokyonight"
+    color = color or "tokyonight"
     -- color = color or "kanagawa"
     -- color = color or "gruvbuddy"
     vim.cmd.colorscheme(color)
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 end
 
 return {
@@ -23,93 +24,138 @@ return {
     },
 
     {
-        "dgox16/oldworld.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("oldworld").setup({
-                transparent = true,
-                styles = {
-                    comments = { italic = false },
-                    conditionals = { italic = false},
-                    loops = { italic = false},
-                    functions = { italic = false },
-                    keywords = { italic = false, bold = true},
-                    strings = { italic = false },
-                    variables = { italic = false } ,
-                    numbers = { italic = false },
-                    booleans = { italic = false, bold = true},
-                    properties = { italic = false },
-                    types = { italic = false, bold = true},
-                    operators = { italic = false },
-                },
-                integrations = {
-                --     hop = true,
-                    telescope = true,
-                    treesitter = true,
-                    lsp = true,
-                    cmp = true,
-                --     gitsigns = true,
-                --     which_key = true,
-                --     indent_blankline = true
-                },
-                -- highlight_overrides = {
-                --     Comment = { bg = "#ff0000", italic = false, underline = false },
-                -- }
-            })
-
-
-            -- vim.cmd("colorscheme oldworld")
-        end,
+        -- "drewxs/ash.nvim",
+        -- lazy = false,
+        -- priority = 1000,
+        -- config = function ()
+        --     require("ash").setup ({
+        --         compile_path = vim.fn.stdpath("cache") .. "/ash",
+        --
+        --         transparent = false, -- transparent background
+        --         term_colors = true, -- terminal colors (e.g. g:terminal_color_x)
+        --         no_italic = true, -- disable italics
+        --         no_bold = true, -- disable bold
+        --         no_underline = true, -- disable underlines
+        --
+        --         -- override highlight groups [function/table]
+        --         -- e.g. highlights = function(colors)
+        --         --     return {
+        --         --         Comment = { fg = colors.red },
+        --         --         CmpBorder = { fg = colors.none },
+        --         --     }
+        --         -- end
+        --         highlights = {
+        --             StatusLine = { fg = "#6e6a86", bg = "#232136" },
+        --         },
+        --
+        --         -- override style groups
+        --         -- e.g. comments = { "italic", "bold" }
+        --         styles = {
+        --             comments = {},
+        --             conditionals = {},
+        --             loops = {},
+        --             functions = {},
+        --             keywords = {},
+        --             strings = {},
+        --             variables = {},
+        --             numbers = {},
+        --             booleans = {},
+        --             properties = {},
+        --             types = {},
+        --             operators = {},
+        --         },
+        --     })
+        -- end,
     },
 
     {
-        "blazkowolf/gruber-darker.nvim",
-        lazy = false,
-        opts = {
-            bold = true,
-            invert = {
-                signs = false,
-                tabline = false,
-                visual = false,
-            },
-            italic = {
-                strings = false,
-                comments = false,
-                operators = false,
-                folds = false,
-            },
-            undercurl = false,
-            underline = false,
-        },
-        config = function(_, opts)
-            require("gruber-darker").setup(opts)
-        end,
+        -- "dgox16/oldworld.nvim",
+        -- lazy = false,
+        -- priority = 1000,
+        -- config = function()
+        --     require("oldworld").setup({
+        --         transparent = true,
+        --         styles = {
+        --             comments = { italic = false },
+        --             conditionals = { italic = false},
+        --             loops = { italic = false},
+        --             functions = { italic = false },
+        --             keywords = { italic = false, bold = true},
+        --             strings = { italic = false },
+        --             variables = { italic = false } ,
+        --             numbers = { italic = false },
+        --             booleans = { italic = false, bold = true},
+        --             properties = { italic = false },
+        --             types = { italic = false, bold = true},
+        --             operators = { italic = false },
+        --         },
+        --         integrations = {
+        --         --     hop = true,
+        --             telescope = true,
+        --             treesitter = true,
+        --             lsp = true,
+        --             cmp = true,
+        --         --     gitsigns = true,
+        --         --     which_key = true,
+        --         --     indent_blankline = true
+        --         },
+        --         -- highlight_overrides = {
+        --         --     Comment = { bg = "#ff0000", italic = false, underline = false },
+        --         -- }
+        --     })
+        --
+        --
+        --     -- vim.cmd("colorscheme oldworld")
+        -- end,
+    },
+
+    {
+        -- "blazkowolf/gruber-darker.nvim",
+        -- lazy = false,
+        -- opts = {
+        --     bold = true,
+        --     invert = {
+        --         signs = false,
+        --         tabline = false,
+        --         visual = false,
+        --     },
+        --     italic = {
+        --         strings = false,
+        --         comments = false,
+        --         operators = false,
+        --         folds = false,
+        --     },
+        --     undercurl = false,
+        --     underline = false,
+        -- },
+        -- config = function(_, opts)
+        --     require("gruber-darker").setup(opts)
+        -- end,
     },
 
 
     {
-        "navarasu/onedark.nvim",
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            require('onedark').setup {
-                style = 'darker'
-            }
-            -- Enable theme
-            require('onedark').load()
-        end
+        -- "navarasu/onedark.nvim",
+        -- priority = 1000, -- make sure to load this before all the other start plugins
+        -- config = function()
+        --     require('onedark').setup {
+        --         style = 'darker'
+        --     }
+        --     -- Enable theme
+        --     require('onedark').load()
+        -- end
     },
 
     {
-        -- Disabled term gui colors in init.lua
-        "sainnhe/sonokai",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.g.sonokai_enable_italic = "0"
-            vim.g.sonokai_disable_italic_comment = 1
-            vim.g.sonokai_style = 'andromeda' -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
-        end,
+        -- -- Disabled term gui colors in init.lua
+        -- "sainnhe/sonokai",
+        -- lazy = false,
+        -- priority = 1000,
+        -- config = function()
+        --     vim.g.sonokai_enable_italic = "0"
+        --     vim.g.sonokai_disable_italic_comment = 1
+        --     vim.g.sonokai_style = 'andromeda' -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
+        -- end,
     },
 
     {

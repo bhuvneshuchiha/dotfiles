@@ -7,6 +7,12 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- This remap does work with wrapped lines and takes your cursor to the
+-- lines that are wrapped too
+vim.keymap.set('n', 'j', 'gj', { desc = 'Up', noremap = true})
+vim.keymap.set('n', 'k', 'gk', { desc = 'Down', noremap = true})
+-- Both are a combo remap above
+
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

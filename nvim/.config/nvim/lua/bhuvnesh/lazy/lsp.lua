@@ -112,10 +112,10 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "gopls",
-                "jdtls",
+                -- "jdtls",
                 -- "ruff",
                 -- "pylsp",
-                "clangd",
+                -- "clangd",
                 "ts_ls", --tsserver name changed to ts_ls
             },
             handlers = {
