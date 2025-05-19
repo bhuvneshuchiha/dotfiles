@@ -13,7 +13,6 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
     },
-
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
@@ -53,6 +52,7 @@ return {
                     vim.g.zig_fmt_autosave = 0
 
                 end,
+
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
@@ -72,10 +72,18 @@ return {
                         }
                     }
                 end,
+
+
             }
         })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+        -- For VS code like snippets --
+        -- local luasnip = require("luasnip")
+        -- require("luasnip.loaders.from_vscode").lazy_load()
+        -- luasnip.config.setup({})
+        -- For VS code like snippets --
 
         cmp.setup({
             snippet = {
@@ -84,13 +92,16 @@ return {
                 end,
             },
             preselect = cmp.PreselectMode.None,
+            experimental = {
+                -- ghost_text = true,
+            },
             mapping = cmp.mapping.preset.insert({
                 ["<C-n>"] = cmp.mapping.select_next_item(),
                 ["<C-p>"] = cmp.mapping.select_prev_item(),
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping.complete({}),
-                ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Autocompletion on Tab
+                -- ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Autocompletion on Tab
                 ["<CR>"] = cmp.mapping.confirm({
                     behavior = cmp.ConfirmBehavior.Replace,
                     select = false, --Set true to make enter key select the first Autocompletion
