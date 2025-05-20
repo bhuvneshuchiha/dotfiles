@@ -73,7 +73,6 @@ return {
                     }
                 end,
 
-
             }
         })
 
@@ -91,10 +90,11 @@ return {
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 end,
             },
-            preselect = cmp.PreselectMode.None,
+            -- preselect = cmp.PreselectMode.None,
             experimental = {
                 -- ghost_text = true,
             },
+
             mapping = cmp.mapping.preset.insert({
                 ["<C-n>"] = cmp.mapping.select_next_item(),
                 ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -118,6 +118,7 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
+            underline = false,
             float = {
                 focusable = false,
                 style = "minimal",
