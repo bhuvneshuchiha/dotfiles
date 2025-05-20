@@ -90,7 +90,7 @@ return {
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
                 end,
             },
-            -- preselect = cmp.PreselectMode.None,
+            preselect = cmp.PreselectMode.None,
             experimental = {
                 -- ghost_text = true,
             },
@@ -118,7 +118,7 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
-            underline = false,
+            -- underline = false,
             float = {
                 focusable = false,
                 style = "minimal",
