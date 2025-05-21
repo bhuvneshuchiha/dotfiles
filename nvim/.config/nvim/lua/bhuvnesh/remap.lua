@@ -9,8 +9,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- This remap does work with wrapped lines and takes your cursor to the
 -- lines that are wrapped too
-vim.keymap.set('n', 'j', 'gj', { desc = 'Up', noremap = true })
-vim.keymap.set('n', 'k', 'gk', { desc = 'Down', noremap = true })
+vim.keymap.set("n", "j", "gj", { desc = "Up", noremap = true })
+vim.keymap.set("n", "k", "gk", { desc = "Down", noremap = true })
 -- Both are a combo remap above
 
 vim.keymap.set("n", "J", "mzJ`z")
@@ -21,16 +21,16 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>ft", function()
-    require("conform").format({ bufnr = 0 })
+	require("conform").format({ bufnr = 0 })
 end)
 
 --vim.api.nvim_set_keymap("n", "<Leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
+	require("vim-with-me").StartVimWithMe()
 end)
 vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
+	require("vim-with-me").StopVimWithMe()
 end)
 -- Yank to system clipboard in normal mode
 vim.api.nvim_set_keymap("n", "y", '"+y', { noremap = true, silent = true })
@@ -58,29 +58,13 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
+vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 
-vim.keymap.set(
-    "n",
-    "<leader>ea",
-    "oassert.NoError(err, \"\")<Esc>F\";a"
-)
+vim.keymap.set("n", "<leader>ea", 'oassert.NoError(err, "")<Esc>F";a')
 
-vim.keymap.set(
-    "n",
-    "<leader>ef",
-    "oif err != nil {<CR>}<Esc>Olog.Fatalf(\"error: %s\\n\", err.Error())<Esc>jj"
-)
+vim.keymap.set("n", "<leader>ef", 'oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\\n", err.Error())<Esc>jj')
 
-vim.keymap.set(
-    "n",
-    "<leader>el",
-    "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
-)
+vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i')
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -108,6 +92,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 --     vim.cmd("so")
 -- end)
 
-
 --Remap for moving to the previous file
-vim.api.nvim_set_keymap('n', '<leader>\\', '<C-^>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>\\", "<C-^>", { noremap = true, silent = true })

@@ -7,7 +7,7 @@
 # ]
 
 [env]
-# TERM="xterm-256color"
+TERM="xterm-256color"
 # [window]
 # padding.x = 10
 # padding.y = 10
@@ -25,19 +25,19 @@ cursor = "#ffffff"  # The color of the cursor itself
 [colors]
 # If `true`, bold text is drawn using the bright color variants.
 # draw_bold_text_with_bright_colors = true
-#decorations = "Transparent"
+# decorations = "Transparent"
 
 [font]
 # normal.family = "MesloLGS Nerd Font Mono"
 # normal.family = "Iosevka Nerd Font"
 # normal.family = "Maple Mono NF"
 # normal.family = "BlexMono Nerd Font"
-normal.family = "FiraCode Nerd Font"
+# normal.family = "FiraCode Nerd Font"
 normal.style = "Regular"
 # normal.family = "SourceCodePro Nerd Font"
 # normal.family = "JetBrains Mono"
-# normal.family = "JetBrainsMono Nerd Font"
-size = 22
+normal.family = "JetBrainsMono Nerd Font"
+size = 24
 [colors.primary]
 # background = '#0c0c0c'
 # background = '#181818'
