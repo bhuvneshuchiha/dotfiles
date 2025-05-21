@@ -6,7 +6,7 @@
 # https://github.com/search?q=path%3Aghostty%2Fconfig&type=code
 # theme = catppuccin-mocha
 
-theme = rose-pine
+theme = rose-pine-moon
 # theme = tokyonight_night
 
 ######## Put these values back if you remove the ghostty theme file######
@@ -15,17 +15,18 @@ background = 000000
 foreground = ffffff
 # cursor-color = white
 cursor-style=block
+cursor-style-blink= false
 # shell-integration-features = no-cursor
+font-family = Fira Code Nerd Font
 shell-integration-features = no-cursor,no-sudo,no-title
-cursor-style-blink = false
 font-thicken= false
 fullscreen=false
-font-size = 18
+font-size = 22
 window-title-font-family = JetBrains Mono
 window-padding-y = 0,0
 confirm-close-surface = false
 macos-option-as-alt = true
-background-opacity = 0.8
+background-opacity = 0.7
 background-blur-radius = true
 
 # File which is responsible for ghostty-custom-theme(its in this same folder)

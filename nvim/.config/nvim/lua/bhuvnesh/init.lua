@@ -231,6 +231,7 @@ autocmd("LspAttach", {
     end,
 })
 
+-- Disable the undercurl and the underline for errors and warnings globally.
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = false, underline = false})
 
 

@@ -28,7 +28,8 @@ blinking = "Never"
 #decorations = "Transparent"
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+# normal.family = "MesloLGS Nerd Font Mono"
+normal.family = "Fira Code Nerd Font"
 # normal.family = "JetBrains Mono"
 # normal.family = "JetBrainsMono Nerd Font"
 #regular
@@ -69,5 +70,5 @@ bindings = [
 
 [window]
 # startup_mode = "SimpleFullscreen"
-opacity=0.8
+opacity=0.7
 option_as_alt = "Both"
