@@ -1,11 +1,11 @@
 function ColorMyPencils(color)
-    -- color = color or "rose-pine-moon"
+    color = color or "rose-pine-moon"
     -- color = color or "ash"
     -- color = color or "oldworld"
     -- color = color or "gruber-darker"
     -- color = color or "sonokai"
     -- color = color or "onedark"
-    color = color or "tokyonight"
+    -- color = color or "tokyonight"
     -- color = color or "kanagawa"
     -- color = color or "gruvbuddy"
     vim.cmd.colorscheme(color)

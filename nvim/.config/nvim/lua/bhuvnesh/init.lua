@@ -92,19 +92,19 @@ vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 -- })
 
 -- If you wanna trigger format by a key rather than on save.
-vim.keymap.set("n", "<leader>ft", function()
-    vim.lsp.buf.format({
-        async = true,
-        timeout_ms = 500,
-        filter = function(clients)
-            return vim.tbl_filter(function(client)
-                return pcall(function(_client)
-                    return _client.config.settings.autoFixOnSave or false
-                end, client) or false
-            end, clients)
-        end,
-    })
-end, { desc = "Trigger LSP formatting" })
+-- vim.keymap.set("n", "<leader>ft", function()
+--     vim.lsp.buf.format({
+--         async = true,
+--         timeout_ms = 500,
+--         filter = function(clients)
+--             return vim.tbl_filter(function(client)
+--                 return pcall(function(_client)
+--                     return _client.config.settings.autoFixOnSave or false
+--                 end, client) or false
+--             end, clients)
+--         end,
+--     })
+-- end, { desc = "Trigger LSP formatting" })
 
 
 

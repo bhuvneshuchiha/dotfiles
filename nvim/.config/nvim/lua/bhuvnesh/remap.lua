@@ -9,8 +9,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- This remap does work with wrapped lines and takes your cursor to the
 -- lines that are wrapped too
-vim.keymap.set('n', 'j', 'gj', { desc = 'Up', noremap = true})
-vim.keymap.set('n', 'k', 'gk', { desc = 'Down', noremap = true})
+vim.keymap.set('n', 'j', 'gj', { desc = 'Up', noremap = true })
+vim.keymap.set('n', 'k', 'gk', { desc = 'Down', noremap = true })
 -- Both are a combo remap above
 
 vim.keymap.set("n", "J", "mzJ`z")
@@ -19,6 +19,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "N", "Nzzzv")
+
+vim.keymap.set("n", "<leader>ft", function()
+    require("conform").format({ bufnr = 0 })
+end)
 
 --vim.api.nvim_set_keymap("n", "<Leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
 
@@ -80,7 +84,7 @@ vim.keymap.set(
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
