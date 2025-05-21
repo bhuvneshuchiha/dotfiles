@@ -90,7 +90,7 @@ return {
                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping.complete({}),
-                ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Autocompletion on Tab
+                -- ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Autocompletion on Tab
                 ["<CR>"] = cmp.mapping.confirm({
                     behavior = cmp.ConfirmBehavior.Replace,
                     select = false, --Set true to make enter key select the first Autocompletion
