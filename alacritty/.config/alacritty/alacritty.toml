@@ -41,6 +41,9 @@ size = 14
 background = '#000000'
 # background = '#1c1e20'
 
+[mouse]
+hide_when_typing = true
+
 [window.padding]
 x = 5
 y = 0
