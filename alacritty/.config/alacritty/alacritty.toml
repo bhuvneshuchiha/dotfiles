@@ -29,10 +29,10 @@ blinking = "Never"
 
 [font]
 # normal.family = "MesloLGS Nerd Font Mono"
-normal.family = "Fira Code Nerd Font"
+# normal.family = "Fira Code Nerd Font"
 # normal.family = "JetBrains Mono"
-# normal.family = "JetBrainsMono Nerd Font"
-#regular
+normal.family = "JetBrainsMono Nerd Font"
+# regular
 size = 14
 
 [colors.primary]
