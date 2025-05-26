@@ -17,6 +17,12 @@ require("bhuvnesh.set")
 require("bhuvnesh.remap")
 require("bhuvnesh.lazy_init")
 
+------- THIS IS IMPORTANT HACK ----------
+-- Ctrl-O lets you go into normal mode for one keystroke while being in insert mode
+-- you can lets say press Ctrl-O and then Shift-A to go the end of the line all
+-- while being in the insert mode.
+------- THIS IS IMPORTANT HACK ----------
+
 --
 vim.opt.termguicolors = true
 vim.o.wrap = false

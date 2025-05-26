@@ -1,21 +1,3 @@
--- return {
--- 	"stevearc/conform.nvim",
--- 	opts = {},
--- 	config = function()
--- 		require("conform").setup({
--- 			formatters_by_ft = {
--- 				lua = { "stylua" },
--- 				go = { "goimports", "gofmt" },
--- 				python = { "black" },
--- 				typescript = { { "prettierd", "prettier" } },
--- 				typescriptreact = { { "prettierd", "prettier" } },
--- 				javascript = { { "prettierd", "prettier" } },
--- 				javascriptreact = { { "prettierd", "prettier" } },
--- 			},
--- 		})
--- 	end,
--- }
-
 return {
 	"stevearc/conform.nvim",
 	opts = {},
@@ -23,21 +5,28 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				go = { "goimports", "gofmt" },
+				go = { "gofmt" },
 				python = { "black" },
 				typescript = { "prettierd", "prettier" },
 				typescriptreact = { "prettierd", "prettier" },
 				javascript = { "prettierd", "prettier" },
 				javascriptreact = { "prettierd", "prettier" },
+				html = { "prettierd", "prettier" },
+				css = { "prettierd", "prettier" },
 			},
 			-- Use the first available formatter in the list
 			format_on_save = false,
+
 			formatters = {
 				prettierd = {
-					prepend_args = { "--tab-width", "4" },
+					inherit = true,
+					prepend_args = { "--use-tabs" },
+					append_args = { "--trailing-comma" },
+					supports_multiple_files = false,
 				},
 				prettier = {
-					prepend_args = { "--tab-width", "4" },
+					inherit = true,
+					prepend_args = { "--use-tabs" },
 				},
 			},
 			-- Set global default to stop after the first available formatter

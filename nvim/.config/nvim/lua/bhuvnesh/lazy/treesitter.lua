@@ -14,16 +14,16 @@ return {
             highlight = {
                 enable = true,
                  disable = function(lang, buf)
-                    if lang == "html" then
-                        print("disabled")
-                        return true
-                    end
+                    -- if lang == "html" then
+                    --     print("disabled")
+                    --     return true
+                    -- end
 
-                    local max_filesize = 10000 * 1024 -- 10MB
+                    local max_filesize = 20000 * 1024 -- 20MB
                     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
                     if ok and stats and stats.size > max_filesize then
                         vim.notify(
-                            "File larger than 10MB treesitter disabled for performance",
+                            "File larger than 20MB treesitter disabled for performance",
                             vim.log.levels.WARN,
                             {title = "Treesitter"}
                         )

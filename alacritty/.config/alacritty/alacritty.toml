@@ -38,6 +38,8 @@ normal.style = "Regular"
 # normal.family = "JetBrains Mono"
 normal.family = "JetBrainsMono Nerd Font"
 size = 24
+
+
 [colors.primary]
 # background = '#0c0c0c'
 # background = '#181818'
@@ -68,6 +70,10 @@ bindings = [
   { key = "Left",   mods = "Alt", chars = "\u001BB" },
 
 ]
+
+
+[mouse]
+hide_when_typing = true
 
 [window]
 # startup_mode = "SimpleFullscreen"

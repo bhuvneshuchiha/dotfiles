@@ -46,7 +46,7 @@ return {
                 -- "prettier", -- prettier formatter
                 -- "stylua",   -- lua formatter
                 -- "isort",    -- python formatter
-                "pyright",
+                "basedpyright",
                 -- "black",    -- python formatter
                 -- "eslint_d",
             },

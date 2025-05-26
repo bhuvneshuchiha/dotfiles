@@ -1,26 +1,23 @@
-
-# NOTE:
-# docs:
-# ghostty +show-config --default --docs | nvim
-# examples:
-# https://github.com/search?q=path%3Aghostty%2Fconfig&type=code
-# theme = catppuccin-mocha
-
 theme = rose-pine-moon
-# theme = tokyonight_night
-
-######## Put these values back if you remove the ghostty theme file######
 background = 000000
-# background = 0c0c0c
-# foreground = ffffff
-# cursor-color = white
+mouse-hide-while-typing=true
 cursor-style=block
 shell-integration-features = no-cursor
 cursor-style-blink = false
 font-thicken= false
 fullscreen=true
-# font-family = MesloLGS Nerd Font Mono
-# font-family = JetBrains Mono
+font-size = 23
+window-title-font-family = JetBrains Mono
+window-padding-y = 0,0
+confirm-close-surface = false
+macos-option-as-alt = true
+background-opacity = 0.8
+background-blur-radius = false
+# adjust-cell-width=-6%
+# theme = tokyonight_night
+background = 0c0c0c
+# cursor-color = white
+# font-family = MesloLGS Nerd Font Mono font-family = JetBrains Mono
 # font-family = JetBrainsMono Nerd Font
 # font-family = SauceCodePro Nerd Font Mono
 # font-family = Cascadia Code
@@ -30,17 +27,10 @@ fullscreen=true
 # font-family = Maple Mono NF
 # font-family = BlexMono Nerd Font
 # font-family = Hasklug Nerd Font
-font-size = 23
-window-title-font-family = JetBrains Mono
-window-padding-y = 0,0
-#adjust-cell-width=-6%
-confirm-close-surface = false
-macos-option-as-alt = true
-background-opacity = 0.8
-background-blur-radius = false
+# font-family = LiterationMono Nerd Font
 
-# File which is responsible for ghostty-custom-theme(its in this same folder)
-# config-file = ghostty-theme
-# config-file = ghostty-theme
+
+
+
 
 
