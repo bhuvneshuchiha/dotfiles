@@ -48,29 +48,13 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
+vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
 
-vim.keymap.set(
-    "n",
-    "<leader>ea",
-    "oassert.NoError(err, \"\")<Esc>F\";a"
-)
+vim.keymap.set("n", "<leader>ea", 'oassert.NoError(err, "")<Esc>F";a')
 
-vim.keymap.set(
-    "n",
-    "<leader>ef",
-    "oif err != nil {<CR>}<Esc>Olog.Fatalf(\"error: %s\\n\", err.Error())<Esc>jj"
-)
+vim.keymap.set("n", "<leader>ef", 'oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\\n", err.Error())<Esc>jj')
 
-vim.keymap.set(
-    "n",
-    "<leader>el",
-    "oif err != nil {<CR>}<Esc>O.logger.Error(\"error\", \"error\", err)<Esc>F.;i"
-)
+vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i')
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -80,9 +64,21 @@ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+-- 1. Basic conform formatting.
+-- vim.keymap.set("n", "<leader>ft", function()
+--     require("conform").format({ bufnr = 0 })
+-- end)
+
+-- 2. Conform formatting to store cursor position.
 vim.keymap.set("n", "<leader>ft", function()
-	require("conform").format({ bufnr = 0 })
-end)
+    local pos = vim.api.nvim_win_get_cursor(0) -- {line, col}
+    require("conform").format({ bufnr = 0 })
+    vim.api.nvim_win_set_cursor(0, pos)
+end, { noremap = true, silent = true })
+
+-- This one is smooth, crisp and blazing fast
+vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
 
 --Substitute in selected area
 -- vim.keymap.set("v", "<C-s>", [[:s/\(\w.*\)/]])
@@ -101,6 +97,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 --     vim.cmd("so")
 -- end)
 
-
 --Remap for moving to the previous file
-vim.api.nvim_set_keymap('n', '<leader>\\', '<C-^>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>\\", "<C-^>", { noremap = true, silent = true })
