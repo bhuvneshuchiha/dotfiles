@@ -1,12 +1,12 @@
 function ColorMyPencils(color)
-    -- color = color or "rose-pine-moon"
+    color = color or "rose-pine-moon"
     -- color = color or "rose-pine"
-    color = color or "tokyonight-night"
+    -- color = color or "tokyonight-night"
     -- color = color or "gruvbox"
     -- color = color or "gruvbuddy"
     vim.cmd.colorscheme(color)
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 end
 
 return {
@@ -67,7 +67,7 @@ return {
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 style = "night",
-                transparent = true,    -- Enable this to disable setting the background color
+                transparent = false,    -- Enable this to disable setting the background color
                 terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
                 styles = {
                     -- Style to be applied to different syntax groups
