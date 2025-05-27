@@ -21,11 +21,17 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Disabling for a while to see if the default one is faster than conform.
-vim.keymap.set("n", "<leader>==", function()
-    require("conform").format({ bufnr = 0 })
-end)
+-- vim.keymap.set("n", "<leader>ft", function()
+--     require("conform").format({ bufnr = 0 })
+-- end)
+vim.keymap.set("n", "<leader>ft", function()
+	local pos = vim.api.nvim_win_get_cursor(0) -- {line, col}
+	require("conform").format({ bufnr = 0 })
+	vim.api.nvim_win_set_cursor(0, pos)
+end, { noremap = true, silent = true })
+
 -- This one is smooth, crisp and blazing fast
-vim.keymap.set("n", "<leader>ft", "ma gg=G `a", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
 
 -- vim.api.nvim_set_keymap("n", "<Leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
 
