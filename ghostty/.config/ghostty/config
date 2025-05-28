@@ -20,6 +20,7 @@ cursor-style-blink= false
 # font-family = Fira Code Nerd Font
 mouse-hide-while-typing=true
 font-family = JetBrainsMono Nerd Font
+# font-family = Iosevka Nerd Font
 shell-integration-features = no-cursor,no-sudo,no-title
 font-thicken= false
 fullscreen=false
