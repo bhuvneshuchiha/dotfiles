@@ -17,22 +17,21 @@ require("bhuvnesh.set")
 require("bhuvnesh.remap")
 require("bhuvnesh.lazy_init")
 
-------- THIS IS IMPORTANT HACK ----------
+------- THIS IS IMPORTANT HACK ---------
 -- Ctrl-O lets you go into normal mode for one keystroke while being in insert mode
 -- you can lets say press Ctrl-O and then Shift-A to go the end of the line all
 -- while being in the insert mode.
-------- THIS IS IMPORTANT HACK ----------
+------- THIS IS IMPORTANT HACK --------
 
---
 vim.opt.termguicolors = true
 vim.o.wrap = false
-
+vim.opt.textwidth = 80
 
 -- Set the sign column to a fixed width of 2
 vim.opt.signcolumn = "yes"
 
-vim.api.nvim_set_hl(0, "Cursor", { fg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Cursor", { fg = "NONE", bg = "NONE" })
+-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup("ThePrimeagen", {})
@@ -41,31 +40,30 @@ local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup("HighlightYank", {})
 
 function R(name)
-    require("plenary.reload").reload_module(name)
+	require("plenary.reload").reload_module(name)
 end
 
 vim.filetype.add({
-    extension = {
-        templ = "templ",
-    },
+	extension = {
+		templ = "templ",
+	},
 })
 
-
 autocmd("TextYankPost", {
-    group = yank_group,
-    pattern = "*",
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = "IncSearch",
-            timeout = 40,
-        })
-    end,
+	group = yank_group,
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 40,
+		})
+	end,
 })
 
 autocmd({ "BufWritePre" }, {
-    group = ThePrimeagenGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
+	group = ThePrimeagenGroup,
+	pattern = "*",
+	command = [[%s/\s\+$//e]],
 })
 
 --HACK:
@@ -75,7 +73,6 @@ vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 -- HACK:    TO FORMAT USING LSP
 --To autoformat files using Neovim's native LSP.
 -- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
-
 
 -- FASTEST LSP FORMATTER
 -- vim.api.nvim_create_augroup("LspFormatting", { clear = true })
@@ -112,8 +109,6 @@ vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 --     })
 -- end, { desc = "Trigger LSP formatting" })
 
-
-
 -- For cursor flickering when saving a file
 -- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 --     pattern = "*",
@@ -147,7 +142,6 @@ vim.opt.splitbelow = true
 --     end,
 -- })
 
-
 -- IMPORTANT **RestoreCursorPosition**
 -- function RestoreCursorPosition()
 --     local line = vim.fn.line("'\"")
@@ -167,23 +161,29 @@ vim.opt.splitbelow = true
 --   ]])
 -- end
 
-
 -- Another way to restore cursor position
 vim.api.nvim_create_autocmd("BufReadPost", {
-    callback = function(args)
-        local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
-        local line_count = vim.api.nvim_buf_line_count(args.buf)
-        if mark[1] > 0 and mark[1] <= line_count then
-            vim.cmd('normal! g`"zz')
-        end
-    end,
+	callback = function(args)
+		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+		local line_count = vim.api.nvim_buf_line_count(args.buf)
+		if mark[1] > 0 and mark[1] <= line_count then
+			vim.cmd('normal! g`"zz')
+		end
+	end,
 })
-
 
 -- Set Netrw file menu to bold
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "netrw",
-    command = "highlight Directory cterm=bold gui=bold",
+	pattern = "netrw",
+	command = "highlight Directory cterm=bold gui=bold",
+})
+
+-- Helps you wrap the comments and lines according to text width when pressed
+-- Shift + V + gq in normal mode
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		vim.bo[args.buf].formatexpr = nil
+	end,
 })
 
 --To run jupiter lab, point neovim to this virtual env
@@ -201,44 +201,42 @@ vim.api.nvim_create_autocmd("FileType", {
 
 --LSP autocmd
 autocmd("LspAttach", {
-    group = ThePrimeagenGroup,
-    callback = function(e)
-        local opts = { buffer = e.buf }
-        vim.keymap.set("n", "gd", function()
-            vim.lsp.buf.definition()
-        end, opts)
-        vim.keymap.set("n", "K", function()
-            vim.lsp.buf.hover()
-        end, opts)
-        vim.keymap.set("n", "<leader>vws", function()
-            vim.lsp.buf.workspace_symbol()
-        end, opts)
-        vim.keymap.set("n", "<leader>vd", function()
-            vim.diagnostic.open_float()
-        end, opts)
-        vim.keymap.set("n", "<leader>vca", function()
-            vim.lsp.buf.code_action()
-        end, opts)
-        vim.keymap.set("n", "<leader>vrr", function()
-            vim.lsp.buf.references()
-        end, opts)
-        vim.keymap.set("n", "<leader>vrn", function()
-            vim.lsp.buf.rename()
-        end, opts)
-        vim.keymap.set("i", "<C-h>", function()
-            vim.lsp.buf.signature_help()
-        end, opts)
-        vim.keymap.set("n", "[d", function()
-            vim.diagnostic.goto_next()
-        end, opts)
-        vim.keymap.set("n", "]d", function()
-            vim.diagnostic.goto_prev()
-        end, opts)
-    end,
+	group = ThePrimeagenGroup,
+	callback = function(e)
+		local opts = { buffer = e.buf }
+		vim.keymap.set("n", "gd", function()
+			vim.lsp.buf.definition()
+		end, opts)
+		vim.keymap.set("n", "K", function()
+			vim.lsp.buf.hover()
+		end, opts)
+		vim.keymap.set("n", "<leader>vws", function()
+			vim.lsp.buf.workspace_symbol()
+		end, opts)
+		vim.keymap.set("n", "<leader>vd", function()
+			vim.diagnostic.open_float()
+		end, opts)
+		vim.keymap.set("n", "<leader>vca", function()
+			vim.lsp.buf.code_action()
+		end, opts)
+		vim.keymap.set("n", "<leader>vrr", function()
+			vim.lsp.buf.references()
+		end, opts)
+		vim.keymap.set("n", "<leader>vrn", function()
+			vim.lsp.buf.rename()
+		end, opts)
+		vim.keymap.set("i", "<C-h>", function()
+			vim.lsp.buf.signature_help()
+		end, opts)
+		vim.keymap.set("n", "[d", function()
+			vim.diagnostic.goto_next()
+		end, opts)
+		vim.keymap.set("n", "]d", function()
+			vim.diagnostic.goto_prev()
+		end, opts)
+	end,
 })
 
 -- for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight") or {}) do
 --   vim.api.nvim_set_hl(0, group, {})
 -- end
-
-

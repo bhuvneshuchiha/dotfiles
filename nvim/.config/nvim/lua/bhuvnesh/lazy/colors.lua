@@ -110,27 +110,27 @@ return {
     },
 
     {
-        -- "blazkowolf/gruber-darker.nvim",
-        -- lazy = false,
-        -- opts = {
-        --     bold = true,
-        --     invert = {
-        --         signs = false,
-        --         tabline = false,
-        --         visual = false,
-        --     },
-        --     italic = {
-        --         strings = false,
-        --         comments = false,
-        --         operators = false,
-        --         folds = false,
-        --     },
-        --     undercurl = false,
-        --     underline = false,
-        -- },
-        -- config = function(_, opts)
-        --     require("gruber-darker").setup(opts)
-        -- end,
+        "blazkowolf/gruber-darker.nvim",
+        lazy = false,
+        opts = {
+            bold = true,
+            invert = {
+                signs = false,
+                tabline = false,
+                visual = false,
+            },
+            italic = {
+                strings = false,
+                comments = false,
+                operators = false,
+                folds = false,
+            },
+            undercurl = false,
+            underline = false,
+        },
+        config = function(_, opts)
+            require("gruber-darker").setup(opts)
+        end,
     },
 
 

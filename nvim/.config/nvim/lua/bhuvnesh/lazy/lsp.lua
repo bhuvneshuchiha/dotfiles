@@ -167,9 +167,9 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"basedpyright",
 				"ts_ls",
 				"gopls",
+                "pyright"
 			},
 
 			handlers = {
@@ -222,6 +222,10 @@ return {
 		-- local cmp_select = { behavior = cmp.SelectBehavior.Insert}
 
 		cmp.setup({
+			-- preselect = cmp.PreselectMode.None,
+			-- completion = {
+			-- 	completeopt = "menu,menuone,noinsert,noselect",
+			-- },
 			snippet = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
@@ -244,7 +248,7 @@ return {
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
-            -- underline = false
+			-- underline = false
 			float = {
 				focusable = false,
 				style = "minimal",

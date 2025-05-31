@@ -21,9 +21,9 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- 1. Basic conform formatting.
--- vim.keymap.set("n", "<leader>ft", function()
---     require("conform").format({ bufnr = 0 })
--- end)
+vim.keymap.set("n", "<leader>ft", function()
+    require("conform").format({ bufnr = 0 })
+end)
 
 -- 2. Conform formatting to store cursor position.
 -- vim.keymap.set("n", "<leader>ft", function()
@@ -33,14 +33,14 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- end, { noremap = true, silent = true })
 
 -- 3. The most advance conform formatting.
-vim.keymap.set("n", "<leader>ft", function()
-	-- Save mark 'a' at current cursor
-	vim.cmd("normal! ma")
-	-- Run conform format
-	require("conform").format({ bufnr = 0 })
-	-- Jump back exactly to mark 'a'
-	vim.cmd("normal! `a")
-end, { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>ft", function()
+-- 	-- Save mark 'a' at current cursor
+-- 	vim.cmd("normal! ma")
+-- 	-- Run conform format
+-- 	require("conform").format({ bufnr = 0 })
+-- 	-- Jump back exactly to mark 'a'
+-- 	vim.cmd("normal! `a")
+-- end, { noremap = true, silent = true })
 
 -- This one is smooth, crisp and blazing fast
 vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
