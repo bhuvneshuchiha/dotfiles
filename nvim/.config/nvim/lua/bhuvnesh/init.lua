@@ -17,15 +17,16 @@ require("bhuvnesh.set")
 require("bhuvnesh.remap")
 require("bhuvnesh.lazy_init")
 
-------- THIS IS IMPORTANT HACK ---------
+------- THIS IS IMPORTANT HACK ---------   ------- THIS IS IMPORTANT HACK ---------------- THIS IS IMPORTANT HACK ---------
 -- Ctrl-O lets you go into normal mode for one keystroke while being in insert mode
 -- you can lets say press Ctrl-O and then Shift-A to go the end of the line all
 -- while being in the insert mode.
+
+-- Use Shift + V + gw to wrap lines in comments acc to text width
 ------- THIS IS IMPORTANT HACK --------
 
 vim.opt.termguicolors = true
 vim.o.wrap = false
-vim.opt.textwidth = 80
 
 -- Set the sign column to a fixed width of 2
 vim.opt.signcolumn = "yes"
@@ -177,27 +178,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "netrw",
 	command = "highlight Directory cterm=bold gui=bold",
 })
-
--- Helps you wrap the comments and lines according to text width when pressed
--- Shift + V + gq in normal mode
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		vim.bo[args.buf].formatexpr = nil
-	end,
-})
-
---To run jupiter lab, point neovim to this virtual env
--- vim.g.python3_host_prog = vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
--- vim.keymap.set("n", "<localleader>ip", function()
---     local venv = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX")
---     if venv ~= nil then
---         -- in the form of /home/benlubas/.virtualenvs/VENV_NAME
---         venv = string.match(venv, "/.+/(.+)")
---         vim.cmd(("MoltenInit %s"):format(venv))
---     else
---         vim.cmd("MoltenInit python3")
---     end
--- end, { desc = "Initialize Molten for python3", silent = true })
 
 --LSP autocmd
 autocmd("LspAttach", {

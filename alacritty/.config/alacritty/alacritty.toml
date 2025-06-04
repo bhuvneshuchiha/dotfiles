@@ -7,7 +7,7 @@
 # ]
 
 [env]
-TERM="xterm-256color"
+# TERM="xterm-256color"
 # [window]
 # padding.x = 10
 # padding.y = 10
