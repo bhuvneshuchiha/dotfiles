@@ -21,8 +21,8 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- 1. Basic conform formatting.
-vim.keymap.set("n", "<leader>ft", function()
-    require("conform").format({ bufnr = 0 })
+vim.keymap.set("n", "<leader>ff", function()
+	require("conform").format({ bufnr = 0 })
 end)
 
 -- 2. Conform formatting to store cursor position.
