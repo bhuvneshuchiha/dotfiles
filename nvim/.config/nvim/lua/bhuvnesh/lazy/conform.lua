@@ -5,38 +5,50 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				go = { "goimports", "gofmt" },
+				go = { "gofmt", "goimports" },
 				python = { "black" },
 				typescript = { "prettierd", "prettier" },
 				typescriptreact = { "prettierd", "prettier" },
 				javascript = { "prettierd", "prettier" },
 				javascriptreact = { "prettierd", "prettier" },
+				css = { "prettierd", "prettier" },
+				scss = { "prettierd", "prettier" },
+				markdown = { "prettierd", "prettier" },
+				html = { "prettierd", "prettier" },
+				json = { "prettierd", "prettier" },
+				yaml = { "prettierd", "prettier" },
+				graphql = { "prettierd", "prettier" },
+				md = { "prettierd", "prettier" },
+				txt = { "prettierd", "prettier" },
 			},
 			-- Use the first available formatter in the list
 			format_on_save = false,
 
-            formatters = {
-                prettierd = {
-                    inherit = true,
-                    prepend_args = { "--use-tabs" },
-                    append_args = { "--trailing-comma" },
-                    supports_multiple_files = false,
-                },
-                prettier = {
-                    inherit = true,
-                    prepend_args = { "--use-tabs" },
-                },
-            },
-            -- Set global default to stop after the first available formatter
-            format_after_save = {
-                lsp_fallback = true,
-            },
-            -- This is the new way to mimic `{ { "a", "b" } }` behavior:
-            -- conform will pick the first available
-            -- formatter in the list per filetype and stop
-            -- if one succeeds.
-            -- Global setting:
-            stop_after_first = true,
-        })
-    end,
+			formatters = {
+				prettierd = {
+					inherit = true,
+					prepend_args = { "--use-tabs" },
+					append_args = { "--trailing-comma" },
+					supports_multiple_files = false,
+				},
+				-- stylua = {
+				-- 	args = { "--indent-width", "2", "--indent-type", "Tabs", "-" },
+				-- },
+				prettier = {
+					inherit = true,
+					prepend_args = { "--use-tabs" },
+				},
+			},
+			-- Set global default to stop after the first available formatter
+			format_after_save = {
+				lsp_fallback = true,
+			},
+			-- This is the new way to mimic `{ { "a", "b" } }` behavior:
+			-- conform will pick the first available
+			-- formatter in the list per filetype and stop
+			-- if one succeeds.
+			-- Global setting:
+			stop_after_first = true,
+		})
+	end,
 }
