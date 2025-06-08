@@ -1,7 +1,7 @@
 function ColorMyPencils(color)
-    color = color or "rose-pine-moon"
+    -- color = color or "rose-pine-moon"
     -- color = color or "rose-pine"
-    -- color = color or "tokyonight-night"
+    color = color or "tokyonight"
     -- color = color or "gruvbox"
     -- color = color or "gruvbuddy"
     vim.cmd.colorscheme(color)
@@ -64,19 +64,15 @@ return {
                     hl.ErrorMsg = { fg = colors.red, bold = true }
                 end,
 
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                style = "night",
-                transparent = false,    -- Enable this to disable setting the background color
-                terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+                style = "storm",
+                transparent = false,
+                terminal_colors = true,
                 styles = {
-                    -- Style to be applied to different syntax groups
-                    -- Value is any valid attr-list value for `:help nvim_set_hl`
                     comments = { italic = false },
                     keywords = { italic = false },
                     -- Background styles. Can be "dark", "transparent" or "normal"
-                    sidebars = "dark", -- style for sidebars, see below
-                    floats = "dark",   -- style for floating windows
+                    sidebars = "dark",
+                    floats = "dark",
                 },
             })
         end

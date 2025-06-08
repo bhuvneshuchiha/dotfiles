@@ -17,10 +17,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 --vim.api.nvim_set_keymap("n", "<Leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
+	require("vim-with-me").StartVimWithMe()
 end)
 vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
+	require("vim-with-me").StopVimWithMe()
 end)
 -- Yank to system clipboard in normal mode
 vim.api.nvim_set_keymap("n", "y", '"+y', { noremap = true, silent = true })
@@ -66,16 +66,16 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- 1. Basic conform formatting.
--- vim.keymap.set("n", "<leader>ft", function()
---     require("conform").format({ bufnr = 0 })
--- end)
+vim.keymap.set("n", "<leader>ff", function()
+	require("conform").format({ bufnr = 0 })
+end)
 
 -- 2. Conform formatting to store cursor position.
-vim.keymap.set("n", "<leader>ft", function()
-    local pos = vim.api.nvim_win_get_cursor(0) -- {line, col}
-    require("conform").format({ bufnr = 0 })
-    vim.api.nvim_win_set_cursor(0, pos)
-end, { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>ff", function()
+--     local pos = vim.api.nvim_win_get_cursor(0) -- {line, col}
+--     require("conform").format({ bufnr = 0 })
+--     vim.api.nvim_win_set_cursor(0, pos)
+-- end, { noremap = true, silent = true })
 
 -- This one is smooth, crisp and blazing fast
 vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
