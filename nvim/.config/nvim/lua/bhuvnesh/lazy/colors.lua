@@ -5,7 +5,8 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight"
+	-- color = color or "tokyonight"
+	color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
@@ -137,12 +138,12 @@ return {
 		"navarasu/onedark.nvim",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-		    require('onedark').setup {
-		        style = 'darker'
-		    }
-		    -- Enable theme
-		    require('onedark').load()
-		end
+			require("onedark").setup({
+				style = "darker",
+			})
+			-- Enable theme
+			require("onedark").load()
+		end,
 	},
 
 	{
@@ -151,9 +152,9 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-		    vim.g.sonokai_enable_italic = "0"
-		    vim.g.sonokai_disable_italic_comment = 1
-		    vim.g.sonokai_style = 'andromeda' -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
+			vim.g.sonokai_enable_italic = "0"
+			vim.g.sonokai_disable_italic_comment = 1
+			vim.g.sonokai_style = "andromeda" -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
 		end,
 	},
 
@@ -174,7 +175,7 @@ return {
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
 				style = "storm",
-				transparent = true, -- Enable this to disable setting the background color
+				transparent = false, -- Enable this to disable setting the background color
 				terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 				styles = {
 					-- Style to be applied to different syntax groups
@@ -182,8 +183,8 @@ return {
 					comments = { italic = false },
 					keywords = { italic = false },
 					-- Background styles. Can be "dark", "transparent" or "normal"
-					sidebars = "dark", -- style for sidebars, see below
-					floats = "dark", -- style for floating windows
+					sidebars = "transparent", -- style for sidebars, see below
+					floats = "transparent", -- style for floating windows
 				},
 			})
 		end,
@@ -286,4 +287,68 @@ return {
 	-- 		ColorMyPencils()
 	-- 	end,
 	-- },
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			local colors = require("catppuccin.palettes").get_palette("mocha")
+			require("catppuccin").setup({
+				flavour = "mocha",
+				styles = {
+					comments = {},
+					conditionals = {},
+					loops = {},
+					functions = {},
+					keywords = { "bold" },
+					strings = {},
+					variables = {},
+					numbers = {},
+					booleans = {},
+					properties = {},
+					types = {},
+					operators = {},
+				},
+				custom_highlights = {
+					-- StatusLine = { bg = colors.base, fg = colors.base },
+					-- StatusLineNC = { bg = colors.base, fg = colors.base },
+				},
+				integrations = {
+					treesitter = true,
+					cmp = true,
+					mason = true,
+					dadbod_ui = true,
+					gitsigns = {
+						enabled = true,
+						transparent = false,
+					},
+					telescope = {
+						enabled = true,
+					},
+					native_lsp = {
+						enabled = true,
+						virtual_text = {
+							errors = {},
+							hints = {},
+							warnings = {},
+							information = {},
+							ok = {},
+						},
+						underlines = {
+							errors = {},
+							hints = {},
+							warnings = {},
+							information = {},
+							ok = {},
+						},
+						inlay_hints = {
+							background = true,
+						},
+					},
+				},
+			})
+			vim.cmd.colorscheme("catppuccin")
+		end,
+	},
 }
