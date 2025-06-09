@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Cursor AI
+Comment=App to show cursor information
+Exec= /opt/cursor.appimage
+Icon=/home/thebhuvnesh/.config/icons8-cursor-ai-256.png
+Type=Application
+Categories=Utility;
+

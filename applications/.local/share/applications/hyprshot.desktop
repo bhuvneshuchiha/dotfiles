@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Hyprshot R
+Comment=Take a screenshot of a selected region using Hyprshot
+Exec=hyprshot -m region
+Icon=applets-screenshooter
+Terminal=false
+Categories=Utility;Screenshot;
+StartupNotify=false
+

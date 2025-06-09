@@ -1,0 +1,24 @@
+# [Desktop Entry]
+# Name=Brave(Wayland)
+# Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+# device-scale-factor=1.5 --parameter=--force-text-direction=ltr %U
+#
+# # Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland --force-device-scale-factor=1.5 --parameter=--force-text-direction=ltr %U
+# # Exec=brave --force-device-scale-factor=1.6  %U
+# Type=Application
+# Terminal=false
+# Icon=/usr/share/icons/hicolor/256x256/apps/brave-desktop.png
+# Categories=Network;WebBrowser;
+
+
+[Desktop Entry]
+Name=Brave (Wayland)
+Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland --force-device-scale-factor=1.5 --force-text-direction=ltr %U
+# Exec=brave --enable-features=UseOzonePlatform --ozone-platform=wayland --high-dpi-support=1 --force-device-scale-factor=1.6 %U
+Type=Application
+Terminal=false
+Icon=/usr/share/icons/hicolor/256x256/apps/brave-desktop.png
+Categories=Network;WebBrowser;
+
+
+

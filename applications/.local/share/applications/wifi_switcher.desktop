@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WiFi Switcher
+Comment=Switch between WiFi networks
+Exec=/home/thebhuvnesh/.local/scripts/wifi_switch.sh
+Icon=network-wireless
+Terminal=false
+Categories=Network;Utility;
+

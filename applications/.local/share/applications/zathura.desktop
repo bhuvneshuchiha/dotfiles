@@ -1,0 +1,21 @@
+[Desktop Entry]
+Exec=zathura
+MimeType=application/pdf;
+Name=zathura
+NoDisplay=true
+Type=Application
+#
+#
+# [Desktop Entry]
+# Version=1.0
+# Name=Zathura
+# Comment=View PDF files
+# Exec=zathura %f
+# Icon=zathura
+# Terminal=false
+# Type=Application
+# Categories=Utility;TextEditor;Viewer;
+# MimeType=application/pdf;
+# NoDisplay=false
+# StartupNotify=true
+#
