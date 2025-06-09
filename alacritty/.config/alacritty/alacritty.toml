@@ -2,9 +2,9 @@
 # defaults write org.alacritty AppleFontSmoothing -int 0
 
 [general] # Go to line 41 and comment out the background color
-# import = [
-#    "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
-# ]
+import = [
+# "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+]
 
 [env]
 # TERM="xterm-256color"
