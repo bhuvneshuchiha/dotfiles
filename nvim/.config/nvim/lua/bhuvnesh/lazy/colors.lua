@@ -5,8 +5,8 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	-- color = color or "tokyonight"
-	color = color or "catppuccin-mocha"
+	color = color or "tokyonight"
+	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
