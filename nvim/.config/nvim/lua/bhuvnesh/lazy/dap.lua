@@ -81,9 +81,7 @@
 -- end,
 -- }
 
-
-
- --THIS WAS THE PRIMEAGEN DAP SETUP
+--THIS WAS THE PRIMEAGEN DAP SETUP
 
 vim.api.nvim_create_augroup("DapGroup", { clear = true })
 

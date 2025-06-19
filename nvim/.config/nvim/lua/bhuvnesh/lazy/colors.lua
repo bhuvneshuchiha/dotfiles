@@ -204,7 +204,8 @@ return {
 					-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
 					-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
 					-- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
-					String = { fg = "#E2C489" }, -- yellowish string color from Vague
+					-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
+					String = { fg = "#f5cb96" }, -- yellowish string color from Vague
 					["@field"] = { fg = "#B4D4CF" }, -- keys
 					["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 					["@tag"] = { fg = "#B4D4CF" }, -- tags
