@@ -25,6 +25,8 @@ vim.keymap.set("n", "<leader>ff", function()
 	require("conform").format({ bufnr = 0 })
 end)
 
+
+
 -- 2. Conform formatting to store cursor position.
 -- vim.keymap.set("n", "<leader>ft", function()
 -- 	local pos = vim.api.nvim_win_get_cursor(0) -- {line, col}
@@ -83,6 +85,8 @@ vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("err
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<M-h>", "<cmd>silent !tmux-sessionizer -s 0 --vsplit<CR>")
+vim.keymap.set("n", "<M-H>", "<cmd>silent !tmux neww tmux-sessionizer -s 0<CR>")
 -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
