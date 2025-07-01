@@ -4,7 +4,8 @@
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
-        "pulseaudio",
+        // "pulseaudio",
+        "pipewire",
         "backlight",
         "battery",
         "network",
