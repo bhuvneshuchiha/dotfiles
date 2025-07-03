@@ -135,6 +135,7 @@ alias cd="z"
 # alias python='python3'
 # alias pip='pip3'
 # eval "$(starship init zsh)"
+bindkey -s "^G" "opencode\n"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
