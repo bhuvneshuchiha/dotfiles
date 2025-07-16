@@ -1,11 +1,11 @@
 function ColorMyPencils(color)
-	-- color = color or "rose-pine-moon"
+	color = color or "rose-pine-moon"
 	-- color = color or "ash"
 	-- color = color or "oldworld"
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight"
+	-- color = color or "tokyonight"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
@@ -206,7 +206,7 @@ return {
 					-- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
 					-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
 					String = { fg = "#f5cb96" }, -- yellowish string color from Vague
-					["@field"] = { fg = "#B4D4CF" }, -- keys
+					["@field"] = { fg = "#B4D4CF" }, -- keyscolor
 					["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 					["@tag"] = { fg = "#B4D4CF" }, -- tags
 					["@type"] = { fg = "#B4D4CF" }, -- types

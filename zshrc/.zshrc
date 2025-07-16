@@ -3,6 +3,10 @@
 
 export PATH=/usr/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
+export PATH="$HOME/.bun/bin:$PATH"
+export EDITOR="nvim"
+
+
 PATH="$PATH":"$HOME/.local/scripts/"
 GOPATH=$HOME/go
 PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
@@ -124,6 +128,10 @@ setopt hist_verify
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+# Add this to your ~/.zshrc
+# bindkey -s '^G' 'ai_beast\n'
+bindkey -s '^G' 'opencode\n'
+
 
 # ---- Eza (better ls) -----
 
@@ -141,3 +149,10 @@ alias pip='pip3'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export DEBUG_TYPE=pretty
+
+# bun completions
+[ -s "/Users/bhuvnesh/.bun/_bun" ] && source "/Users/bhuvnesh/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
