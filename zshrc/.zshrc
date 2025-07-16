@@ -4,6 +4,7 @@
 export PATH=/usr/bin:$PATH
 # export ZSH=$HOME/.oh-my-zsh
 PATH="$PATH":"$HOME/.local/scripts/"
+export EDITOR="nvim"
 # GOPATH=$HOME/go
 # PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
