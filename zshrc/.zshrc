@@ -2,6 +2,7 @@
 # Path to your oh-my-zsh installation.
 
 export PATH=/usr/bin:$PATH
+export PATH="$HOME/.local/scripts:$PATH"
 # export ZSH=$HOME/.oh-my-zsh
 PATH="$PATH":"$HOME/.local/scripts/"
 export EDITOR="nvim"
