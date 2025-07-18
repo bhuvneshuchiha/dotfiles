@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Nautilus (Hyprland)
+Comment=Access and organize files
+Exec=nautilus --no-desktop --new-window %U
+Icon=org.gnome.Nautilus
+Terminal=false
+Type=Application
+Categories=GTK;Utility;Core;FileManager;
+StartupNotify=true
+MimeType=inode/directory;
+
