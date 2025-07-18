@@ -1,10 +1,13 @@
 # you come from bash you might have to change your $PATH.
 # Path to your oh-my-zsh installation.
 
-export PATH=/usr/bin:$PATH
-export PATH="$HOME/.local/scripts:$PATH"
-# export ZSH=$HOME/.oh-my-zsh
-PATH="$PATH":"$HOME/.local/scripts/"
+# export PATH=/usr/bin:$PATH
+# export PATH="$HOME/.local/scripts:$PATH"
+# # export ZSH=$HOME/.oh-my-zsh
+# PATH="$PATH":"$HOME/.local/scripts/"
+if [[ ":$PATH:" != *":$HOME/.local/scripts:"* ]]; then
+  export PATH="$HOME/.local/scripts:$PATH"
+fi
 export EDITOR="nvim"
 # GOPATH=$HOME/go
 # PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
@@ -16,8 +19,6 @@ export EDITOR="nvim"
 # Uncomment this if you need to create a virtual env with a new python version.
 # export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
 
-alias vim="nvim"
-bindkey -s ^f "tmux-sessionizer\n"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -127,10 +128,12 @@ setopt hist_verify
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
 alias ls="eza --icons=always"
+alias vim="nvim"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
