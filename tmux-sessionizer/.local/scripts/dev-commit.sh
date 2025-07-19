@@ -42,14 +42,16 @@ for dir in "${REPOS[@]}"; do
   fi
 
   # Check if there's anything to commit
-  if git status --porcelain | grep . > /dev/null; then
-    git add .
-    git commit -m "$COMMIT_MESSAGE"
-    git push origin master
-    echo "[DONE] Changes pushed in $dir"
-  else
-    echo "[SKIP] No changes to commit in $dir"
-  fi
+if git status --porcelain | grep . > /dev/null; then
+  git add .
+  git commit -m "$COMMIT_MESSAGE"
+  current_branch=$(git symbolic-ref --short HEAD)
+  git push origin "$current_branch"
+  echo "[DONE] Changes pushed in $dir"
+else
+  echo "[SKIP] No changes to commit in $dir"
+fi
+
 
   popd > /dev/null
 done
