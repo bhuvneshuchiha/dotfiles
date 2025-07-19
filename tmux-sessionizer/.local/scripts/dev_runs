@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+sudo pacman -S zsh
+hash -r
+sudo chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo pacman -S --noconfirm --needed tmux
+yay -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm
+go install github.com/air-verse/air@latest
+yay -S love --noconfirm --needed
+yay -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm --needed
+yay -S hyprlock --noconfirm --needed
+yay -S ghostty --noconfirm --needed
+yay -s hyprpaper hyprshot --noconfirm --needed
+yay -Syu wlogout-git --noconfirm --needed
+yay -S --noconfirm --needed opencode-bin
+
+yay -S ffmpeg aalib ascii-image-converter-bin --noconfirm
