@@ -4,7 +4,9 @@ sudo pacman -S zsh
 hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sudo pacman -S --noconfirm --needed tmux
+sudo pacman -S tmux --noconfirm --needed
+sudo pacman -S zoxide --noconfirm --needed
+sudo pacman -S kitty --noconfirm --needed
 sudo pacman -S nautilus --noconfirm --needed
 sudo pacman -S libreoffice-fresh --noconfirm --needed
 yay -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm

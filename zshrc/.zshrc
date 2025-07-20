@@ -137,6 +137,7 @@ alias vim="nvim"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
+alias kitt="kitten icat"
 # alias python='python3'
 # alias pip='pip3'
 # eval "$(starship init zsh)"
