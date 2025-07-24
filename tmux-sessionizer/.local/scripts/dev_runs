@@ -5,11 +5,12 @@ hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S tmux --noconfirm --needed
+sudo pacman -S pavucontrol --noconfirm --needed
 sudo pacman -S zoxide --noconfirm --needed
 sudo pacman -S kitty --noconfirm --needed
 sudo pacman -S nautilus --noconfirm --needed
 sudo pacman -S libreoffice-fresh --noconfirm --needed
-yay -S --noconfirm --needed gimp tldr go fzf rofi-wayland btop bc stylua node npm
+yay -S gimp tldr go fzf rofi-wayland btop bc stylua node npm --noconfirm --needed
 go install github.com/air-verse/air@latest
 yay -S love --noconfirm --needed
 yay -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm --needed
