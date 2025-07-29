@@ -62,3 +62,6 @@ EOF
 
 echo "Configuration written to ~/.config/environment.d/qt6ct.conf"
 echo "Reboot your system or re-login for the changes to take effect."
+
+git config --global init.defaultBranch master
+
