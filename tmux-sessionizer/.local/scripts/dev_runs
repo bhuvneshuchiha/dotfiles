@@ -39,6 +39,9 @@ yay -Syu wlogout-git --noconfirm --needed
 yay -S --noconfirm --needed opencode-bin
 yay -S nwg-look --noconfirm --needed
 yay -S yt-dlp --noconfirm --needed
+yay -S zen-browser --noconfirm --needed
+yay -S brave-bin --noconfirm --needed
+
 
 sudo pacman -S breeze breeze-icons --noconfirm --needed
 yay -S sweet-gtk-theme sweet-kde-theme --noconfirm --needed

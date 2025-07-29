@@ -64,13 +64,6 @@ fi
 
 echo "Installing AUR packages with yay..."
 
-yay -S --noconfirm \
-
-  brave-bin \
-
-  ghostty-git \
-
-  zenity
 
 echo "Configuring Git globally..."
 
