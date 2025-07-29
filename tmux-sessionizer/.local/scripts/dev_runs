@@ -5,6 +5,7 @@ hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S tmux --noconfirm --needed
+sudo pacman -S archlinux-xdg-menu
 sudo pacman -S pavucontrol --noconfirm --needed
 sudo pacman -S zoxide --noconfirm --needed
 sudo pacman -S kitty --noconfirm --needed
