@@ -36,7 +36,7 @@ window {
     border-radius:               0px;
     border-color:                @selected;
 // when you want to use the default use below
-    // background-color:            @background;
+    background-color:            @background;
     // just for the f1 background use below
     // background-color:            #37014066;
 // when you want to use the complete transparent use below
