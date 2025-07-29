@@ -5,13 +5,29 @@ hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S tmux --noconfirm --needed
-sudo pacman -S archlinux-xdg-menu
-sudo pacman -S qt6ct kvantum-theme-materia
+sudo pacman -S archlinux-xdg-menu --noconfirm --needed
+sudo pacman -S git --noconfirm --needed
+sudo pacman -S qt6ct kvantum-theme-materia --noconfirm --needed
 sudo pacman -S pavucontrol --noconfirm --needed
 sudo pacman -S zoxide --noconfirm --needed
 sudo pacman -S kitty --noconfirm --needed
 sudo pacman -S nautilus --noconfirm --needed
 sudo pacman -S libreoffice-fresh --noconfirm --needed
+
+sudo pacman -S go --noconfirm --needed
+mkdir -p ~/go/{bin,src,pkg}
+echo 'export GOPATH=$HOME/go' >> ~/.zshrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
+source ~/.zshrc
+
+sudo pacman -S python python-pip --noconfirm --needed
+
+
+if ! command -v yay &>/dev/null; then
+  echo "yay not found. Please install it first."
+  exit 1
+fi
+
 yay -S gimp tldr go fzf rofi-wayland btop bc stylua node npm --noconfirm --needed
 go install github.com/air-verse/air@latest
 yay -S love --noconfirm --needed
@@ -33,6 +49,7 @@ yay -S papirus-icon-theme --noconfirm --needed
 #can apply those themes by running "qt6ct" in terminal
 
 yay -S ffmpeg aalib ascii-image-converter-bin --noconfirm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # for dolphin theme setting
 echo "Setting QT_QPA_PLATFORMTHEME=qt6ct for Wayland sessions..."
