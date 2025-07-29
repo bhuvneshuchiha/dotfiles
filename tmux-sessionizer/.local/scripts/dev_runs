@@ -6,6 +6,7 @@ sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S tmux --noconfirm --needed
 sudo pacman -S archlinux-xdg-menu
+sudo pacman -S qt6ct kvantum-theme-materia
 sudo pacman -S pavucontrol --noconfirm --needed
 sudo pacman -S zoxide --noconfirm --needed
 sudo pacman -S kitty --noconfirm --needed
@@ -23,4 +24,24 @@ yay -S --noconfirm --needed opencode-bin
 yay -S nwg-look --noconfirm --needed
 yay -S yt-dlp --noconfirm --needed
 
+sudo pacman -S breeze breeze-icons --noconfirm --needed
+yay -S sweet-gtk-theme sweet-kde-theme --noconfirm --needed
+yay -S orchis-kde-theme --noconfirm --needed
+yay -S tela-icon-theme --noconfirm --needed
+yay -S papirus-icon-theme --noconfirm --needed
+
+#can apply those themes by running "qt6ct" in terminal
+
 yay -S ffmpeg aalib ascii-image-converter-bin --noconfirm
+
+# for dolphin theme setting
+echo "Setting QT_QPA_PLATFORMTHEME=qt6ct for Wayland sessions..."
+
+mkdir -p ~/.config/environment.d
+
+cat <<EOF > ~/.config/environment.d/qt6ct.conf
+QT_QPA_PLATFORMTHEME=qt6ct
+EOF
+
+echo "Configuration written to ~/.config/environment.d/qt6ct.conf"
+echo "Reboot your system or re-login for the changes to take effect."
