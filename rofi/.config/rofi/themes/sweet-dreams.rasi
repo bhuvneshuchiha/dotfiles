@@ -1,0 +1,260 @@
+/* Sweet Dreams - A beautiful rofi-wayland theme for Hyprland */
+
+* {
+    /* Color Palette - Sweet pastels with dark mode vibes */
+    bg-primary:     #1a1b26;
+    bg-secondary:   #24283b;
+    bg-selected:    #414868;
+    bg-urgent:      #f7768e;
+
+    text-primary:   #c0caf5;
+    text-secondary: #9aa5ce;
+    text-selected:  #ffffff;
+    text-urgent:    #ffffff;
+
+    accent:         #bb9af7;
+    accent-alt:     #7aa2f7;
+    success:        #9ece6a;
+    warning:        #e0af68;
+    error:          #f7768e;
+
+    /* Typography */
+    font-family:    "JetBrains Mono Nerd Font";
+    font-size:      14px;
+    // font-weight:    normal;
+
+    /* Borders and Radius */
+    border-radius:  12px;
+    border-width:   2px;
+    border-color:   @accent;
+
+    /* Spacing */
+    margin:         0px;
+    padding:        0px;
+    spacing:        8px;
+}
+
+window {
+    transparency:         "real";
+    location:            center;
+    anchor:              center;
+    fullscreen:          false;
+    width:               600px;
+    x-offset:            0px;
+    y-offset:            0px;
+
+    /* Styling */
+    // background-color:    @bg-primary;
+    background-color: argb:80000000;
+    border:              2px solid;
+    border-color:        @accent;
+    border-radius:       @border-radius;
+
+    /* Animation */
+    animation:           "slideIn";
+}
+
+mainbox {
+    background-color:    transparent;
+    spacing:            0px;
+    padding:            20px;
+    children:           [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    background-color:    @bg-secondary;
+    text-color:         @text-primary;
+    padding:            16px 20px;
+    border-radius:      @border-radius;
+    margin:             0px 0px 16px 0px;
+    border:             1px solid;
+    border-color:       @bg-selected;
+    children:           [ "prompt", "textbox-prompt-colon", "entry", "case-indicator" ];
+}
+
+prompt {
+    background-color:    transparent;
+    text-color:         @accent;
+    font-weight:        bold;
+    padding:            0px 8px 0px 0px;
+}
+
+textbox-prompt-colon {
+    expand:             false;
+    str:                "➤";
+    background-color:    transparent;
+    text-color:         @accent;
+    padding:            0px 8px 0px 0px;
+}
+
+entry {
+    background-color:    transparent;
+    text-color:         @text-primary;
+    placeholder-color:   @text-secondary;
+    expand:             true;
+    horizontal-align:    0;
+    placeholder:        "Search...";
+    cursor:             text;
+}
+
+case-indicator {
+    background-color:    transparent;
+    text-color:         @accent-alt;
+    spacing:            0;
+}
+
+listview {
+    background-color:    transparent;
+    padding:            0px;
+    columns:            1;
+    lines:              8;
+    spacing:            6px;
+    cycle:              true;
+    dynamic:            true;
+    scrollbar:          false;
+    layout:             vertical;
+    reverse:            false;
+    fixed-height:       true;
+}
+
+element {
+    background-color:    @bg-secondary;
+    text-color:         @text-primary;
+    orientation:        horizontal;
+    border-radius:      8px;
+    padding:            12px 16px;
+    margin:             0px;
+}
+
+element normal.normal {
+    background-color:    @bg-secondary;
+    text-color:         @text-primary;
+}
+
+element normal.urgent {
+    background-color:    @bg-urgent;
+    text-color:         @text-urgent;
+}
+
+element normal.active {
+    background-color:    @accent-alt;
+    text-color:         @text-selected;
+}
+
+element selected.normal {
+    background-color:    @bg-selected;
+    text-color:         @text-selected;
+    border-color:       @accent;
+}
+
+element selected.urgent {
+    background-color:    @error;
+    text-color:         @text-urgent;
+    border-color:       @error;
+}
+
+element selected.active {
+    background-color:    @success;
+    text-color:         @text-selected;
+    border-color:       @success;
+}
+
+element-icon {
+    background-color:    transparent;
+    text-color:         inherit;
+    size:               24px;
+    cursor:             inherit;
+    margin:             0px 12px 0px 0px;
+}
+
+element-text {
+    background-color:    transparent;
+    text-color:         inherit;
+    cursor:             inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+    expand:             true;
+}
+
+message {
+    background-color:    @bg-secondary;
+    border:             1px solid;
+    border-color:       @accent-alt;
+    border-radius:      8px;
+    padding:            12px;
+    margin:             0px 0px 16px 0px;
+}
+
+textbox {
+    background-color:    transparent;
+    text-color:         @text-primary;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+error-message {
+    background-color:    @error;
+    text-color:         @text-urgent;
+    border-radius:      8px;
+    padding:            12px;
+}
+
+/* Mode Switcher */
+mode-switcher {
+    spacing:            0px;
+    background-color:    transparent;
+    margin:             16px 0px 0px 0px;
+}
+
+button {
+    background-color:    @bg-secondary;
+    text-color:         @text-secondary;
+    border:             1px solid;
+    border-color:       @bg-selected;
+    border-radius:      6px;
+    padding:            8px 16px;
+    margin:             0px 4px;
+}
+
+button selected {
+    background-color:    @accent;
+    text-color:         @text-selected;
+    border-color:       @accent;
+    font-weight:        bold;
+}
+
+/* Scrollbar */
+scrollbar {
+    width:              6px;
+    border:             0;
+    handle-color:       @accent;
+    handle-width:       6px;
+    padding:            0;
+    margin:             0px 4px 0px 0px;
+    background-color:   @bg-secondary;
+    border-radius:      3px;
+}
+
+
+/* Vim keybinding indicators */
+vi-mode {
+    background-color: @accent;
+    color: @text-selected;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0px 0px 0px 8px;
+}
+
+
+/* Responsive design for different screen sizes */
+@media (max-width: 800px) {
+    window {
+        width: 30%;
+    }
+
+    listview {
+        lines: 8;
+    }
+}
+
