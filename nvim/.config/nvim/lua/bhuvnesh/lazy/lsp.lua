@@ -162,7 +162,6 @@ return {
 			cmp_lsp.default_capabilities()
 		)
 
-
 		require("fidget").setup({})
 		require("mason").setup()
 		require("mason-lspconfig").setup({
@@ -170,7 +169,7 @@ return {
 				"lua_ls",
 				"ts_ls",
 				"gopls",
-                "pyright"
+				-- "pyright"
 			},
 
 			handlers = {
@@ -194,6 +193,67 @@ return {
 					})
 					vim.g.zig_fmt_parse_errors = 0
 					vim.g.zig_fmt_autosave = 0
+				end,
+				["ruff"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.ruff.setup({
+						init_options = {
+							settings = {
+								args = {}, -- optional args like "--line-length=100"
+							},
+						},
+					})
+				end,
+				["pyright"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.pyright.setup({
+						capabilities = capabilities,
+						-- settings = {
+						-- 	python = {
+						-- 		analysis = {
+						-- 			typeCheckingMode = "off", -- Turn off type checking
+						-- 			diagnosticSeverityOverrides = {
+						-- 				reportGeneralTypeIssues = "none",
+						-- 				reportOptionalSubscript = "none",
+						-- 				reportOptionalMemberAccess = "none",
+						-- 				reportPrivateImportUsage = "none",
+						-- 				reportUndefinedVariable = "none",
+						-- 				reportUnusedImport = "none",
+						-- 				reportUnusedVariable = "none",
+						-- 			},
+						-- 		},
+						-- 	},
+						-- },
+					})
+				end,
+				["pylsp"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.pylsp.setup({
+						capabilities = capabilities,
+						settings = {
+							pylsp = {
+								plugins = {
+									pycodestyle = { enabled = false },
+									pyflakes = { enabled = false },
+									mccabe = { enabled = false },
+									pylint = { enabled = false },
+									autopep8 = { enabled = false },
+									yapf = { enabled = false },
+									isort = { enabled = false },
+									black = { enabled = false },
+									pyls_isort = { enabled = false },
+								},
+							},
+						},
+						handlers = {
+							["textDocument/publishDiagnostics"] = vim.lsp.with(
+								vim.lsp.diagnostic.on_publish_diagnostics,
+								{
+									severity_limit = "Error",
+								}
+							),
+						},
+					})
 				end,
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
@@ -249,8 +309,8 @@ return {
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
-			-- underline = false,
-             -- virtual_text = true,
+			underline = false,
+			-- virtual_text = true,
 			float = {
 				focusable = false,
 				style = "minimal",
