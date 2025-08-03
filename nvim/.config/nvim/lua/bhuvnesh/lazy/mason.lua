@@ -27,12 +27,13 @@ return {
                 "ts_ls",
                 "gopls",
                 "pyright",
+                "stylua",
+                "lua_ls",
                 -- "html",
                 -- "cssls",
                 -- "clangd",
                 -- "tailwindcss",
                 -- "svelte",
-                "lua_ls",
                 -- "ruff",
                 -- "jdtls",
                 -- "pylsp",
@@ -45,7 +46,7 @@ return {
         mason_tool_installer.setup({
             ensure_installed = {
                 -- "prettier", -- prettier formatter
-                -- "stylua",   -- lua formatter
+                "stylua",   -- lua formatter
                 -- "isort",    -- python formatter
                 -- "pyright",
                 -- "black",    -- python formatter
