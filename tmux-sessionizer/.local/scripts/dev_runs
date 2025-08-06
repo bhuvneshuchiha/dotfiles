@@ -5,6 +5,7 @@ hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S tmux --noconfirm --needed
+sudo pacman -S jq imagemagick --noconfirm --needed
 sudo pacman -S archlinux-xdg-menu --noconfirm --needed
 sudo pacman -S git --noconfirm --needed
 sudo pacman -S qt6ct kvantum-theme-materia --noconfirm --needed
