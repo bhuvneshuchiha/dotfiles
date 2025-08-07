@@ -154,4 +154,6 @@ configuration {
 
 
 
-@theme "~/.config/rofi/themes/sweet-dreams.rasi"
+// @theme "~/.config/rofi/themes/sweet-dreams.rasi"
+@theme "~/.config/rofi/themes/unixporn.rasi"
+// @theme "~/.config/rofi/themes/style-10.rasi"
