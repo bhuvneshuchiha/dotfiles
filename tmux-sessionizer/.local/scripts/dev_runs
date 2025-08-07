@@ -4,6 +4,7 @@ sudo pacman -S zsh
 hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo pacman -S base-devel git make --noconfirm --needed
 sudo pacman -S tmux --noconfirm --needed
 sudo pacman -S jq imagemagick --noconfirm --needed
 sudo pacman -S archlinux-xdg-menu --noconfirm --needed
@@ -32,6 +33,7 @@ fi
 yay -S gimp tldr go fzf rofi-wayland btop bc stylua node npm --noconfirm --needed
 go install github.com/air-verse/air@latest
 yay -S love --noconfirm --needed
+yay -S sddm-theme-sugar-candy --noconfirm --needed
 yay -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm --needed
 yay -S hyprlock --noconfirm --needed
 yay -S ghostty --noconfirm --needed
