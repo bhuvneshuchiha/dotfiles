@@ -33,6 +33,7 @@ fi
 yay -S gimp tldr go fzf rofi-wayland btop bc stylua node npm --noconfirm --needed
 go install github.com/air-verse/air@latest
 yay -S love --noconfirm --needed
+yay -S waypaper --noconfirm --needed
 yay -S sddm-theme-sugar-candy --noconfirm --needed
 yay -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm --needed
 yay -S hyprlock --noconfirm --needed
