@@ -21,8 +21,10 @@ window {
   location:                    center;
   anchor:                      center;
   fullscreen:                  false;
-  width:                       50%;
-  height:                      70%;
+  // width:                       50%;
+  // height:                      70%;
+  width:                       30%;
+  height:                      50%;
   x-offset:                    0px;
   y-offset:                    0px;
 
@@ -33,7 +35,9 @@ window {
   border-radius:               30px;
   border-color:                @alternate-normal-background;
   cursor:                      "default";
-  background-color:            rgba(30, 30, 46, 0.7);
+  // background-color:            rgba(30, 30, 46, 0.7);
+  background-color: rgba(10, 10, 10, 0.95);
+
 }
 
 /*****----- Main Box -----*****/
@@ -75,7 +79,7 @@ textbox-prompt-colon {
 entry {
   enabled:                     true;
   expand:                      false;
-  width:                       300px;
+  width:                       230px; // this is from where you can control the input box width(default=100)
   padding:                     12px 16px;
   border-radius:               100%;
   background-color:            @alternate-normal-background;
