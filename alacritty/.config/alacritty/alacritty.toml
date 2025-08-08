@@ -2,10 +2,10 @@
 # defaults write org.alacritty AppleFontSmoothing -int 0
 
 [general]
-# import = [
-#    # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
-#    "~/.config/alacritty/themes/colors.toml"
-# ]
+import = [
+   # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+   # "~/.config/alacritty/themes/colors2.toml"
+]
 
 [env]
 # TERM="xterm-256color"
