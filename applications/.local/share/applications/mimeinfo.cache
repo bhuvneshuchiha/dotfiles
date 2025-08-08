@@ -1,2 +1,8 @@
 [MIME Cache]
+image/bmp=wallpaper_selector.desktop;
+image/jpeg=wallpaper_selector.desktop;
+image/png=wallpaper_selector.desktop;
+image/tiff=wallpaper_selector.desktop;
+image/webp=wallpaper_selector.desktop;
 inode/directory=org.kde.dolphin.desktop;
+x-content/unix-software=nautilus-autorun-software.desktop;
