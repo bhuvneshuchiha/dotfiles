@@ -3,7 +3,8 @@
 
 [general]
 # import = [
-#    "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+#    # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+#    "~/.config/alacritty/themes/colors.toml"
 # ]
 
 [env]
@@ -33,7 +34,7 @@ blinking = "Never"
 # normal.family = "JetBrains Mono"
 normal.family = "JetBrainsMono Nerd Font"
 # regular
-size = 14
+size = 20
 
 [colors.primary]
 # background = '#0c0c0c'

@@ -64,8 +64,8 @@ return {
 					hl.ErrorMsg = { fg = colors.red, bold = true }
 				end,
 
-				style = "storm",
-				transparent = false,
+				style = "night",
+				transparent = true,
 				terminal_colors = true,
 				styles = {
 					comments = { italic = false },
