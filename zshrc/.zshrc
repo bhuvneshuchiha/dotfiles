@@ -1,5 +1,16 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
 # you come from bash you might have to change your $PATH.
 # Path to your oh-my-zsh installation.
+
+# autoload -Uz colors && colors # load colors
+# #PROMPT="%F{green}%n@%m %F{blue}%~ %F{magenta}$ %f"
+# PROMPT="%F%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 export PATH=/usr/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
@@ -18,8 +29,6 @@ PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Uncomment this if you need to create a virtual env with a new python version.
 # export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
 
-alias vim="nvim"
-bindkey -s ^f "tmux-sessionizer\n"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -131,6 +140,7 @@ bindkey '^[[B' history-search-forward
 # Add this to your ~/.zshrc
 # bindkey -s '^G' 'ai_beast\n'
 bindkey -s '^G' 'opencode\n'
+bindkey -s ^f "tmux-sessionizer\n"
 
 
 # ---- Eza (better ls) -----
@@ -142,7 +152,8 @@ alias cd="z"
 alias python='python3'
 alias pip='pip3'
 alias kitt='kitten icat'
-# eval "$(starship init zsh)"
+alias vim="nvim"
+eval "$(starship init zsh)"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -157,3 +168,7 @@ export DEBUG_TYPE=pretty
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
