@@ -66,7 +66,7 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- 1. Basic conform formatting.
-vim.keymap.set("n", "<leader>ff", function()
+vim.keymap.set("n", "<leader>ft", function()
 	require("conform").format({ bufnr = 0 })
 end)
 
