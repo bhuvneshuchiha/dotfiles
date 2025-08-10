@@ -24,7 +24,7 @@ window {
   // width:                       50%;
   // height:                      70%;
   width:                       30%;
-  height:                      35%;
+  height:                      40%;
   x-offset:                    0px;
   y-offset:                    0px;
 
@@ -33,7 +33,9 @@ window {
   margin:                      0px;
   padding:                     0px;
   border-radius:               30px;
-  border-color:                @alternate-normal-background;
+  // border-color:                @alternate-normal-background;
+  border :                     2px; // just to have that visible border
+  border-color:                #a7c080;
   cursor:                      "default";
   // background-color:            rgba(30, 30, 46, 0.7);
   background-color: rgba(10, 10, 10, 0.95);
@@ -84,6 +86,8 @@ entry {
   padding:                     12px 16px;
   border-radius:               100%;
   background-color:            @alternate-normal-background;
+  // border-color:                #a7c080; // to have that green color around input
+  // border :                     2px; // just to have that border visible
   text-color:                  inherit;
   cursor:                      text;
   placeholder:                 "Search";
