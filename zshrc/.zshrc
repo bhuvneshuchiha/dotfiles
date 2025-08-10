@@ -153,7 +153,7 @@ alias python='python3'
 alias pip='pip3'
 alias kitt='kitten icat'
 alias vim="nvim"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
