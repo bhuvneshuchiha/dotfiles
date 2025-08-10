@@ -77,8 +77,8 @@ return {
 		vim.keymap.set("n", "<C-S-N>", function()
 			harpoon:list():next()
 		end)
-		vim.keymap.set("n", "<leader>hl", function()
-			toggle_telescope(harpoon:list())
-		end, { desc = "Harpoon List" })
+		-- vim.keymap.set("n", "<leader><leader>", function()
+		-- 	toggle_telescope(harpoon:list())
+		-- end, { desc = "Harpoon List" })
 	end,
 }
