@@ -6,6 +6,7 @@ sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo pacman -S base-devel git make --noconfirm --needed
 sudo pacman -S tmux --noconfirm --needed
+sudo pacman -S github-cli --noconfirm --needed
 sudo pacman -S stow --noconfirm --needed
 sudo pacman -S flameshot --noconfirm --needed
 sudo pacman -S jq imagemagick --noconfirm --needed
