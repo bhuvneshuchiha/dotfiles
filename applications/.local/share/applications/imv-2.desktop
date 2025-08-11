@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=imv
+MimeType=image/png;
+Name=imv
+NoDisplay=true
+Type=Application
