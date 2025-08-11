@@ -35,7 +35,8 @@ window {
   border-radius:               30px;
   // border-color:                @alternate-normal-background;
   border :                     2px; // just to have that visible border
-  border-color:                #a7c080;
+  // border-color:                #a7c080;
+  border-color:                #00ff99;
   cursor:                      "default";
   // background-color:            rgba(30, 30, 46, 0.7);
   background-color: rgba(10, 10, 10, 0.95);
