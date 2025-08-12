@@ -40,6 +40,7 @@ fi
 
 yay -S gimp tldr go fzf rofi-wayland btop bc stylua node npm --noconfirm --needed
 go install github.com/air-verse/air@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
 yay -S love --noconfirm --needed
 yay -S waypaper --noconfirm --needed
 yay -S sddm-theme-sugar-candy --noconfirm --needed
