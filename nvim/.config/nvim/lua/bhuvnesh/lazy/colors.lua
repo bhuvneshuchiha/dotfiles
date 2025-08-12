@@ -88,29 +88,29 @@ return {
 					italic = false,
 				},
 				highlight_groups = {
-					-- String = { fg = "#d6bd8b" },    -- yellowish string color from Vague
-					-- String = { fg = "#f5cb96" }, -- yellowish string color from Vague
+					-- -- String = { fg = "#d6bd8b" },    -- yellowish string color from Vague
+					-- -- String = { fg = "#f5cb96" }, -- yellowish string color from Vague
 					String = { fg = "#e8b589" }, -- yellowish string color from Vague
-					["@field"] = { fg = "#B4D4CF" }, -- keys
-					["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
-					["@tag"] = { fg = "#B4D4CF" }, -- tags
-					-- ["@type"] = { fg = "#B4D4CF" }, -- types
-					["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
-
-					-- Your added colors
-					-- Keyword = { fg = "#6e94b2" }, -- keyword (e.g., if, return)
-					-- ["@keyword"] = { fg = "#6e94b2" }, -- Tree-sitter keyword group
-					-- ["@keyword.function"] = { fg = "#6e94b2" },
-					-- ["@keyword.return"] = { fg = "#6e94b2" },
-
-					["@keyword"] = { fg = "#6e94b2" }, -- all keywords fallback
-					["@keyword.function"] = { fg = "#6e94b2" }, -- function
-					["@keyword.return"] = { fg = "#6e94b2" }, -- return
-					["@keyword.conditional"] = { fg = "#6e94b2" }, -- if, then, else
-
-					Type = { fg = "#9bb4bc" }, -- type (e.g., int, string)
-					["@type"] = { fg = "#9bb4bc" }, -- Tree-sitter type group
-					Builtin = { fg = "#b4d4cf" },
+					-- ["@field"] = { fg = "#B4D4CF" }, -- keys
+					-- ["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
+					-- ["@tag"] = { fg = "#B4D4CF" }, -- tags
+					-- -- ["@type"] = { fg = "#B4D4CF" }, -- types
+					-- ["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
+					--
+					-- -- Your added colors
+					-- -- Keyword = { fg = "#6e94b2" }, -- keyword (e.g., if, return)
+					-- -- ["@keyword"] = { fg = "#6e94b2" }, -- Tree-sitter keyword group
+					-- -- ["@keyword.function"] = { fg = "#6e94b2" },
+					-- -- ["@keyword.return"] = { fg = "#6e94b2" },
+					--
+					-- ["@keyword"] = { fg = "#6e94b2" }, -- all keywords fallback
+					-- ["@keyword.function"] = { fg = "#6e94b2" }, -- function
+					-- ["@keyword.return"] = { fg = "#6e94b2" }, -- return
+					-- ["@keyword.conditional"] = { fg = "#6e94b2" }, -- if, then, else
+					--
+					-- Type = { fg = "#9bb4bc" }, -- type (e.g., int, string)
+					-- ["@type"] = { fg = "#9bb4bc" }, -- Tree-sitter type group
+					-- Builtin = { fg = "#b4d4cf" },
 				},
 			})
 
