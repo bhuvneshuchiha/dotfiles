@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Impala WiFi Manager
+Comment=Python-based TUI for managing Wi-Fi on Linux
+Exec=alacritty -e /usr/bin/impala
+Terminal=false
+Type=Application
+Icon=network-wireless
+Categories=Network;Utility;
+
