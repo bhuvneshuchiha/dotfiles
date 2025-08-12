@@ -249,9 +249,6 @@ return {
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
-			severity = {
-				min = vim.diagnostic.severity.ERROR,
-			},
 			underline = false,
 			float = {
 				focusable = false,
