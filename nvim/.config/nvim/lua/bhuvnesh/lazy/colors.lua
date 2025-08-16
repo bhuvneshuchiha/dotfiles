@@ -1,11 +1,12 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine-moon"
+	-- color = color or "rose-pine-moon"
+	-- color = color or "vague"
 	-- color = color or "ash"
 	-- color = color or "oldworld"
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	-- color = color or "tokyonight"
+	color = color or "tokyonight"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
@@ -24,7 +25,18 @@ return {
 		end,
 	},
 
-	{
+	-- {
+	-- 	"vague2k/vague.nvim",
+	-- 	config = function()
+	-- 		require("vague").setup({
+	-- 			colors = {
+	-- 				bg = "#090B10",
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
+
+	-- {
 		-- "drewxs/ash.nvim",
 		-- lazy = false,
 		-- priority = 1000,
@@ -67,9 +79,9 @@ return {
 		--         },
 		--     })
 		-- end,
-	},
+	-- },
 
-	{
+	-- {
 		-- "dgox16/oldworld.nvim",
 		-- lazy = false,
 		-- priority = 1000,
@@ -108,56 +120,56 @@ return {
 		--
 		--     -- vim.cmd("colorscheme oldworld")
 		-- end,
-	},
+	-- },
 
-	{
-		"blazkowolf/gruber-darker.nvim",
-		lazy = false,
-		opts = {
-			bold = true,
-			invert = {
-				signs = false,
-				tabline = false,
-				visual = false,
-			},
-			italic = {
-				strings = false,
-				comments = false,
-				operators = false,
-				folds = false,
-			},
-			undercurl = false,
-			underline = false,
-		},
-		config = function(_, opts)
-			require("gruber-darker").setup(opts)
-		end,
-	},
+	-- {
+		-- "blazkowolf/gruber-darker.nvim",
+		-- lazy = false,
+		-- opts = {
+		-- 	bold = true,
+		-- 	invert = {
+		-- 		signs = false,
+		-- 		tabline = false,
+		-- 		visual = false,
+		-- 	},
+		-- 	italic = {
+		-- 		strings = false,
+		-- 		comments = false,
+		-- 		operators = false,
+		-- 		folds = false,
+		-- 	},
+		-- 	undercurl = false,
+		-- 	underline = false,
+		-- },
+		-- config = function(_, opts)
+		-- 	require("gruber-darker").setup(opts)
+		-- end,
+	-- },
 
-	{
-		"navarasu/onedark.nvim",
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			require("onedark").setup({
-				style = "darker",
-			})
-			-- Enable theme
-			require("onedark").load()
-		end,
-	},
+	-- {
+	-- 	"navarasu/onedark.nvim",
+	-- 	priority = 1000, -- make sure to load this before all the other start plugins
+	-- 	config = function()
+	-- 		require("onedark").setup({
+	-- 			style = "darker",
+	-- 		})
+	-- 		-- Enable theme
+	-- 		require("onedark").load()
+	-- 	end,
+	-- },
 
-	{
-		-- -- Disabled term gui colors in init.lua
-		"sainnhe/sonokai",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.g.sonokai_enable_italic = "0"
-			vim.g.sonokai_disable_italic_comment = 1
-			vim.g.sonokai_style = "andromeda" -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
-		end,
-	},
-
+	-- {
+	-- 	-- -- Disabled term gui colors in init.lua
+	-- 	"sainnhe/sonokai",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.g.sonokai_enable_italic = "0"
+	-- 		vim.g.sonokai_disable_italic_comment = 1
+	-- 		vim.g.sonokai_style = "andromeda" -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
+	-- 	end,
+	-- },
+	--
 	{
 		"folke/tokyonight.nvim",
 		config = function()
@@ -183,13 +195,13 @@ return {
 					comments = { italic = false },
 					keywords = { italic = false },
 					-- Background styles. Can be "dark", "transparent" or "normal"
-					sidebars = "transparent", -- style for sidebars, see below
-					floats = "transparent", -- style for floating windows
+					sidebars = "dark", -- style for sidebars, see below
+					floats = "dark", -- style for floating windows
 				},
 			})
 		end,
 	},
-
+	--
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -289,67 +301,67 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			local colors = require("catppuccin.palettes").get_palette("mocha")
-			require("catppuccin").setup({
-				flavour = "mocha",
-				styles = {
-					comments = {},
-					conditionals = {},
-					loops = {},
-					functions = {},
-					keywords = { "bold" },
-					strings = {},
-					variables = {},
-					numbers = {},
-					booleans = {},
-					properties = {},
-					types = {},
-					operators = {},
-				},
-				custom_highlights = {
-					-- StatusLine = { bg = colors.base, fg = colors.base },
-					-- StatusLineNC = { bg = colors.base, fg = colors.base },
-				},
-				integrations = {
-					treesitter = true,
-					cmp = true,
-					mason = true,
-					dadbod_ui = true,
-					gitsigns = {
-						enabled = true,
-						transparent = false,
-					},
-					telescope = {
-						enabled = true,
-					},
-					native_lsp = {
-						enabled = true,
-						virtual_text = {
-							errors = {},
-							hints = {},
-							warnings = {},
-							information = {},
-							ok = {},
-						},
-						underlines = {
-							errors = {},
-							hints = {},
-							warnings = {},
-							information = {},
-							ok = {},
-						},
-						inlay_hints = {
-							background = true,
-						},
-					},
-				},
-			})
-			vim.cmd.colorscheme("catppuccin")
-		end,
-	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		local colors = require("catppuccin.palettes").get_palette("mocha")
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "mocha",
+	-- 			styles = {
+	-- 				comments = {},
+	-- 				conditionals = {},
+	-- 				loops = {},
+	-- 				functions = {},
+	-- 				keywords = { "bold" },
+	-- 				strings = {},
+	-- 				variables = {},
+	-- 				numbers = {},
+	-- 				booleans = {},
+	-- 				properties = {},
+	-- 				types = {},
+	-- 				operators = {},
+	-- 			},
+	-- 			custom_highlights = {
+	-- 				-- StatusLine = { bg = colors.base, fg = colors.base },
+	-- 				-- StatusLineNC = { bg = colors.base, fg = colors.base },
+	-- 			},
+	-- 			integrations = {
+	-- 				treesitter = true,
+	-- 				cmp = true,
+	-- 				mason = true,
+	-- 				dadbod_ui = true,
+	-- 				gitsigns = {
+	-- 					enabled = true,
+	-- 					transparent = false,
+	-- 				},
+	-- 				telescope = {
+	-- 					enabled = true,
+	-- 				},
+	-- 				native_lsp = {
+	-- 					enabled = true,
+	-- 					virtual_text = {
+	-- 						errors = {},
+	-- 						hints = {},
+	-- 						warnings = {},
+	-- 						information = {},
+	-- 						ok = {},
+	-- 					},
+	-- 					underlines = {
+	-- 						errors = {},
+	-- 						hints = {},
+	-- 						warnings = {},
+	-- 						information = {},
+	-- 						ok = {},
+	-- 					},
+	-- 					inlay_hints = {
+	-- 						background = true,
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 		vim.cmd.colorscheme("catppuccin")
+	-- 	end,
+	-- },
 }
