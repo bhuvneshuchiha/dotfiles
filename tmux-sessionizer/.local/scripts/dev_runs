@@ -7,6 +7,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sudo pacman -S base-devel git make --noconfirm --needed
 sudo pacman -S tmux --noconfirm --needed
 sudo pacman -S lsof --noconfirm --needed
+sudo pacman -S mariadb --noconfirm --needed
 sudo pacman -S impala --noconfirm --needed
 sudo pacman -S github-cli --noconfirm --needed
 sudo pacman -S stow --noconfirm --needed
@@ -55,6 +56,7 @@ yay -S nwg-look --noconfirm --needed
 yay -S yt-dlp --noconfirm --needed
 yay -S zen-browser --noconfirm --needed
 yay -S brave-bin --noconfirm --needed
+yay -S vicinae-git --noconfirm --needed
 
 
 sudo pacman -S breeze breeze-icons --noconfirm --needed
@@ -79,6 +81,10 @@ EOF
 
 echo "Configuration written to ~/.config/environment.d/qt6ct.conf"
 echo "Reboot your system or re-login for the changes to take effect."
+
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
 
 git config --global init.defaultBranch master
 
