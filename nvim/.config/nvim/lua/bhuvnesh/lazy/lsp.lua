@@ -167,13 +167,14 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"ts_ls",
+				-- "ts_ls",
 				"gopls",
 				-- "pyright"
 			},
 
 			handlers = {
 				function(server_name) -- default handler (optional)
+					vim.notify("Setting up LSP: " .. server_name, vim.log.levels.WARN)
 					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
 					})
@@ -204,6 +205,15 @@ return {
 						},
 					})
 				end,
+
+				-- ["ts_ls"] = function()
+				-- 	local lspconfig = require("lspconfig")
+				-- 	lspconfig.ts_ls.setup({
+				-- 		capabilities = capabilities,
+				-- 		single_file_support = true,
+				-- 	})
+				-- end,
+
 				["pyright"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.pyright.setup({
@@ -252,6 +262,37 @@ return {
 									severity_limit = "Error",
 								}
 							),
+						},
+					})
+				end,
+
+				["tailwindcss"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.tailwindcss.setup({
+						capabilities = capabilities,
+						filetypes = {
+							"html",
+							"css",
+							"scss",
+							"javascript",
+							"javascriptreact",
+							"typescript",
+							"typescriptreact",
+							"vue",
+							"svelte",
+						},
+						settings = {
+							tailwindCSS = {
+								experimental = {
+									classRegex = {
+										"tw`([^`]*)",
+										'tw="([^"]*)',
+										'tw={"([^"}]*)',
+										"tw\\.\\w+`([^`]*)",
+										"tw\\(.*?\\)`([^`]*)",
+									},
+								},
+							},
 						},
 					})
 				end,
