@@ -128,7 +128,9 @@ setopt hist_verify
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
-bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer\n"
+# bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer\n"
+# bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
@@ -151,3 +153,11 @@ bindkey -s "^G" "opencode\n"
 export PATH=$PATH:$HOME/go/bin
 # eval "$(/bin/brew shellenv)"
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# bun completions
+[ -s "/home/bhuvnesh-awasthi/.bun/_bun" ] && source "/home/bhuvnesh-awasthi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
