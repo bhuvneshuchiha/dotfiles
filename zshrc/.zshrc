@@ -88,7 +88,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source <(fzf --zsh)
 # source $ZSH/oh-my-zsh.sh
-source /home/thebhuvnesh/.oh-my-zsh/oh-my-zsh.sh
+source /home/bhuvnesh-awasthi/.oh-my-zsh/oh-my-zsh.sh
 
 # User configuration
 
@@ -128,7 +128,7 @@ setopt hist_verify
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
@@ -149,3 +149,5 @@ bindkey -s "^G" "opencode\n"
 # export SDKMAN_DIR="$HOME/.sdkman"
 # [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH=$PATH:$HOME/go/bin
+# eval "$(/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

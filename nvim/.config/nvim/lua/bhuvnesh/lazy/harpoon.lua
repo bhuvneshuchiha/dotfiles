@@ -30,8 +30,8 @@ return {
         end
 
         -- Hightlight the current file in Harpoon UI menu
-        local harpoon_extensions = require("harpoon.extensions")
-        harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
+        -- local harpoon_extensions = require("harpoon.extensions")
+        -- harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
 
         -- vim.keymap.set("n", "<C-h>", function()
         --     toggle_telescope(harpoon:list())
