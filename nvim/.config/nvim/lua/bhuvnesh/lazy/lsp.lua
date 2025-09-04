@@ -202,6 +202,17 @@ return {
 						-- },
 					})
 				end,
+
+				["volar"] = function()
+					local lspconfig = require("lspconfig")
+
+					lspconfig.volar.setup({
+						capabilities = capabilities,
+						filetypes = { "vue" },
+					})
+				end,
+
+
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({

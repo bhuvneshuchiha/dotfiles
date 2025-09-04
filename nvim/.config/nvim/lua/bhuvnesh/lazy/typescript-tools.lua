@@ -2,7 +2,7 @@ return {
 	{
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		ft = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue" },
 		config = function()
 			require("typescript-tools").setup({
 				on_attach = function(client, buffer_number)
@@ -10,7 +10,8 @@ return {
 					-- require("dmmulroy.keymaps").map_lsp_keybinds(buffer_number)
 				end,
 				settings = {
-					tsserver_path = "~/.bun/bin/tsgo",
+					-- tsserver_path = "~/.bun/bin/tsgo",
+                    tsserver_path = vim.fn.expand("~/.bun/install/global/node_modules/typescript/lib/tsserver.js"),
 					-- Performance: separate diagnostic server for large projects
 					separate_diagnostic_server = true,
 					-- When to publish diagnostics
@@ -18,7 +19,7 @@ return {
 					-- JSX auto-closing tags
 					jsx_close_tag = {
 						enable = true,
-						filetypes = { "javascriptreact", "typescriptreact" },
+						filetypes = { "javascriptreact", "typescriptreact", "vue"},
 					},
 					tsserver_file_preferences = {
 						includeInlayParameterNameHints = "all",

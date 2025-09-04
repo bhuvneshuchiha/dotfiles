@@ -26,7 +26,7 @@ blinking = "Never"
 [colors]
 # If `true`, bold text is drawn using the bright color variants.
 # draw_bold_text_with_bright_colors = true
-#decorations = "Transparent"
+# decorations = "Transparent"
 
 [font]
 # normal.family = "MesloLGS Nerd Font Mono"
@@ -34,7 +34,7 @@ blinking = "Never"
 # normal.family = "JetBrains Mono"
 normal.family = "JetBrainsMono Nerd Font"
 # regular
-size = 20
+size = 14
 
 [colors.primary]
 # background = '#0c0c0c'
@@ -74,5 +74,5 @@ bindings = [
 
 [window]
 # startup_mode = "SimpleFullscreen"
-opacity=0.87
+opacity=0.86
 option_as_alt = "Both"

@@ -45,6 +45,7 @@ return {
                 "yaml",
                 "toml",
                 "go",
+                "vue",
                 "c",
                 "rust",
                 "zig",
