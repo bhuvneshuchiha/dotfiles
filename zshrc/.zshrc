@@ -144,6 +144,7 @@ alias kitt="kitten icat"
 # alias pip='pip3'
 # eval "$(starship init zsh)"
 bindkey -s "^G" "opencode\n"
+#terraform -install-autocomplete
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -161,3 +162,6 @@ export PATH=$PATH:$HOME/go/bin
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
