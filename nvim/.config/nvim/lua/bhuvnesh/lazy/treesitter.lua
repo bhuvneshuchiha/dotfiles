@@ -48,6 +48,7 @@ return {
                 "zig",
                 "javascript",
                 "typescript",
+                "vue",
                 "tsx",
                 "rust",
                 "yaml",
