@@ -67,6 +67,7 @@ return {
 
 		vim.lsp.enable("vue_ls")
 		vim.lsp.enable("vtsls")
+        vim.lsp.enable("ruby_lsp")
 
 		mason_tool_installer.setup({
 			ensure_installed = {

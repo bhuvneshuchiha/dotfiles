@@ -9,6 +9,8 @@ if [[ ":$PATH:" != *":$HOME/.local/scripts:"* ]]; then
   export PATH="$HOME/.local/scripts:$PATH"
 fi
 export EDITOR="nvim"
+export PATH="$(ruby -r rubygems -e 'puts Gem.bindir'):$PATH"
+
 # GOPATH=$HOME/go
 # PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
@@ -165,3 +167,4 @@ export PATH="$HOME/.bun/bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+eval "$(~/.local/bin/mise activate)"

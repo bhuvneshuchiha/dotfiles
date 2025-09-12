@@ -216,5 +216,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym $mod+m move workspace to output left
 
 # Suspend
-bindsym $mod+Shift+period exec systemctl suspend
+bindsym $mod+Shift+x exec "i3lock -c 000000"
+# bindsym $mod+Shift+period exec systemctl suspend
+
 
