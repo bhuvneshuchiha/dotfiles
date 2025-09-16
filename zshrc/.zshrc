@@ -1,170 +1,114 @@
-# you come from bash you might have to change your $PATH.
-# Path to your oh-my-zsh installation.
-
-# export PATH=/usr/bin:$PATH
-# export PATH="$HOME/.local/scripts:$PATH"
-# # export ZSH=$HOME/.oh-my-zsh
-# PATH="$PATH":"$HOME/.local/scripts/"
-if [[ ":$PATH:" != *":$HOME/.local/scripts:"* ]]; then
-  export PATH="$HOME/.local/scripts:$PATH"
-fi
-export EDITOR="nvim"
-export PATH="$(ruby -r rubygems -e 'puts Gem.bindir'):$PATH"
-
-# GOPATH=$HOME/go
-# PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-# To stop using 256 colors ->
-# export TERM=xterm
-
-
-# Uncomment this if you need to create a virtual env with a new python version.
-# export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
-
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="robbyrussell"
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "powerlevel10k/powerlevel10k" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-source <(fzf --zsh)
-# source $ZSH/oh-my-zsh.sh
-source /home/bhuvnesh-awasthi/.oh-my-zsh/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
+# # export PATH=/usr/bin:$PATH
+# # export PATH="$HOME/.local/scripts:$PATH"
+# # # export ZSH=$HOME/.oh-my-zsh
+# # PATH="$PATH":"$HOME/.local/scripts/"
+# if [[ ":$PATH:" != *":$HOME/.local/scripts:"* ]]; then
+#   export PATH="$HOME/.local/scripts:$PATH"
 # fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+# export EDITOR="nvim"
+# export PATH="$(ruby -r rubygems -e 'puts Gem.bindir'):$PATH"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# # ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
+# plugins=(git)
+# source <(fzf --zsh)
+# # source $ZSH/oh-my-zsh.sh
+# source /home/bhuvnesh-awasthi/.oh-my-zsh/oh-my-zsh.sh
+# # history setup
+# HISTFILE=$HOME/.zhistory
+# SAVEHIST=1000
+# HISTSIZE=999
+# setopt share_history
+# setopt hist_expire_dups_first
+# setopt hist_ignore_dups
+# setopt hist_verify
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# history setup
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
-
-# completion using arrow keys (based on history)
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
-# bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer\n"
+# # completion using arrow keys (based on history)
+# bindkey '^[[A' history-search-backward
+# bindkey '^[[B' history-search-forward
+# # bindkey -s ^f "bash ~/.local/scripts/tmux-sessionizer\n"
+# # bindkey -s ^f "tmux-sessionizer\n"
 # bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^f "tmux-sessionizer\n"
+#
+# # ---- Eza (better ls) -----
+#
+# alias ls="eza --icons=always"
+# alias vim="nvim"
+# # ---- Zoxide (better cd) ----
+# eval "$(zoxide init zsh)"
+# alias cd="z"
+# alias kitt="kitten icat"
+# # alias python='python3'
+# # alias pip='pip3'
+# # eval "$(starship init zsh)"
+# bindkey -s "^G" "opencode\n"
+# #terraform -install-autocomplete
+#
+# # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#
+# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# # export SDKMAN_DIR="$HOME/.sdkman"
+# # [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export PATH=$PATH:$HOME/go/bin
+# # eval "$(/bin/brew shellenv)"
+# # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#
+# # bun completions
+# [ -s "/home/bhuvnesh-awasthi/.bun/_bun" ] && source "/home/bhuvnesh-awasthi/.bun/_bun"
+#
+# # bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
+# export PATH="$HOME/.bun/bin:$PATH"
+#
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /usr/bin/terraform terraform
+# eval "$(~/.local/bin/mise activate)"
 
-# ---- Eza (better ls) -----
 
-alias ls="eza --icons=always"
-alias vim="nvim"
-# ---- Zoxide (better cd) ----
+# PATH
+export PATH="$HOME/.local/scripts:$HOME/.rbenv/bin:$HOME/go/bin:$HOME/.bun/bin:$PATH"
+export EDITOR="nvim"
+
+# rbenv (pick this OR rvm, not both)
+eval "$(rbenv init -)"
+
+# oh-my-zsh (minimal, only git plugin + lightweight theme)
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git zsh-nvm)
+source $ZSH/oh-my-zsh.sh
+
+# fzf (use cached init)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide
 eval "$(zoxide init zsh)"
-alias cd="z"
-alias kitt="kitten icat"
-# alias python='python3'
-# alias pip='pip3'
-# eval "$(starship init zsh)"
-bindkey -s "^G" "opencode\n"
-#terraform -install-autocomplete
-
-# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH=$PATH:$HOME/go/bin
-# eval "$(/bin/brew shellenv)"
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# bun completions
-[ -s "/home/bhuvnesh-awasthi/.bun/_bun" ] && source "/home/bhuvnesh-awasthi/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.bun/bin:$PATH"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
-eval "$(~/.local/bin/mise activate)"
+# completion cache (faster startup)
+autoload -Uz compinit
+compinit -C
+
+# history
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history hist_expire_dups_first hist_ignore_dups hist_verify
+
+# keybinds
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s "^G" "opencode\n"
+
+# aliases
+alias ls="eza --icons=always"
+alias vim="nvim"
+alias cd="z"
+alias kitt="kitten icat"
+

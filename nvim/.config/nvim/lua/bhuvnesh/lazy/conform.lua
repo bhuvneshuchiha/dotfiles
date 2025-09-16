@@ -7,6 +7,8 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				python = { "black" },
+                ruby = { "rubocop" },
+				eruby = { "erb_formatter" },
 				typescript = { "prettierd", "prettier" },
 				typescriptreact = { "prettierd", "prettier" },
 				javascript = { "prettierd", "prettier" },
