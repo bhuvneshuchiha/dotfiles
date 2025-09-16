@@ -216,10 +216,10 @@ return {
 					local lspconfig = require("lspconfig")
 
 					lspconfig.ruby_lsp.setup({
+						cmd = { "bundle", "exec", "ruby-lsp" },
 						capabilities = capabilities,
 					})
 				end,
-
 
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")

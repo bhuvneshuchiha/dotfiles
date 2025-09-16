@@ -7,7 +7,8 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				python = { "black" },
-                ruby = { "rubocop" },
+				-- ruby = { "rubocop" },
+				ruby = { "rubyfmt" },
 				eruby = { "erb_formatter" },
 				typescript = { "prettierd", "prettier" },
 				typescriptreact = { "prettierd", "prettier" },
@@ -39,6 +40,10 @@ return {
 				prettier = {
 					inherit = true,
 					prepend_args = { "--use-tabs" },
+				},
+				rubocop = {
+					command = "bundle",
+					args = { "exec", "rubocop", "-A", "--stdin", "$FILENAME" },
 				},
 			},
 			-- Set global default to stop after the first available formatter
