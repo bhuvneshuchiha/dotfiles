@@ -6,7 +6,8 @@
 # https://github.com/search?q=path%3Aghostty%2Fconfig&type=code
 # theme = catppuccin-mocha
 
-theme = rose-pine-moon
+# theme = rose-pine-moon
+theme = Rose Pine Moon
 # theme = tokyonight_night
 
 ######## Put these values back if you remove the ghostty theme file######
