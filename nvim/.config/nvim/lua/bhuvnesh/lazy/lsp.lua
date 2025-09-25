@@ -269,6 +269,9 @@ return {
 		vim.diagnostic.config({
 			-- update_in_insert = true,
 			underline = false,
+			signs = {
+				severity = { min = vim.diagnostic.severity.WARN },
+			},
 			float = {
 				focusable = false,
 				style = "minimal",
