@@ -7,7 +7,6 @@ return {
 				lua = { "stylua" },
 				go = { "gofmt", "goimports" },
 				python = { "black" },
-				-- ruby = { "rubocop" },
 				ruby = { "rubyfmt" },
 				eruby = { "erb_formatter" },
 				typescript = { "prettierd", "prettier" },
@@ -41,20 +40,15 @@ return {
 					inherit = true,
 					prepend_args = { "--use-tabs" },
 				},
-				rubocop = {
-					command = "bundle",
-					args = { "exec", "rubocop", "-A", "--stdin", "$FILENAME" },
-				},
+				-- rubocop = {
+				-- 	command = "bundle",
+				-- 	args = { "exec", "rubocop", "-A", "--stdin", "$FILENAME" },
+				-- },
 			},
 			-- Set global default to stop after the first available formatter
 			format_after_save = {
 				lsp_fallback = true,
 			},
-			-- This is the new way to mimic `{ { "a", "b" } }` behavior:
-			-- conform will pick the first available
-			-- formatter in the list per filetype and stop
-			-- if one succeeds.
-			-- Global setting:
 			stop_after_first = true,
 		})
 	end,
