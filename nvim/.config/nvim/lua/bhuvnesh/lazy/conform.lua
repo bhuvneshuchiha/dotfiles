@@ -6,6 +6,8 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "gofmt" },
+				ruby = { "rubyfmt" },
+				eruby = { "erb_formatter" },
 				python = { "black" },
 				typescript = { "prettierd", "prettier" },
 				typescriptreact = { "prettierd", "prettier" },

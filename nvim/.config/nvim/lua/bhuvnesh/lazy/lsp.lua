@@ -206,6 +206,15 @@ return {
 					})
 				end,
 
+				["ruby_lsp"] = function()
+					local lspconfig = require("lspconfig")
+
+					lspconfig.ruby_lsp.setup({
+						cmd = { "bundle", "exec", "ruby-lsp" },
+						capabilities = capabilities,
+					})
+				end,
+
 				-- ["ts_ls"] = function()
 				-- 	local lspconfig = require("lspconfig")
 				-- 	lspconfig.ts_ls.setup({
@@ -351,6 +360,9 @@ return {
 		vim.diagnostic.config({
 			-- update_in_insert = true,
 			underline = false,
+			signs = {
+				severity = { min = vim.diagnostic.severity.WARN },
+			},
 			-- virtual_text = true,
 			float = {
 				focusable = false,
