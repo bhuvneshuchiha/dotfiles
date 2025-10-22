@@ -29,6 +29,7 @@ return {
 				"pyright",
 				"stylua",
 				"lua_ls",
+                "ruby_lsp",
                 "rubyfmt",
                 "solargraph",
 				-- "html",
