@@ -1,12 +1,12 @@
 --NOTE:Below two line disable netrw flash and these 2 lines need to be at the top
---of this file.
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+--of this file. To use oil uncommnet below 2 lines
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
---NOTE:This is to enable netrw
--- vim.g.netrw_browse_split = 0
--- vim.g.netrw_banner = 0
--- vim.g.netrw_winsize = 25
+--NOTE:This is to enable netrw, to use netrw uncomment these 3 lines.
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
