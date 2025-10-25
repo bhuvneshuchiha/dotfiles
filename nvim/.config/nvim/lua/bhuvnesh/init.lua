@@ -1,12 +1,13 @@
 --NOTE:Below two line disable netrw flash and these 2 lines need to be at the top
---of this file.
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+--of this file. These below 2 lines should be commented out if you want to use
+-- netrw.Uncomment if you are using oil
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
---NOTE:This is to enable netrw
--- vim.g.netrw_browse_split = 0
--- vim.g.netrw_banner = 0
--- vim.g.netrw_winsize = 25
+--NOTE:These below 3 lines should be un-commented if you wanna enable netrw
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
