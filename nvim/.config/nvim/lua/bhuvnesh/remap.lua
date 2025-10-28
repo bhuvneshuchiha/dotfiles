@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "-", vim.cmd.Ex)
 
 --- Just press 0 to go to the beginning of the line even if its whitespace.
 --- Press d0 or d^ to delete everything before a word where your cursor is.

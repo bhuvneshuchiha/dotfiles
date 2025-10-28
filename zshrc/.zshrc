@@ -139,7 +139,7 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 # Add this to your ~/.zshrc
 # bindkey -s '^G' 'ai_beast\n'
-bindkey -s '^G' 'opencode\n'
+# bindkey -s '^G' 'opencode\n'
 bindkey -s ^f "tmux-sessionizer\n"
 
 
