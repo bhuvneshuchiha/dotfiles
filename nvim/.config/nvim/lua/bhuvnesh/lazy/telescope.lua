@@ -11,30 +11,34 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
-			defaults = {
-				file_ignore_patterns = { "%.git/" }, -- Optional: ignore git files
-				preview = {
-					hide_on_startup = true,
-				},
-				mappings = {
-					i = {
-						["<C-p>"] = false, -- Disable preview in insert mode
-					},
-					n = {
-						["<C-p>"] = false, -- Disable preview in normal mode
-					},
-				},
-			},
-
-			-- This line disables the previewer
-			pickers = {
-				find_files = {
-					previewer = true, -- Disable preview for find_files
-				},
-				live_grep = {
-					previewer = true, -- Disable preview for live_grep
-				},
-			},
+            --CAN MAKE THIS BLOCK UNCOMMENTED IF YOU WANT SOME FANCY OPTIONS------------> defaults = {
+			-- 	file_ignore_patterns = { "%.git/" }, -- Optional: ignore git files
+			-- 	preview = {
+			-- 		hide_on_startup = true,
+			-- 	},
+			-- 	mappings = {
+			-- 		i = {
+			-- 			["<C-p>"] = false, -- Disable preview in insert mode
+			-- 		},
+			-- 		n = {
+			-- 			["<C-p>"] = false, -- Disable preview in normal mode
+			-- 		},
+			-- 	},
+			-- },
+			--
+			-- -- This line disables the previewer
+			-- pickers = {
+			-- 	find_files = {
+			-- 		previewer = true, -- Disable preview for find_files
+			-- 	},
+			-- 	live_grep = {
+			-- 		previewer = true, -- Disable preview for live_grep
+			-- 	},
+			--              help_tags = {
+			--                  previewer = true,
+			--              }
+			-- },
+            -- FOR SOME FANCY THINGS UNCOMMENT ABOVE BLOCK ---------------------->
 			-- extenstions = {
 			--     ["ui-select"] = {
 			--         require("telescope.themes").get_dropdown {
@@ -52,7 +56,7 @@ return {
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 		-- vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 		vim.keymap.set("n", "<C-g>", builtin.git_files, {})
-		vim.keymap.set("n", "<leader>fB", builtin.current_buffer_fuzzy_find, {})
+		vim.keymap.set("n", "<leader>fb", builtin.current_buffer_fuzzy_find, {})
 		-- vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 		-- vim.keymap.set("n", "<leader>tr", builtin.lsp_references, {})
 		vim.keymap.set("n", "<leader>fw", function()
