@@ -14,10 +14,10 @@ return {
             highlight = {
                 enable = true,
                  disable = function(lang, buf)
-                    if lang == "html" then
-                        print("disabled")
-                        return true
-                    end
+                    -- if lang == "html" then
+                    --     print("disabled")
+                    --     return true
+                    -- end
 
                     local max_filesize = 10000 * 1024 -- 10MB
                     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
