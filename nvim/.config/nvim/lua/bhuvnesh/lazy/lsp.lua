@@ -361,7 +361,7 @@ return {
 			-- update_in_insert = true,
 			underline = false,
 			signs = {
-				severity = { min = vim.diagnostic.severity.WARN },
+				severity = { min = vim.diagnostic.severity.ERROR},
 			},
 			-- virtual_text = true,
 			float = {
