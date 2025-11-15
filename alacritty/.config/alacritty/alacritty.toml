@@ -37,7 +37,7 @@ normal.style = "Regular"
 # normal.family = "SourceCodePro Nerd Font"
 # normal.family = "JetBrains Mono"
 normal.family = "JetBrainsMono Nerd Font"
-size = 24
+size = 22
 
 
 [colors.primary]
