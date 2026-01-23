@@ -175,3 +175,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.4.7
+
+# Added by Antigravity
+export PATH="/Users/bhuvnesh/.antigravity/antigravity/bin:$PATH"

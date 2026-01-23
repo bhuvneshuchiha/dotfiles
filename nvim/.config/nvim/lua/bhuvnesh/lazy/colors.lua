@@ -1,12 +1,13 @@
 function ColorMyPencils(color)
-	-- color = color or "rose-pine-moon"
+	color = color or "rose-pine-moon"
 	-- color = color or "vague"
 	-- color = color or "ash"
 	-- color = color or "oldworld"
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight-moon"
+	-- color = color or "tokyonight-night"
+	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
@@ -16,30 +17,61 @@ function ColorMyPencils(color)
 end
 
 return {
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		opts = {},
-		config = function()
-			require("tokyonight").setup({
-				on_colors = function(colors)
-					-- colors.fg = "#FFFFFF" -- Set pure white for foreground
-					-- colors.fg = "#e0def4" -- Set pure white for foreground
-					colors.error = "#eb6f92"
-					-- colors.warning = "#f6c177"
-				end,
-				on_highlights = function(hl, colors)
-					hl.ErrorMsg = { fg = colors.red, bold = true }
-				end,
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	enabled = true,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		local tokyo = require("tokyonight")
+	-- 		tokyo.setup({
+	-- 			transparent = true,
+	-- 			styles = {
+	-- 				sidebars = "transparent",
+	-- 				floats = "transparent",
+	-- 			},
+	-- 			on_highlights = function(hl, c)
+	-- 				hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
+	-- 			end,
+	-- 		})
+	-- 		-- vim.cmd.colorscheme("tokyonight")
+	-- 		-- vim.cmd.colorscheme("tokyonight-night")
+	-- 		-- vim.cmd.colorscheme("tokyonight-storm")
+	-- 		-- vim.cmd.colorscheme("tokyonight-moon")
+	-- 		-- vim.cmd.colorscheme("tokyonight-day")
+	--
+	-- 		-- Transparent background fix
+	-- 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- 		vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+	-- 		vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+	-- 	end,
+	-- },
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		require("tokyonight").setup({
+	-- 			on_colors = function(colors)
+	-- 				-- colors.fg = "#FFFFFF" -- Set pure white for foreground
+	-- 				-- colors.fg = "#e0def4" -- Set pure white for foreground
+	-- 				colors.error = "#eb6f92"
+	-- 				-- colors.warning = "#f6c177"
+	-- 			end,
+	-- 			on_highlights = function(hl, colors)
+	-- 				hl.ErrorMsg = { fg = colors.red, bold = true }
+	-- 			end,
+	--
+	-- 			styles = {
+	-- 				comments = { italic = false },
+	-- 				keywords = { italic = false },
+	-- 			},
+	-- 		})
+	-- 		ColorMyPencils()
+	-- 	end,
+	-- },
 
-				styles = {
-					comments = { italic = false },
-					keywords = { italic = false },
-				},
-			})
-			ColorMyPencils()
-		end,
-	},
+	{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
 	-- {
 	-- 	"vague2k/vague.nvim",
@@ -51,7 +83,6 @@ return {
 	-- 		})
 	-- 	end,
 	-- },
-
 
 	-- {
 	-- "drewxs/ash.nvim",

@@ -1,5 +1,5 @@
 return {
-	"stevearc/quicker.nvim",
-	event = "VeryLazy",
-	opts = {},
+	-- "stevearc/quicker.nvim",
+	-- event = "VeryLazy",
+	-- opts = {},
 }
