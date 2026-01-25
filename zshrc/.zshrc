@@ -178,3 +178,18 @@ chruby ruby-3.4.7
 
 # Added by Antigravity
 export PATH="/Users/bhuvnesh/.antigravity/antigravity/bin:$PATH"
+
+git() {
+  if [[ "$1 $2" == "add ." ]]; then
+    echo -n "⚠️  You are about to run 'git add .'. Continue? [y/N]: "
+    read -r reply
+    if [[ "$reply" =~ ^[Yy]$ ]]; then
+      command git "$@"
+    else
+      echo "❌ Aborted."
+    fi
+  else
+    command git "$@"
+  fi
+}
+
