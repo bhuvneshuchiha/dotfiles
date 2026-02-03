@@ -360,9 +360,9 @@ return {
 		vim.diagnostic.config({
 			-- update_in_insert = true,
 			underline = false,
-			signs = {
-				severity = { min = vim.diagnostic.severity.ERROR},
-			},
+			-- signs = {
+			-- 	severity = { min = vim.diagnostic.severity.ERROR},
+			-- },
 			-- virtual_text = true,
 			float = {
 				focusable = false,

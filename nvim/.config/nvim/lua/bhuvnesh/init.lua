@@ -1,13 +1,15 @@
 --NOTE:Below two line disable netrw flash and these 2 lines need to be at the top
 --of this file. These below 2 lines should be commented out if you want to use
 -- netrw.Uncomment if you are using oil
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 --NOTE:These below 3 lines should be un-commented if you wanna enable netrw
--- vim.g.netrw_browse_split = 0
--- vim.g.netrw_banner = 0
--- vim.g.netrw_winsize = 25
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
+vim.keymap.set("n", "-", "<CMD>:Ex<CR>", { desc = "Open netrw" })
+
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -19,9 +21,9 @@ require("bhuvnesh.remap")
 require("bhuvnesh.lazy_init")
 
 ------- THIS IS IMPORTANT HACK ---------   ------- THIS IS IMPORTANT HACK ---------------- THIS IS IMPORTANT HACK ---------
--- Ctrl-O lets you go into normal mode for one keystroke while being in insert mode
--- you can lets say press Ctrl-O and then Shift-A to go the end of the line all
--- while being in the insert mode.
+-- Ctrl-O lets you go into normal mode for one keystroke while being in insert
+-- mode you can lets say press Ctrl-O and then Shift-A to go the end of the line
+-- all while being in the insert mode.
 
 -- Use Shift + V + gw to wrap lines in comments acc to text width
 ------- THIS IS IMPORTANT HACK --------
@@ -174,19 +176,19 @@ vim.opt.splitbelow = true
 -- 	end,
 -- })
 
--- BRAND NEW
-vim.api.nvim_create_autocmd("BufReadPost", {
-	callback = function(args)
-		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
-		local line_count = vim.api.nvim_buf_line_count(args.buf)
-		if mark[1] > 0 and mark[1] <= line_count then
-			vim.api.nvim_win_set_cursor(0, mark)
-			vim.schedule(function()
-				vim.cmd("normal! zz")
-			end)
-		end
-	end,
-})
+-- BRAND NEW -- Commenting to check if cursor still jumps on saving
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+-- 	callback = function(args)
+-- 		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+-- 		local line_count = vim.api.nvim_buf_line_count(args.buf)
+-- 		if mark[1] > 0 and mark[1] <= line_count then
+-- 			vim.api.nvim_win_set_cursor(0, mark)
+-- 			vim.schedule(function()
+-- 				vim.cmd("normal! zz")
+-- 			end)
+-- 		end
+-- 	end,
+-- })
 
 
 -- Set Netrw file menu to bold

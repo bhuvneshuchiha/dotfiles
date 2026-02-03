@@ -124,6 +124,7 @@ return {
     config = function()
         require("oil").setup({
             -- columns = { "icons" },
+            default_file_explorer = false, -- If you want to use this with netrw else set true
             columns = { { 'icon' } },
             keymaps = {
                 ["<C-h>"] = false,
@@ -136,7 +137,7 @@ return {
             skip_confirm_for_simple_edits = true,
         })
         -- opens parent dir over current active window
-        vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+        vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
         -- open parent dir in float window
         -- vim.keymap.set("n", "<leader>-", require("oil").toggle_float)

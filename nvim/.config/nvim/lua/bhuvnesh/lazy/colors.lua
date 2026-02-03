@@ -14,6 +14,20 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+    -- This is to have tokyonight bg in rose pine
+	local bg = "#1a1b26" -- tokyonight-night bg
+
+	local groups = {
+		"Normal",
+		"NormalNC",
+		"SignColumn",
+		"EndOfBuffer",
+		"MsgArea",
+	}
+
+	for _, group in ipairs(groups) do
+		vim.api.nvim_set_hl(0, group, { bg = bg })
+	end
 end
 
 return {
@@ -255,7 +269,7 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
-				disable_background = true,
+				-- disable_background = true,
 				styles = {
 					italic = false,
 					-- transparency = true
