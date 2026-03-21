@@ -12,22 +12,22 @@ function ColorMyPencils(color)
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
-	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
     -- This is to have tokyonight bg in rose pine
-	local bg = "#1a1b26" -- tokyonight-night bg
-
-	local groups = {
-		"Normal",
-		"NormalNC",
-		"SignColumn",
-		"EndOfBuffer",
-		"MsgArea",
-	}
-
-	for _, group in ipairs(groups) do
-		vim.api.nvim_set_hl(0, group, { bg = bg })
-	end
+	-- local bg = "#1a1b26" -- tokyonight-night bg
+	--
+	-- local groups = {
+	-- 	"Normal",
+	-- 	"NormalNC",
+	-- 	"SignColumn",
+	-- 	"EndOfBuffer",
+	-- 	"MsgArea",
+	-- }
+	--
+	-- for _, group in ipairs(groups) do
+	-- 	vim.api.nvim_set_hl(0, group, { bg = bg })
+	-- end
 end
 
 return {

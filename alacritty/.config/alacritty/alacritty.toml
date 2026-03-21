@@ -2,9 +2,9 @@
 # defaults write org.alacritty AppleFontSmoothing -int 0
 
 [general] # Go to line 41 and comment out the background color
-import = [
-# "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
-]
+# import = [
+# # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+# ]
 
 [env]
 # TERM="xterm-256color"
@@ -32,11 +32,12 @@ cursor = "#ffffff"  # The color of the cursor itself
 # normal.family = "Iosevka Nerd Font"
 # normal.family = "Maple Mono NF"
 # normal.family = "BlexMono Nerd Font"
-# normal.family = "FiraCode Nerd Font"
+normal.family = "FiraCode Nerd Font"
 normal.style = "Regular"
 # normal.family = "SourceCodePro Nerd Font"
 # normal.family = "JetBrains Mono"
-normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "JetBrainsMono Nerd Font"
+# use_thin_strokes = true
 size = 22
 
 
