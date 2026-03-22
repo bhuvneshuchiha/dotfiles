@@ -132,7 +132,8 @@ vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 local o = vim.o
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
-vim.opt.clipboard = "unnamed,unnamedplus"
+-- vim.opt.clipboard = "unnamed,unnamedplus" -- use when linuxing
+vim.opt.clipboard = "unnamedplus" -- only for macos
 
 vim.opt.ignorecase = true
 vim.opt.splitbelow = true
