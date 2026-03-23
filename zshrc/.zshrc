@@ -15,7 +15,9 @@
 export PATH=/usr/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 export PATH="$HOME/.bun/bin:$PATH"
-export EDITOR="nvim"
+export EDITOR=nvim
+export VISUAL=nvim
+
 
 
 PATH="$PATH":"$HOME/.local/scripts/"
@@ -98,6 +100,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source <(fzf --zsh)
 source $ZSH/oh-my-zsh.sh
+set -o vi
 
 # User configuration
 

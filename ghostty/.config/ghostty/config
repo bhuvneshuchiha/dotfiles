@@ -1,7 +1,9 @@
-theme = Rose Pine Moon
+theme = /Users/bhuvnesh/.dotfiles/ghostty/.config/ghostty/themes/tokyonight
+# theme = Tokyonight
+# theme = Rose Pine Moon
 # theme = GruvboxDarkHard
 # background = 000000
-background = 000110
+# background = 000110
 clipboard-read = allow
 clipboard-write = allow
 mouse-hide-while-typing=true
@@ -22,20 +24,15 @@ background-blur-radius = false
 # background = 0c0c0c
 # cursor-color = white
 # font-family = MesloLGS Nerd Font Mono font-family = JetBrains Mono
-# font-family = JetBrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font
 # font-family = SauceCodePro Nerd Font Mono
 # font-family = Cascadia Code
 # font-family = Menlo
 # font-family = Iosevka Nerd Font
-font-family = FiraCode Nerd Font
+# font-family = FiraCode Nerd Font
 # font-family = Maple Mono NF
 # font-family = BlexMono Nerd Font
 # font-family = Hasklug Nerd Font
 # font-family = LiterationMono Nerd Font
-
-
-
-
-
 
 keybind = shift+enter=text:\x1b\r
