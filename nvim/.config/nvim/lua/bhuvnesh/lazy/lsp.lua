@@ -162,6 +162,16 @@ return {
 			cmp_lsp.default_capabilities()
 		)
 
+		local vue_language_server_path = vim.fn.stdpath("data")
+			.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+
+		local vue_plugin = {
+			name = "@vue/typescript-plugin",
+			location = vue_language_server_path,
+			languages = { "vue" },
+			configNamespace = "typescript",
+		}
+
 		require("fidget").setup({})
 		require("mason").setup()
 		require("mason-lspconfig").setup({
@@ -171,6 +181,46 @@ return {
 				"gopls",
 				-- "pyright"
 			},
+
+			-- Latest way to configure lsp's.. follow this
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+						format = {
+							enable = true,
+							-- Put format options here
+							-- NOTE: the value should be STRING!!
+							defaultConfig = {
+								indent_style = "space",
+								indent_size = "2",
+							},
+						},
+					},
+				},
+			}),
+
+			vim.lsp.config("vtsls", {
+				settings = {
+					vtsls = {
+						tsserver = {
+							globalPlugins = {
+								vue_plugin,
+							},
+						},
+					},
+				},
+				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			}),
 
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -305,25 +355,25 @@ return {
 						},
 					})
 				end,
-				["lua_ls"] = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.lua_ls.setup({
-						capabilities = capabilities,
-						settings = {
-							Lua = {
-								format = {
-									enable = true,
-									-- Put format options here
-									-- NOTE: the value should be STRING!!
-									defaultConfig = {
-										indent_style = "space",
-										indent_size = "2",
-									},
-								},
-							},
-						},
-					})
-				end,
+				-- ["lua_ls"] = function()
+				-- 	local lspconfig = require("lspconfig")
+				-- 	lspconfig.lua_ls.setup({
+				-- 		capabilities = capabilities,
+				-- 		settings = {
+				-- 			Lua = {
+				-- 				format = {
+				-- 					enable = true,
+				-- 					-- Put format options here
+				-- 					-- NOTE: the value should be STRING!!
+				-- 					defaultConfig = {
+				-- 						indent_style = "space",
+				-- 						indent_size = "2",
+				-- 					},
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	})
+				-- end,
 			},
 		})
 

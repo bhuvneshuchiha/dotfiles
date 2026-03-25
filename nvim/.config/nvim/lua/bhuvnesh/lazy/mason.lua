@@ -43,27 +43,27 @@ return {
 			},
 		})
 
-		local vue_language_server_path = vim.fn.stdpath("data")
-			.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
-
-		local vue_plugin = {
-			name = "@vue/typescript-plugin",
-			location = vue_language_server_path,
-			languages = { "vue" },
-			configNamespace = "typescript",
-		}
-		vim.lsp.config("vtsls", {
-			settings = {
-				vtsls = {
-					tsserver = {
-						globalPlugins = {
-							vue_plugin,
-						},
-					},
-				},
-			},
-			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-		})
+		-- local vue_language_server_path = vim.fn.stdpath("data")
+		-- 	.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+		--
+		-- local vue_plugin = {
+		-- 	name = "@vue/typescript-plugin",
+		-- 	location = vue_language_server_path,
+		-- 	languages = { "vue" },
+		-- 	configNamespace = "typescript",
+		-- }
+		-- vim.lsp.config("vtsls", {
+		-- 	settings = {
+		-- 		vtsls = {
+		-- 			tsserver = {
+		-- 				globalPlugins = {
+		-- 					vue_plugin,
+		-- 				},
+		-- 			},
+		-- 		},
+		-- 	},
+		-- 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+		-- })
 
 		vim.lsp.enable("vue_ls")
 		vim.lsp.enable("vtsls")
@@ -72,11 +72,11 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				-- "prettier", -- prettier formatter
-				-- "stylua",   -- lua formatter
+				"prettier", -- prettier formatter
+				"stylua",   -- lua formatter
 				-- "isort",    -- python formatter
 				-- "black",    -- python formatter
-				-- "eslint_d",
+				"eslint_d",
 			},
 		})
 	end,
