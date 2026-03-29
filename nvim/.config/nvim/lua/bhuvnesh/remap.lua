@@ -47,6 +47,8 @@ end)
 
 -- This one is smooth, crisp and blazing fast
 vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
+vim.keymap.set("n", "-", "<CMD>:Ex<CR>", { desc = "Open netrw" })
+
 
 -- vim.api.nvim_set_keymap("n", "<Leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
 
