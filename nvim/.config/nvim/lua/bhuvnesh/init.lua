@@ -35,7 +35,6 @@
 -- vim.opt.signcolumn = "yes"
 --
 -- -- vim.api.nvim_set_hl(0, "Cursor", { fg = "NONE", bg = "NONE" })
--- -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 --
 -- local augroup = vim.api.nvim_create_augroup
 -- local ThePrimeagenGroup = augroup("ThePrimeagen", {})
@@ -177,19 +176,19 @@
 -- -- 	end,
 -- -- })
 --
--- -- BRAND NEW -- Commenting to check if cursor still jumps on saving
--- -- vim.api.nvim_create_autocmd("BufReadPost", {
--- -- 	callback = function(args)
--- -- 		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
--- -- 		local line_count = vim.api.nvim_buf_line_count(args.buf)
--- -- 		if mark[1] > 0 and mark[1] <= line_count then
--- -- 			vim.api.nvim_win_set_cursor(0, mark)
--- -- 			vim.schedule(function()
--- -- 				vim.cmd("normal! zz")
--- -- 			end)
--- -- 		end
--- -- 	end,
--- -- })
+-- BRAND NEW -- Commenting to check if cursor still jumps on saving
+vim.api.nvim_create_autocmd("BufReadPost", {
+	callback = function(args)
+		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+		local line_count = vim.api.nvim_buf_line_count(args.buf)
+		if mark[1] > 0 and mark[1] <= line_count then
+			vim.api.nvim_win_set_cursor(0, mark)
+			vim.schedule(function()
+				vim.cmd("normal! zz")
+			end)
+		end
+	end,
+})
 --
 --
 -- -- Set Netrw file menu to bold
@@ -322,16 +321,16 @@ autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
-autocmd("BufEnter", {
-	group = ThePrimeagenGroup,
-	callback = function()
-		if vim.bo.filetype == "zig" then
-			pcall(vim.cmd.colorscheme, "tokyonight-night")
-		else
-			pcall(vim.cmd.colorscheme, "rose-pine-moon")
-		end
-	end,
-})
+-- autocmd("BufEnter", {
+-- 	group = ThePrimeagenGroup,
+-- 	callback = function()
+-- 		if vim.bo.filetype == "zig" then
+-- 			pcall(vim.cmd.colorscheme, "tokyonight-night")
+-- 		else
+-- 			pcall(vim.cmd.colorscheme, "rose-pine-moon")
+-- 		end
+-- 	end,
+-- })
 
 -- For typescript only
 vim.api.nvim_create_autocmd("FileType", {
