@@ -42,28 +42,21 @@ return {
 		vim.keymap.set("n", "<C-e>", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
-
-		vim.keymap.set("n", "<C-h>", function()
+		--
+		vim.keymap.set("n", "<C-j>", function()
 			harpoon:list():select(1)
 		end)
-		vim.keymap.set("n", "<C-j>", function()
+		vim.keymap.set("n", "<C-k>", function()
 			harpoon:list():select(2)
 		end)
-		vim.keymap.set("n", "<C-k>", function()
+		vim.keymap.set("n", "<C-l>", function()
 			harpoon:list():select(3)
 		end)
-		vim.keymap.set("n", "<C-l>", function()
-			harpoon:list():select(4)
-		end)
-		--
-		-- vim.keymap.set("n", "<leader>5", function()
-		--     harpoon:list():select(5)
-		-- end)
-		--
-		-- vim.keymap.set("n", "<leader>6", function()
+
+		-- vim.keymap.set("n", "<M-f>", function()
 		--     harpoon:list():select(6)
 		-- end)
-		--
+
 		-- vim.keymap.set("n", "<leader>7", function()
 		--     harpoon:list():select(7)
 		-- end)

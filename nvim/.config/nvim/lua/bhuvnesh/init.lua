@@ -177,18 +177,18 @@
 -- -- })
 --
 -- BRAND NEW -- Commenting to check if cursor still jumps on saving
-vim.api.nvim_create_autocmd("BufReadPost", {
-	callback = function(args)
-		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
-		local line_count = vim.api.nvim_buf_line_count(args.buf)
-		if mark[1] > 0 and mark[1] <= line_count then
-			vim.api.nvim_win_set_cursor(0, mark)
-			vim.schedule(function()
-				vim.cmd("normal! zz")
-			end)
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+-- 	callback = function(args)
+-- 		local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+-- 		local line_count = vim.api.nvim_buf_line_count(args.buf)
+-- 		if mark[1] > 0 and mark[1] <= line_count then
+-- 			vim.api.nvim_win_set_cursor(0, mark)
+-- 			vim.schedule(function()
+-- 				vim.cmd("normal! zz")
+-- 			end)
+-- 		end
+-- 	end,
+-- })
 --
 --
 -- -- Set Netrw file menu to bold
@@ -333,22 +333,37 @@ autocmd({ "BufWritePre" }, {
 -- })
 
 -- For typescript only
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
-		"typescript",
-		"typescriptreact",
-		"javascript",
-		"javascriptreact",
-		"html",
-		"css",
-		"scss",
-	},
-	callback = function()
-		vim.opt_local.tabstop = 2
-		vim.opt_local.shiftwidth = 2
-		vim.opt_local.softtabstop = 2
-		vim.opt_local.expandtab = true
-	end,
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = {
+-- 		"typescript",
+-- 		"typescriptreact",
+-- 		"javascript",
+-- 		"javascriptreact",
+-- 		"html",
+-- 		"css",
+-- 		"scss",
+-- 	},
+-- 	callback = function()
+-- 		vim.opt_local.tabstop = 2
+-- 		vim.opt_local.shiftwidth = 2
+-- 		vim.opt_local.softtabstop = 2
+-- 		vim.opt_local.expandtab = true
+-- 	end,
+-- })
+
+local group = vim.api.nvim_create_augroup("TrimWhitespace", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = group,
+  pattern = "*",
+  callback = function(args)
+    if vim.bo[args.buf].buftype ~= "" then
+      return
+    end
+
+    local view = vim.fn.winsaveview()
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.winrestview(view)
+  end,
 })
 
 autocmd("LspAttach", {

@@ -33,15 +33,15 @@ return {
 			formatters = {
 				prettierd = {
 					inherit = true,
-					-- prepend_args = { "--use-tabs" },
-                    prepend_args = { "--tab-width", "2", "--use-tabs=false" },
+					prepend_args = { "--use-tabs" },
+                    -- prepend_args = { "--tab-width", "2", "--use-tabs=false" },
 					append_args = { "--trailing-comma" },
 					supports_multiple_files = false,
 				},
 				prettier = {
 					inherit = true,
-                    prepend_args = { "--tab-width", "2", "--use-tabs=false" },
-					-- prepend_args = { "--use-tabs" },
+                    -- prepend_args = { "--tab-width", "2", "--use-tabs=false" },
+					prepend_args = { "--use-tabs" },
 				},
 			},
 			-- Set global default to stop after the first available formatter

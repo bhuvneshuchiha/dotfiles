@@ -13,23 +13,23 @@ function ColorMyPencils(color)
 	-- color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-    -- This is to have tokyonight bg in rose pine
+	-- This is to have tokyonight bg in rose pine
 	-- local bg = "#1a1b26" -- tokyonight-night bg
 
-    -- if color == "rose-pine-moon" then
-        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
-        vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#000000", fg = "#7a7a7a" })
-        vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#000000" })
-        vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#000000", fg = "#7a7a7a" })
-        vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "#000000" })
-        vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "#000000", fg = "#7a7a7a" })
-        vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { bg = "#000000" })
-        vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "#000000", fg = "#7a7a7a" })
-        vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = "#000000" })
-        vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = "#000000", fg = "#7a7a7a" })
-    -- end
+	-- if color == "rose-pine-moon" then
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })
+	-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#000000", fg = "#7a7a7a" })
+	-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#000000" })
+	-- vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#000000", fg = "#7a7a7a" })
+	-- vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "#000000" })
+	-- vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "#000000", fg = "#7a7a7a" })
+	-- vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { bg = "#000000" })
+	-- vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "#000000", fg = "#7a7a7a" })
+	-- vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = "#000000" })
+	-- vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = "#000000", fg = "#7a7a7a" })
+	-- end
 end
 
 return {
@@ -82,6 +82,7 @@ return {
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
+				transparent = true,
 			})
 			ColorMyPencils()
 		end,
@@ -277,16 +278,16 @@ return {
 					-- transparency = true
 				},
 				highlight_groups = {
-				-- 	-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
-				-- 	-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
-				-- 	-- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
-				-- 	-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
-				-- 	String = { fg = "#f5cb96" }, -- yellowish string color from Vague
-				-- 	["@field"] = { fg = "#B4D4CF" }, -- keyscolor
-				-- 	["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
-				-- 	["@tag"] = { fg = "#B4D4CF" }, -- tags
-				-- 	["@type"] = { fg = "#B4D4CF" }, -- types
-				-- 	["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
+					-- 	-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
+					-- 	-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
+					-- 	-- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
+					-- 	-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
+					-- 	String = { fg = "#f5cb96" }, -- yellowish string color from Vague
+					-- 	["@field"] = { fg = "#B4D4CF" }, -- keyscolor
+					-- 	["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
+					-- 	["@tag"] = { fg = "#B4D4CF" }, -- tags
+					-- 	["@type"] = { fg = "#B4D4CF" }, -- types
+					-- 	["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
 					StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})

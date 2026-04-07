@@ -46,7 +46,7 @@ end)
 -- end, { noremap = true, silent = true })
 
 -- This one is smooth, crisp and blazing fast
-vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>==", "ma gg=G `a", { noremap = true, silent = true })
 vim.keymap.set("n", "-", "<CMD>:Ex<CR>", { desc = "Open netrw" })
 
 
