@@ -101,13 +101,15 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	-- event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	-- branch = "master", -- very important and do not use lazy = false
+	branch = "master", -- very important and do not use lazy = false
 	lazy = false,
 
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
-        branch = "master",
-	    lazy = false,
+		{
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			branch = "master",
+			lazy = false,
+		},
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
