@@ -1,20 +1,23 @@
 function ColorMyPencils(color)
 	-- color = color or "rose-pine-moon"
+	color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
 	-- color = color or "oldworld"
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight-storm"
+	-- color = color or "tokyonight-storm"
 	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
 	vim.cmd.colorscheme(color)
+
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+
+    -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	-- This is to have tokyonight bg in rose pine
 	-- local bg = "#1a1b26" -- tokyonight-night bg
 
@@ -82,7 +85,7 @@ return {
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
-				transparent = true,
+				transparent = false,
 			})
 			ColorMyPencils()
 		end,
