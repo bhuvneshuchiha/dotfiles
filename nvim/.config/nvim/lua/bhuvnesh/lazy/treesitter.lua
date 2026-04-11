@@ -5,6 +5,7 @@
 --     branch = "master",
 --     dependencies = {
 --         "windwp/nvim-ts-autotag",
+-- 		"nvim-treesitter/nvim-treesitter-textobjects",
 --     },
 --     config = function()
 --         -- import nvim-treesitter plugin
@@ -39,6 +40,16 @@
 --             autotag = {
 --                 enable = true,
 --             },
+-- 			textobjects = {
+-- 				select = {
+-- 					enable = true,
+-- 					lookahead = true,
+-- 					keymaps = {
+-- 						["af"] = "@function.outer",
+-- 						["if"] = "@function.inner",
+-- 					},
+-- 				},
+-- 			},
 --             -- ensure these language parsers are installed
 --             ensure_installed = {
 --                 "cpp",
@@ -90,10 +101,13 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	-- event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	branch = "master", -- very important and do not use lazy = false
+	-- branch = "master", -- very important and do not use lazy = false
+	lazy = false,
+
 	dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        lazy = false,
+		"nvim-treesitter/nvim-treesitter-textobjects",
+        branch = "master",
+	    lazy = false,
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
@@ -110,11 +124,6 @@ return {
 					keymaps = {
 						["af"] = "@function.outer",
 						["if"] = "@function.inner",
-					},
-					selection_modes = {
-						["@function.outer"] = "V", -- Line-wise
-						["@class.outer"] = "V", -- Line-wise
-						["@parameter.outer"] = "v", -- Char-wise
 					},
 				},
 			},
@@ -148,6 +157,3 @@ return {
 		})
 	end,
 }
-
-
-
