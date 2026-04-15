@@ -1,13 +1,13 @@
 function ColorMyPencils(color)
 	-- color = color or "rose-pine-moon"
-	color = color or "rose-pine-main"
+	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
 	-- color = color or "oldworld"
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	-- color = color or "tokyonight-storm"
+	color = color or "tokyonight-storm"
 	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
@@ -36,60 +36,60 @@ function ColorMyPencils(color)
 end
 
 return {
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	enabled = true,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		local tokyo = require("tokyonight")
-	-- 		tokyo.setup({
-	-- 			transparent = true,
-	-- 			styles = {
-	-- 				sidebars = "transparent",
-	-- 				floats = "transparent",
-	-- 			},
-	-- 			on_highlights = function(hl, c)
-	-- 				hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
-	-- 			end,
-	-- 		})
-	-- 		-- vim.cmd.colorscheme("tokyonight")
-	-- 		-- vim.cmd.colorscheme("tokyonight-night")
-	-- 		-- vim.cmd.colorscheme("tokyonight-storm")
-	-- 		-- vim.cmd.colorscheme("tokyonight-moon")
-	-- 		-- vim.cmd.colorscheme("tokyonight-day")
-	--
-	-- 		-- Transparent background fix
-	-- 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- 		vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-	-- 		vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
-	-- 	end,
-	-- },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
-		opts = {},
+		enabled = true,
+		priority = 1000,
 		config = function()
-			require("tokyonight").setup({
-				on_colors = function(colors)
-					-- colors.fg = "#FFFFFF" -- Set pure white for foreground
-					-- colors.fg = "#e0def4" -- Set pure white for foreground
-					colors.error = "#eb6f92"
-					-- colors.warning = "#f6c177"
-				end,
-				on_highlights = function(hl, colors)
-					hl.ErrorMsg = { fg = colors.red, bold = true }
-				end,
-
+			local tokyo = require("tokyonight")
+			tokyo.setup({
+				transparent = true,
 				styles = {
-					comments = { italic = false },
-					keywords = { italic = false },
+					sidebars = "transparent",
+					floats = "transparent",
 				},
-				transparent = false,
+				on_highlights = function(hl, c)
+					hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
+				end,
 			})
-			ColorMyPencils()
+			-- vim.cmd.colorscheme("tokyonight")
+			-- vim.cmd.colorscheme("tokyonight-night")
+			-- vim.cmd.colorscheme("tokyonight-storm")
+			-- vim.cmd.colorscheme("tokyonight-moon")
+			-- vim.cmd.colorscheme("tokyonight-day")
+
+			-- Transparent background fix
+			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+			vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 		end,
 	},
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		require("tokyonight").setup({
+	-- 			on_colors = function(colors)
+	-- 				-- colors.fg = "#FFFFFF" -- Set pure white for foreground
+	-- 				-- colors.fg = "#e0def4" -- Set pure white for foreground
+	-- 				colors.error = "#eb6f92"
+	-- 				-- colors.warning = "#f6c177"
+	-- 			end,
+	-- 			on_highlights = function(hl, colors)
+	-- 				hl.ErrorMsg = { fg = colors.red, bold = true }
+	-- 			end,
+	--
+	-- 			styles = {
+	-- 				comments = { italic = false },
+	-- 				keywords = { italic = false },
+	-- 			},
+	-- 			transparent = true,
+	-- 		})
+	-- 		ColorMyPencils()
+	-- 	end,
+	-- },
 
 	{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
@@ -281,17 +281,18 @@ return {
 					-- transparency = true
 				},
 				highlight_groups = {
-					-- 	-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
+					    -- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
 					-- 	-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
-					-- 	-- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
-					-- 	-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
-					-- 	String = { fg = "#f5cb96" }, -- yellowish string color from Vague
-					-- 	["@field"] = { fg = "#B4D4CF" }, -- keyscolor
-					-- 	["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
-					-- 	["@tag"] = { fg = "#B4D4CF" }, -- tags
-					-- 	["@type"] = { fg = "#B4D4CF" }, -- types
-					-- 	["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
-					StatusLine = { fg = "subtle", bg = "surface" },
+					    -- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
+						-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
+                        String = { fg = "#e8b589" },
+						-- String = { fg = "#f5cb96" }, -- yellowish string color from Vague
+						["@field"] = { fg = "#B4D4CF" }, -- keyscolor
+						["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
+						["@tag"] = { fg = "#B4D4CF" }, -- tags
+						["@type"] = { fg = "#B4D4CF" }, -- types
+						["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
+					-- StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})
 
