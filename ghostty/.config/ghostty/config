@@ -1,5 +1,5 @@
-theme = /Users/bhuvnesh/.dotfiles/ghostty/.config/ghostty/themes/tokyonight
-# theme = Tokyonight
+# theme = /Users/bhuvnesh/.dotfiles/ghostty/.config/ghostty/themes/tokyonight
+theme = Tokyonight Night
 # theme = Rose Pine Moon
 # theme = GruvboxDarkHard
 # background = 000000
@@ -17,14 +17,15 @@ font-size = 23
 window-padding-y = 0,0
 confirm-close-surface = false
 macos-option-as-alt = true
-background-opacity = 0.8
+# background-opacity = 0.8
 background-blur-radius = false
 # adjust-cell-width=-6%
 # theme = tokyonight_night
 # background = 0c0c0c
 # cursor-color = white
-# font-family = MesloLGS Nerd Font Mono font-family = JetBrains Mono
-font-family = JetBrainsMono Nerd Font
+# font-family = MesloLGS Nerd Font Mono
+# font-family = JetBrains Mono
+# font-family = JetBrainsMono Nerd Font
 # font-family = SauceCodePro Nerd Font Mono
 # font-family = Cascadia Code
 # font-family = Menlo

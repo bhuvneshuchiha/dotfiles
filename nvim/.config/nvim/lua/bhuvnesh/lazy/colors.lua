@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	-- color = color or "rose-pine-moon"
+	color = color or "rose-pine-moon"
 	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
@@ -7,7 +7,7 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight-storm"
+	-- color = color or "tokyonight-storm"
 	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
@@ -48,6 +48,8 @@ return {
 				styles = {
 					sidebars = "transparent",
 					floats = "transparent",
+					comments = { italic = false },
+					keywords = { italic = false },
 				},
 				on_highlights = function(hl, c)
 					hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
@@ -292,7 +294,7 @@ return {
 						["@tag"] = { fg = "#B4D4CF" }, -- tags
 						["@type"] = { fg = "#B4D4CF" }, -- types
 						["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
-					-- StatusLine = { fg = "subtle", bg = "surface" },
+                        StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})
 

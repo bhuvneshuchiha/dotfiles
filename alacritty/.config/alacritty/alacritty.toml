@@ -2,12 +2,15 @@
 # defaults write org.alacritty AppleFontSmoothing -int 0
 
 [general] # Go to line 41 and comment out the background color
-# import = [
-# # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
-# ]
+import = [
+# "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+# "~/.config/alacritty/themes/themes/prime.toml"
+# "~/.config/alacritty/themes/themes/ayu_dark.toml"
+# "~/.config/alacritty/themes/themes/blood_moon.toml"
+]
 
 [env]
-# TERM="xterm-256color"
+TERM="xterm-256color"
 # [window]
 # padding.x = 10
 # padding.y = 10
@@ -18,9 +21,12 @@
 
 [colors.cursor]
 # text = "#000000"    # The color of the text underneath the cursor
-cursor = "#ffffff"  # The color of the cursor itself
+# cursor = "#ffffff"  # The color of the cursor itself
 # cursor = "#fff000"  # The color of the cursor itself
 
+# [cursor]
+# style.blinking = "on"
+# blink_interval = 500
 
 [colors]
 # If `true`, bold text is drawn using the bright color variants.
@@ -32,20 +38,24 @@ cursor = "#ffffff"  # The color of the cursor itself
 # normal.family = "Iosevka Nerd Font"
 # normal.family = "Maple Mono NF"
 # normal.family = "BlexMono Nerd Font"
-normal.family = "FiraCode Nerd Font"
+# normal.family = "FiraCode Nerd Font"
+# normal.family = "Fira Mono"
+normal.family="DejaVuSansM Nerd Font Mono"
 normal.style = "Regular"
 # normal.family = "SourceCodePro Nerd Font"
 # normal.family = "JetBrains Mono"
 # normal.family = "JetBrainsMono Nerd Font"
 # use_thin_strokes = true
-size = 22
+size = 18
 
 
 [colors.primary]
 # background = '#0c0c0c'
 # background = '#181818'
-background = '#000000' #Comment this out to get the theme background color
+# background = '#000000' #Comment this out to get the theme background color
+# background = '#333333'
 # background = '#1c1e20'
+background = "#1d1f21"
 
 [window.padding]
 x = 5
@@ -77,6 +87,62 @@ bindings = [
 hide_when_typing = true
 
 [window]
-# startup_mode = "SimpleFullscreen"
-# opacity=0.75
+# startup_mode = "Maximized"
+# opacity=0.87
 option_as_alt = "Both"
+
+
+
+
+
+
+
+
+
+
+
+# [general]
+# import = [
+# # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+# # "~/.config/alacritty/themes/themes/prime.toml"
+# # "~/.config/alacritty/themes/themes/ayu_dark.toml"
+# # "~/.config/alacritty/themes/themes/blood_moon.toml"
+# ]
+#
+# [env]
+# TERM = "xterm-256color"
+#
+# [font]
+# normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+# size = 13.5
+#
+# offset = { x = 0, y = 0 }
+# glyph_offset = { x = 0, y = 0 }
+#
+# [colors.primary]
+# background = "#1d1f21"
+#
+# [window]
+# padding = { x = 5, y = 0 }
+# decorations = "None"
+# option_as_alt = "Both"
+#
+# [window.dimensions]
+# columns = 250
+# lines = 90
+#
+# [window.position]
+# x = 800
+# y = 150
+#
+# [keyboard]
+# bindings = [
+# { key = "F", mods = "Alt", action = "ToggleSimpleFullscreen" },
+# { key = "Q", mods = "Command", action = "None" },
+# { key = "Right", mods = "Alt", chars = "\u001BF" },
+# { key = "Left", mods = "Alt", chars = "\u001BB" }
+# ]
+#
+# [mouse]
+# hide_when_typing = true
+#

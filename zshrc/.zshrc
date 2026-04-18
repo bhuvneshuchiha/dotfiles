@@ -24,6 +24,11 @@ PATH="$PATH":"$HOME/.local/scripts/"
 GOPATH=$HOME/go
 PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
 # To stop using 256 colors ->
 # export TERM=xterm
 
@@ -148,7 +153,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
-alias ls="eza --icons=always"
+# alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
