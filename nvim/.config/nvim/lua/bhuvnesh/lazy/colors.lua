@@ -15,6 +15,7 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
     -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
@@ -95,16 +96,18 @@ return {
 
 	{ "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
-	-- {
-	-- 	"vague2k/vague.nvim",
-	-- 	config = function()
-	-- 		require("vague").setup({
-	-- 			colors = {
-	-- 				bg = "#090B10",
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({
+	               transparent = false,
+	               italic = false,
+				colors = {
+					bg = "#090B10",
+				},
+			})
+		end,
+	},
 
 	-- {
 	-- "drewxs/ash.nvim",
