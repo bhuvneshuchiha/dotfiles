@@ -12,6 +12,10 @@
 # #PROMPT="%F{green}%n@%m %F{blue}%~ %F{magenta}$ %f"
 # PROMPT="%F%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export TERM=xterm-256color
+
 export PATH=/usr/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 export PATH="$HOME/.bun/bin:$PATH"
@@ -205,3 +209,27 @@ git() {
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+
+wally() {
+    WALLPAPER_DIR="$HOME/.config/anime/"
+
+    selected=$(find "$WALLPAPER_DIR" \
+      \( -iname "*.jpg" -o \
+         -iname "*.jpeg" -o \
+         -iname "*.png" -o \
+         -iname "*.webp" \) | fzf)
+
+    [ -z "$selected" ] && return
+
+    osascript <<EOF
+tell application "System Events"
+    tell every desktop
+        set picture to "$selected"
+    end tell
+end tell
+EOF
+
+    echo "Wallpaper changed:"
+    echo "$selected"
+}

@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine-moon"
+	-- color = color or "rose-pine-moon"
 	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
@@ -7,7 +7,7 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	-- color = color or "tokyonight-storm"
+	color = color or "tokyonight-storm"
 	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
@@ -52,9 +52,9 @@ return {
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
-				on_highlights = function(hl, c)
-					hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
-				end,
+				-- on_highlights = function(hl, c)
+				-- 	hl["@lsp.code.unused"] = { fg = c.comment, italic = true }
+				-- end,
 			})
 			-- vim.cmd.colorscheme("tokyonight")
 			-- vim.cmd.colorscheme("tokyonight-night")

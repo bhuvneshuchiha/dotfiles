@@ -36,4 +36,5 @@ background-blur-radius = false
 # font-family = Hasklug Nerd Font
 # font-family = LiterationMono Nerd Font
 
-keybind = shift+enter=text:\x1b\r
+# keybind = shift+enter=text:\x1b\r
+keybind = shift+enter=text:\n
