@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
-	-- color = color or "rose-pine-moon"
-	color = color or "rose-pine-main"
+	color = color or "rose-pine-moon"
+	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
 	-- color = color or "oldworld"

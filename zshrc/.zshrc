@@ -12,9 +12,9 @@
 # #PROMPT="%F{green}%n@%m %F{blue}%~ %F{magenta}$ %f"
 # PROMPT="%F%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export TERM=xterm-256color
+# export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# export TERM=xterm-256color
 
 export PATH=/usr/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
@@ -157,7 +157,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
-# alias ls="eza --icons=always"
+alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
