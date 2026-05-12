@@ -15,7 +15,7 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
     -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
@@ -287,16 +287,23 @@ return {
 				},
 				highlight_groups = {
 					    -- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
-					-- 	-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
-					    -- String = { fg = "#d6bd8b" },             -- yellowish string color from Vague
-						-- String = { fg = "#E2C489" }, -- yellowish string color from Vague
+						-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
                         String = { fg = "#e8b589" },
-						-- String = { fg = "#f5cb96" }, -- yellowish string color from Vague
 						["@field"] = { fg = "#B4D4CF" }, -- keyscolor
 						["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 						["@tag"] = { fg = "#B4D4CF" }, -- tags
 						["@type"] = { fg = "#B4D4CF" }, -- types
 						["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
+
+                        ["@parameter"] = { fg = "#bb9dbd" },
+                        ["@constant"] = { fg = "#aeaed1" },
+                        ["@function"] = { fg = "#c48282" },
+                        ["@keyword"] = { fg = "#6e94b2" },
+                        ["@keyword.conditional"] = { fg = "#6e94b2" },
+                        ["@keyword.return"] = { fg = "#6e94b2" },
+                        ["@operator"] = { fg = "#90a0b5" },
+                        ["@string"] = { fg = "#e8b589" },
+                        ["@number"] = { fg = "#e0a363" },
                         StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})
