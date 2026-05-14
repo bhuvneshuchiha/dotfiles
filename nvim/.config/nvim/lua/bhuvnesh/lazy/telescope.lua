@@ -73,39 +73,49 @@
 -- 	end,
 -- }
 
-
-
-
-
-
 return {
-    "nvim-telescope/telescope.nvim",
+	"nvim-telescope/telescope.nvim",
 
-    tag = "0.1.5",
+	-- tag = "0.1.5",
 
-    dependencies = {
-        "nvim-lua/plenary.nvim"
-    },
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
 
-    config = function()
-        require('telescope').setup({})
+	config = function()
+		require("telescope").setup({})
 
-        local preview_utils = require("telescope.previewers.utils")
-        preview_utils.ts_highlighter = function(bufnr, ft)
-            local lang = vim.treesitter.language.get_lang(ft) or ft
-            if not lang or lang == "" then
-                return false
-            end
+		local preview_utils = require("telescope.previewers.utils")
+		preview_utils.ts_highlighter = function(bufnr, ft)
+			local lang = vim.treesitter.language.get_lang(ft) or ft
+			if not lang or lang == "" then
+				return false
+			end
 
-            return pcall(vim.treesitter.start, bufnr, lang)
-        end
+			return pcall(vim.treesitter.start, bufnr, lang)
+		end
 
 		local builtin = require("telescope.builtin")
+
+		-- show all the symbols in the project(functions, variables etc)
+		vim.keymap.set("n", "<leader>fws", function()
+			require("telescope.builtin").lsp_workspace_symbols({
+				query = vim.fn.expand("<cword>"),
+			})
+		end)
+		-- show all the symbols in the current file only(functions, variables etc)
+		vim.keymap.set("n", "<leader>fds", function()
+			require("telescope.builtin").lsp_document_symbols({
+				symbol_width = 50,
+			})
+		end)
+		--similar to go to implementation (gi)
+		vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations, {})
+
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 		vim.keymap.set("n", "<leader>fk", builtin.keymaps, {})
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-		-- vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 		vim.keymap.set("n", "<C-g>", builtin.git_files, {})
 		vim.keymap.set("n", "<leader>fb", builtin.current_buffer_fuzzy_find, {})
 		-- vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
@@ -123,4 +133,3 @@ return {
 		end)
 	end,
 }
-
