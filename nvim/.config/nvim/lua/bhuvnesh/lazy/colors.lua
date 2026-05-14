@@ -288,7 +288,8 @@ return {
 				highlight_groups = {
 					    -- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
 						-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
-                        String = { fg = "#e8b589" },
+                        -- String = { fg = "#e8b589" },
+                        String = { fg = "#f5d2a6" },
 						["@field"] = { fg = "#B4D4CF" }, -- keyscolor
 						["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 						["@tag"] = { fg = "#B4D4CF" }, -- tags
