@@ -15,10 +15,10 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
-    -- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	-- This is to have tokyonight bg in rose pine
 	-- local bg = "#1a1b26" -- tokyonight-night bg
 
@@ -100,8 +100,8 @@ return {
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
-	               transparent = false,
-	               italic = false,
+				transparent = false,
+				italic = false,
 				colors = {
 					bg = "#090B10",
 				},
@@ -195,29 +195,29 @@ return {
 	-- end,
 	-- },
 
-	-- {
-	-- "blazkowolf/gruber-darker.nvim",
-	-- lazy = false,
-	-- opts = {
-	-- 	bold = true,
-	-- 	invert = {
-	-- 		signs = false,
-	-- 		tabline = false,
-	-- 		visual = false,
-	-- 	},
-	-- 	italic = {
-	-- 		strings = false,
-	-- 		comments = false,
-	-- 		operators = false,
-	-- 		folds = false,
-	-- 	},
-	-- 	undercurl = false,
-	-- 	underline = false,
-	-- },
-	-- config = function(_, opts)
-	-- 	require("gruber-darker").setup(opts)
-	-- end,
-	-- },
+	{
+	"blazkowolf/gruber-darker.nvim",
+	lazy = false,
+	opts = {
+		bold = false,
+		invert = {
+			signs = false,
+			tabline = false,
+			visual = false,
+		},
+		italic = {
+			strings = false,
+			comments = false,
+			operators = false,
+			folds = false,
+		},
+		undercurl = false,
+		underline = false,
+	},
+	config = function(_, opts)
+		require("gruber-darker").setup(opts)
+	end,
+	},
 	--
 	-- {
 	-- 	"navarasu/onedark.nvim",
@@ -286,26 +286,29 @@ return {
 					-- transparency = true
 				},
 				highlight_groups = {
-					    -- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
-						-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
-                        -- String = { fg = "#e8b589" },
-                        String = { fg = "#f5d2a6" },
-						["@field"] = { fg = "#B4D4CF" }, -- keyscolor
-						["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
-						["@tag"] = { fg = "#B4D4CF" }, -- tags
-						["@type"] = { fg = "#B4D4CF" }, -- types
-						["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
+					-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
+					-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
+					-- String = { fg = "#e8b589" },
+					String = { fg = "#f5d2a6" },
+					-- ["@field"] = { fg = "#B4D4CF" }, -- keyscolor
+					-- ["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
+					-- ["@tag"] = { fg = "#B4D4CF" }, -- tags
+					-- ["@type"] = { fg = "#B4D4CF" }, -- types
+					-- ["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
 
-                        ["@parameter"] = { fg = "#bb9dbd" },
-                        ["@constant"] = { fg = "#aeaed1" },
-                        ["@function"] = { fg = "#c48282" },
-                        ["@keyword"] = { fg = "#6e94b2" },
-                        ["@keyword.conditional"] = { fg = "#6e94b2" },
-                        ["@keyword.return"] = { fg = "#6e94b2" },
-                        ["@operator"] = { fg = "#90a0b5" },
-                        ["@string"] = { fg = "#e8b589" },
-                        ["@number"] = { fg = "#e0a363" },
-                        StatusLine = { fg = "subtle", bg = "surface" },
+					-- ["@parameter"] = { fg = "#bb9dbd" },
+					-- ["@constant"] = { fg = "#aeaed1" },
+					-- ["@function"] = { fg = "#c48282" },
+					-- ["@keyword"] = { fg = "#6e94b2" },
+					-- ["@keyword.conditional"] = { fg = "#6e94b2" },
+					-- ["@keyword.return"] = { fg = "#6e94b2" },
+					-- ["@keyword.import"] = { fg = "#6e94b2" },
+					-- ["@keyword.repeat"] = { fg = "#6e94b2" },
+					-- -- ["@operator"] = { fg = "#90a0b5" },
+					-- -- ["@string"] = { fg = "#e8b589" },
+					-- -- ["@number"] = { fg = "#e0a363" },
+					-- ["@number"] = { fg = "#f5d2a6" },
+					StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})
 

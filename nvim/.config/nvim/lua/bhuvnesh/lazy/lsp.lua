@@ -421,7 +421,7 @@ return {
 			-- signs = {
 			-- 	severity = { min = vim.diagnostic.severity.ERROR},
 			-- },
-			-- virtual_text = true,
+			virtual_text = true,
 			float = {
 				focusable = false,
 				style = "minimal",

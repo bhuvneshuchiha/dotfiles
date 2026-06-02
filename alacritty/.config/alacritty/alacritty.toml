@@ -21,7 +21,7 @@ TERM="xterm-256color"
 
 [colors.cursor]
 # text = "#000000"    # The color of the text underneath the cursor
-# cursor = "#ffffff"  # The color of the cursor itself
+cursor = "#ffffff"  # The color of the cursor itself
 # cursor = "#fff000"  # The color of the cursor itself
 
 # [cursor]
@@ -41,22 +41,19 @@ TERM="xterm-256color"
 # normal.family = "FiraCode Nerd Font"
 # normal.family = "Fira Mono"
 # normal.family = "CommitMono Nerd Font"
-# normal.family="DejaVuSansM Nerd Font Mono"
+normal.family="DejaVuSansM Nerd Font Mono"
 normal.style = "Regular"
 # normal.family = "SourceCodePro Nerd Font"
 # normal.family = "JetBrains Mono"
-normal.family = "JetBrainsMono Nerd Font"
-# use_thin_strokes = true
+# normal.family = "JetBrainsMono Nerd Font"
 size = 18
 
 
 [colors.primary]
-# background = '#0c0c0c'
-# background = '#181818'
-background = '#000000' #Comment this out to get the theme background color
-# background = '#1c1e20'
-# background = "#1d1f21"
-# background = "#1B1E20"
+# background = '#000000' #Comment this out to get the theme background color
+background = "#1B1E20" #grey go to
+# background = "#090300" #reddish black
+# background = "#181818" # gruber dark
 
 [window.padding]
 x = 5
@@ -88,9 +85,9 @@ bindings = [
 hide_when_typing = true
 
 [window]
-# startup_mode = "Maximized"
-opacity=0.86
-blur = true
+# startup_mode = "SimpleFullscreen"
+# opacity=0.86
+# blur = true
 option_as_alt = "Both"
 
 

@@ -157,7 +157,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # ---- Eza (better ls) -----
 
-alias ls="eza --icons=always"
+# alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
