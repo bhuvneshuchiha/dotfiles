@@ -229,7 +229,7 @@ return {
 			}),
 
 			vim.lsp.config("gopls", {
-                on_attach = function(client, bufnr)
+                on_attach = function(client, _)
                     client.server_capabilities.semanticTokensProvider = nil
                 end,
 				settings = {},
@@ -430,7 +430,7 @@ return {
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
-			-- underline = true,
+			underline = false,
 			-- signs = {
 			-- 	severity = { min = vim.diagnostic.severity.WARN},
 			-- },
