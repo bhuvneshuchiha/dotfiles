@@ -15,8 +15,12 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+					-- StatusLine = {
+					-- 	fg = "#908caa", -- subtle
+					-- 	bg = "#2a273f", -- surface
+					-- },
 
 	-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	-- This is to have tokyonight bg in rose pine
@@ -103,7 +107,6 @@ return {
 				transparent = false,
 				italic = false,
 				colors = {
-					bg = "#090B10",
 				},
 			})
 		end,
@@ -289,14 +292,14 @@ return {
 					-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
 					-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
 					-- String = { fg = "#e8b589" },
-					-- String = { fg = "#f5d2a6" },
+					String = { fg = "#f5d2a6" },
 					-- ["@field"] = { fg = "#B4D4CF" }, -- keyscolor
 					-- ["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 					-- ["@tag"] = { fg = "#B4D4CF" }, -- tags
 					-- ["@type"] = { fg = "#B4D4CF" }, -- types
 					-- ["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
 
-                    --- Here
+					--- Here
 					-- ["@parameter"] = { fg = "#bb9dbd" },
 					-- ["@constant"] = { fg = "#aeaed1" },
 					-- ["@function"] = { fg = "#c48282" },
@@ -305,7 +308,7 @@ return {
 					-- ["@keyword.return"] = { fg = "#6e94b2" },
 					-- ["@keyword.import"] = { fg = "#6e94b2" },
 					-- ["@keyword.repeat"] = { fg = "#6e94b2" },
-                    ---Here
+					---Here
 					-- ["@operator"] = { fg = "#90a0b5" },
 					-- ["@string"] = { fg = "#e8b589" },
 					-- ["@number"] = { fg = "#e0a363" },

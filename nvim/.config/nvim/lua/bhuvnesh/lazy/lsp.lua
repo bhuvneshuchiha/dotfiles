@@ -182,6 +182,12 @@ return {
 				-- "pyright"
 			},
 
+			on_attach = function(client, bufnr)
+				if client.name == "gopls" then
+					client.server_capabilities.semanticTokensProvider = nil
+				end
+			end,
+
 			-- Latest way to configure lsp's.. follow this
 			vim.lsp.config("lua_ls", {
 				settings = {
@@ -220,6 +226,13 @@ return {
 					},
 				},
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			}),
+
+			vim.lsp.config("gopls", {
+                on_attach = function(client, bufnr)
+                    client.server_capabilities.semanticTokensProvider = nil
+                end,
+				settings = {},
 			}),
 
 			handlers = {
@@ -417,7 +430,7 @@ return {
 
 		vim.diagnostic.config({
 			-- update_in_insert = true,
-			underline = true,
+			-- underline = true,
 			-- signs = {
 			-- 	severity = { min = vim.diagnostic.severity.WARN},
 			-- },
