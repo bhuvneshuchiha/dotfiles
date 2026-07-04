@@ -196,27 +196,27 @@ return {
 	-- },
 
 	{
-	"blazkowolf/gruber-darker.nvim",
-	lazy = false,
-	opts = {
-		bold = false,
-		invert = {
-			signs = false,
-			tabline = false,
-			visual = false,
+		"blazkowolf/gruber-darker.nvim",
+		lazy = false,
+		opts = {
+			bold = false,
+			invert = {
+				signs = false,
+				tabline = false,
+				visual = false,
+			},
+			italic = {
+				strings = false,
+				comments = false,
+				operators = false,
+				folds = false,
+			},
+			undercurl = false,
+			underline = false,
 		},
-		italic = {
-			strings = false,
-			comments = false,
-			operators = false,
-			folds = false,
-		},
-		undercurl = false,
-		underline = false,
-	},
-	config = function(_, opts)
-		require("gruber-darker").setup(opts)
-	end,
+		config = function(_, opts)
+			require("gruber-darker").setup(opts)
+		end,
 	},
 	--
 	-- {
@@ -289,25 +289,27 @@ return {
 					-- String = { fg = "#E5C07B" },    -- yellowish string color from Vague
 					-- String = { fg = "#e5c39d" },    -- yellowish string color from Vague
 					-- String = { fg = "#e8b589" },
-					String = { fg = "#f5d2a6" },
+					-- String = { fg = "#f5d2a6" },
 					-- ["@field"] = { fg = "#B4D4CF" }, -- keyscolor
 					-- ["@property"] = { fg = "#B4D4CF" }, -- additional keys/properties
 					-- ["@tag"] = { fg = "#B4D4CF" }, -- tags
 					-- ["@type"] = { fg = "#B4D4CF" }, -- types
 					-- ["@tag.attribute"] = { fg = "#B4D4CF" }, -- tag attributes if you want
 
-					["@parameter"] = { fg = "#bb9dbd" },
-					["@constant"] = { fg = "#aeaed1" },
-					["@function"] = { fg = "#c48282" },
-					["@keyword"] = { fg = "#6e94b2" },
-					["@keyword.conditional"] = { fg = "#6e94b2" },
-					["@keyword.return"] = { fg = "#6e94b2" },
-					["@keyword.import"] = { fg = "#6e94b2" },
-					["@keyword.repeat"] = { fg = "#6e94b2" },
+                    --- Here
+					-- ["@parameter"] = { fg = "#bb9dbd" },
+					-- ["@constant"] = { fg = "#aeaed1" },
+					-- ["@function"] = { fg = "#c48282" },
+					-- ["@keyword"] = { fg = "#6e94b2" },
+					-- ["@keyword.conditional"] = { fg = "#6e94b2" },
+					-- ["@keyword.return"] = { fg = "#6e94b2" },
+					-- ["@keyword.import"] = { fg = "#6e94b2" },
+					-- ["@keyword.repeat"] = { fg = "#6e94b2" },
+                    ---Here
 					-- ["@operator"] = { fg = "#90a0b5" },
 					-- ["@string"] = { fg = "#e8b589" },
 					-- ["@number"] = { fg = "#e0a363" },
-					["@number"] = { fg = "#f5d2a6" },
+					-- ["@number"] = { fg = "#f5d2a6" },
 					StatusLine = { fg = "subtle", bg = "surface" },
 				},
 			})
@@ -386,67 +388,75 @@ return {
 	-- 	end,
 	-- },
 
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		local colors = require("catppuccin.palettes").get_palette("mocha")
-	-- 		require("catppuccin").setup({
-	-- 			flavour = "mocha",
-	-- 			styles = {
-	-- 				comments = {},
-	-- 				conditionals = {},
-	-- 				loops = {},
-	-- 				functions = {},
-	-- 				keywords = { "bold" },
-	-- 				strings = {},
-	-- 				variables = {},
-	-- 				numbers = {},
-	-- 				booleans = {},
-	-- 				properties = {},
-	-- 				types = {},
-	-- 				operators = {},
-	-- 			},
-	-- 			custom_highlights = {
-	-- 				-- StatusLine = { bg = colors.base, fg = colors.base },
-	-- 				-- StatusLineNC = { bg = colors.base, fg = colors.base },
-	-- 			},
-	-- 			integrations = {
-	-- 				treesitter = true,
-	-- 				cmp = true,
-	-- 				mason = true,
-	-- 				dadbod_ui = true,
-	-- 				gitsigns = {
-	-- 					enabled = true,
-	-- 					transparent = false,
-	-- 				},
-	-- 				telescope = {
-	-- 					enabled = true,
-	-- 				},
-	-- 				native_lsp = {
-	-- 					enabled = true,
-	-- 					virtual_text = {
-	-- 						errors = {},
-	-- 						hints = {},
-	-- 						warnings = {},
-	-- 						information = {},
-	-- 						ok = {},
-	-- 					},
-	-- 					underlines = {
-	-- 						errors = {},
-	-- 						hints = {},
-	-- 						warnings = {},
-	-- 						information = {},
-	-- 						ok = {},
-	-- 					},
-	-- 					inlay_hints = {
-	-- 						background = true,
-	-- 					},
-	-- 				},
-	-- 			},
-	-- 		})
-	-- 		vim.cmd.colorscheme("catppuccin")
-	-- 	end,
-	-- },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			local colors = require("catppuccin.palettes").get_palette("mocha")
+			require("catppuccin").setup({
+				no_italic = true,
+				flavour = "mocha",
+				styles = {
+					comments = {},
+					italic = false,
+					conditionals = {},
+					loops = {},
+					functions = {},
+					keywords = { "bold" },
+					strings = {},
+					variables = {},
+					numbers = {},
+					booleans = {},
+					properties = {},
+					types = {},
+					operators = {},
+				},
+				custom_highlights = {
+					-- StatusLine = { bg = colors.base, fg = colors.base },
+					StatusLine = {
+						fg = "#908caa", -- subtle
+						bg = "#2a273f", -- surface
+					},
+
+					-- StatusLineNC = { bg = colors.base, fg = colors.base },
+				},
+				integrations = {
+					treesitter = true,
+					cmp = true,
+					mason = true,
+					dadbod_ui = true,
+					gitsigns = {
+						enabled = true,
+						transparent = false,
+					},
+					telescope = {
+						enabled = true,
+					},
+					native_lsp = {
+						enabled = true,
+						virtual_text = {
+							errors = {},
+							hints = {},
+							warnings = {},
+							information = {},
+							ok = {},
+							italic = {},
+						},
+						underlines = {
+							errors = {},
+							hints = {},
+							warnings = {},
+							information = {},
+							ok = {},
+						},
+						inlay_hints = {
+							background = true,
+						},
+					},
+				},
+			})
+			vim.cmd.colorscheme("catppuccin")
+		end,
+	},
 }

@@ -83,17 +83,35 @@ return {
 	},
 
 	config = function()
-		require("telescope").setup({})
+		require("telescope").setup({
+			-- -- This line disables the previewer
+			defaults = {
+				preview = {
+					hide_on_startup = true,
+				},
+			},
+			-- pickers = {
+			-- 	find_files = {
+			-- 		previewer = false, -- Disable preview for find_files
+			-- 	},
+			-- 	live_grep = {
+			-- 		previewer = true, -- Disable preview for live_grep
+			-- 	},
+			-- 	help_tags = {
+			-- 		previewer = true,
+			-- 	},
+			-- },
+		})
 
-		local preview_utils = require("telescope.previewers.utils")
-		preview_utils.ts_highlighter = function(bufnr, ft)
-			local lang = vim.treesitter.language.get_lang(ft) or ft
-			if not lang or lang == "" then
-				return false
-			end
-
-			return pcall(vim.treesitter.start, bufnr, lang)
-		end
+		-- local preview_utils = require("telescope.previewers.utils")
+		-- preview_utils.ts_highlighter = function(bufnr, ft)
+		-- 	local lang = vim.treesitter.language.get_lang(ft) or ft
+		-- 	if not lang or lang == "" then
+		-- 		return false
+		-- 	end
+		--
+		-- 	return pcall(vim.treesitter.start, bufnr, lang)
+		-- end
 
 		local builtin = require("telescope.builtin")
 

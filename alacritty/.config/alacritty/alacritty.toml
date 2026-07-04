@@ -21,7 +21,7 @@ TERM="xterm-256color"
 
 [colors.cursor]
 # text = "#000000"    # The color of the text underneath the cursor
-cursor = "#ffffff"  # The color of the cursor itself
+# cursor = "#ffffff"  # The color of the cursor itself
 # cursor = "#fff000"  # The color of the cursor itself
 
 # [cursor]
@@ -51,7 +51,9 @@ size = 18
 
 [colors.primary]
 # background = '#000000' #Comment this out to get the theme background color
-background = "#1B1E20" #grey go to
+background = "#1B1E20" #grey go to primeagen
+# background = "#16161e" #tokyonight dark
+# background = "#1a1b26" #tokyonight
 # background = "#090300" #reddish black
 # background = "#181818" # gruber dark
 
@@ -86,7 +88,7 @@ hide_when_typing = true
 
 [window]
 # startup_mode = "SimpleFullscreen"
-# opacity=0.86
+# opacity=0.9
 # blur = true
 option_as_alt = "Both"
 
