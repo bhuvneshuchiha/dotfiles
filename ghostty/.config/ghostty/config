@@ -1,6 +1,6 @@
 term = "xterm-ghostty"
 theme = /Users/bhuvnesh/.dotfiles/ghostty/.config/ghostty/themes/rosepine-custom
-theme = Tokyonight Night
+theme = Tokyonight
 # theme = catppuccin mocha
 # theme = Rose Pine Moon
 # theme = GruvboxDarkHard

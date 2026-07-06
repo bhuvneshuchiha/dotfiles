@@ -1,5 +1,16 @@
+-- local function make_netrw_dir_bold()
+--     local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = "netrwDir" })
+--     if ok then
+--         hl.bold = true
+--         vim.api.nvim_set_hl(0, "netrwDir", hl)
+--     end
+-- end
+--
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--     callback = make_netrw_dir_bold,
+-- })
 function ColorMyPencils(color)
-	color = color or "rose-pine-moon"
+	-- color = color or "rose-pine-moon"
 	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
@@ -7,7 +18,7 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	-- color = color or "tokyonight-storm"
+	color = color or "tokyonight-storm"
 	-- color = color or "moonfly"
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
@@ -15,12 +26,19 @@ function ColorMyPencils(color)
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "netrwDir", { bold = true })
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-					-- StatusLine = {
-					-- 	fg = "#908caa", -- subtle
-					-- 	bg = "#2a273f", -- surface
-					-- },
+
+    -- To make the folder icons bold in tokyonight
+	local hl = vim.api.nvim_get_hl(0, { name = "Directory", link = false })
+	hl.bold = true
+	vim.api.nvim_set_hl(0, "netrwDir", hl)
+
+	-- StatusLine = {
+	-- 	fg = "#908caa", -- subtle
+	-- 	bg = "#2a273f", -- surface
+	-- },
 
 	-- vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "none" })
 	-- This is to have tokyonight bg in rose pine
@@ -50,9 +68,15 @@ return {
 			local tokyo = require("tokyonight")
 			tokyo.setup({
 				transparent = true,
+				on_colors = function(colors)
+					-- colors.fg = "#FFFFFF" -- Set pure white for foreground
+					-- colors.fg = "#e0def4" -- Set pure white for foreground
+					colors.error = "#eb6f92"
+					colors.warning = "#f6c177"
+				end,
 				styles = {
-					sidebars = "transparent",
-					floats = "transparent",
+					-- sidebars = "transparent",
+					-- floats = "transparent",
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
@@ -106,8 +130,7 @@ return {
 			require("vague").setup({
 				transparent = false,
 				italic = false,
-				colors = {
-				},
+				colors = {},
 			})
 		end,
 	},
@@ -302,12 +325,12 @@ return {
 					--- Here
 					-- ["@parameter"] = { fg = "#bb9dbd" },
 					-- ["@constant"] = { fg = "#aeaed1" },
-					-- ["@function"] = { fg = "#c48282" },
-					-- ["@keyword"] = { fg = "#6e94b2" },
-					-- ["@keyword.conditional"] = { fg = "#6e94b2" },
-					-- ["@keyword.return"] = { fg = "#6e94b2" },
-					-- ["@keyword.import"] = { fg = "#6e94b2" },
-					-- ["@keyword.repeat"] = { fg = "#6e94b2" },
+					["@function"] = { fg = "#c48282" },
+					["@keyword"] = { fg = "#6e94b2" },
+					["@keyword.conditional"] = { fg = "#6e94b2" },
+					["@keyword.return"] = { fg = "#6e94b2" },
+					["@keyword.import"] = { fg = "#6e94b2" },
+					["@keyword.repeat"] = { fg = "#6e94b2" },
 					---Here
 					-- ["@operator"] = { fg = "#90a0b5" },
 					-- ["@string"] = { fg = "#e8b589" },
