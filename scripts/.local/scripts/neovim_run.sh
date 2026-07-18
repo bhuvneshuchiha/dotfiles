@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-NVIM_VERSION="v0.11.3"
+NVIM_VERSION="v0.11.5"
 
 OS="$(uname -s)"
 ARCH="$(uname -m)"

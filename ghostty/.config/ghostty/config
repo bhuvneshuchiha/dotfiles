@@ -1,12 +1,12 @@
 term = "xterm-ghostty"
 theme = /Users/bhuvnesh/.dotfiles/ghostty/.config/ghostty/themes/rosepine-custom
-theme = Tokyonight
+theme = TokyoNight Night
 # theme = catppuccin mocha
 # theme = Rose Pine Moon
-# theme = GruvboxDarkHard
 # background = 000000
 # background = #1B1E20
 # background = 000110
+background = #151515
 clipboard-read = allow
 clipboard-write = allow
 mouse-hide-while-typing=true

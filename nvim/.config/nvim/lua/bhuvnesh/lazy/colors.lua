@@ -1,16 +1,5 @@
--- local function make_netrw_dir_bold()
---     local ok, hl = pcall(vim.api.nvim_get_hl, 0, { name = "netrwDir" })
---     if ok then
---         hl.bold = true
---         vim.api.nvim_set_hl(0, "netrwDir", hl)
---     end
--- end
---
--- vim.api.nvim_create_autocmd("ColorScheme", {
---     callback = make_netrw_dir_bold,
--- })
 function ColorMyPencils(color)
-	-- color = color or "rose-pine-moon"
+	color = color or "rose-pine-moon"
 	-- color = color or "rose-pine-main"
 	-- color = color or "vague"
 	-- color = color or "ash"
@@ -18,22 +7,24 @@ function ColorMyPencils(color)
 	-- color = color or "gruber-darker"
 	-- color = color or "sonokai"
 	-- color = color or "onedark"
-	color = color or "tokyonight-storm"
-	-- color = color or "moonfly"
+	-- color = color or "tokyonight-storm"
+	-- color = color or "moonfly" -- good
 	-- color = color or "catppuccin-mocha"
 	-- color = color or "kanagawa"
 	-- color = color or "gruvbuddy"
+	-- color = color or "ayu-mirage"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	-- vim.api.nvim_set_hl(0, "netrwDir", { bold = true })
-	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
-    -- To make the folder icons bold in tokyonight
+	-- To make the folder icons bold in tokyonight
 	local hl = vim.api.nvim_get_hl(0, { name = "Directory", link = false })
 	hl.bold = true
 	vim.api.nvim_set_hl(0, "netrwDir", hl)
+
 
 	-- StatusLine = {
 	-- 	fg = "#908caa", -- subtle
@@ -76,7 +67,7 @@ return {
 				end,
 				styles = {
 					-- sidebars = "transparent",
-					-- floats = "transparent",
+					floats = "transparent",
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
@@ -91,9 +82,18 @@ return {
 			-- vim.cmd.colorscheme("tokyonight-day")
 
 			-- Transparent background fix
-			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-			vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+			-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+		end,
+	},
+
+	{
+		"Shatur/neovim-ayu",
+		config = function()
+			require("ayu").setup({
+				transparent = true,
+			})
 		end,
 	},
 	-- {
@@ -258,7 +258,7 @@ return {
 	-- },
 
 	-- {
-	-- 	-- -- Disabled term gui colors in init.lua
+	-- -- 	-- -- Disabled term gui colors in init.lua
 	-- 	"sainnhe/sonokai",
 	-- 	lazy = false,
 	-- 	priority = 1000,
@@ -266,6 +266,7 @@ return {
 	-- 		vim.g.sonokai_enable_italic = "0"
 	-- 		vim.g.sonokai_disable_italic_comment = 1
 	-- 		vim.g.sonokai_style = "andromeda" -- or 'default', 'atlantis', 'shusia', 'maia', 'espresso'
+	--            transparent = 1,
 	-- 	end,
 	-- },
 	--

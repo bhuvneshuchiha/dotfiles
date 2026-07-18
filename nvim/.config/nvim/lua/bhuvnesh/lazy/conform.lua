@@ -26,6 +26,7 @@ return {
                 jsonc = { "prettierd" },
 				html = { "prettier" },
 				css = { "prettier" },
+				markdown = { "mdformat" },
 			},
 			-- Use the first available formatter in the list
 			format_on_save = false,

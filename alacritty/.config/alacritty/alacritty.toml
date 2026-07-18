@@ -56,6 +56,7 @@ background = "#1B1E20" #grey go to primeagen
 # background = "#1a1b26" #tokyonight
 # background = "#090300" #reddish black
 # background = "#181818" # gruber dark
+# background = "#151515"
 
 [window.padding]
 x = 5
