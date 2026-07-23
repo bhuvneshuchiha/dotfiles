@@ -17,7 +17,7 @@ function ColorMyPencils(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	-- vim.api.nvim_set_hl(0, "netrwDir", { bold = true })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
 	-- To make the folder icons bold in tokyonight
@@ -66,8 +66,8 @@ return {
 					colors.warning = "#f6c177"
 				end,
 				styles = {
-					-- sidebars = "transparent",
-					floats = "transparent",
+					sidebars = "transparent",
+					-- floats = "transparent",
 					comments = { italic = false },
 					keywords = { italic = false },
 				},
@@ -82,9 +82,9 @@ return {
 			-- vim.cmd.colorscheme("tokyonight-day")
 
 			-- Transparent background fix
-			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-			-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-			-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+			vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 		end,
 	},
 
@@ -128,7 +128,7 @@ return {
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
-				transparent = false,
+				transparent = true,
 				italic = false,
 				colors = {},
 			})

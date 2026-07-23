@@ -109,7 +109,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source <(fzf --zsh)
 source $ZSH/oh-my-zsh.sh
-set -o vi
 
 # User configuration
 
@@ -165,6 +164,7 @@ alias python='python3'
 alias pip='pip3'
 alias kitt='kitten icat'
 alias vim="nvim"
+printf "\e[?1042l"
 # eval "$(starship init zsh)"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

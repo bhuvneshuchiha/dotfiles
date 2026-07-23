@@ -5,7 +5,7 @@
 import = [
 # "~/.config/alacritty/themes/themes/alacritty_0_12.toml"
 # "~/.config/alacritty/themes/themes/prime.toml"
-# "~/.config/alacritty/themes/themes/ayu_dark.toml"
+# "~/.config/alacritty/themes/themes/pop_os.toml"
 # "~/.config/alacritty/themes/themes/blood_moon.toml"
 ]
 
@@ -51,7 +51,7 @@ size = 18
 
 [colors.primary]
 # background = '#000000' #Comment this out to get the theme background color
-background = "#1B1E20" #grey go to primeagen
+# background = "#1B1E20" #grey go to primeagen
 # background = "#16161e" #tokyonight dark
 # background = "#1a1b26" #tokyonight
 # background = "#090300" #reddish black
