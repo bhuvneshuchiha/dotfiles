@@ -1,0 +1,5 @@
+sudo DevToolsSecurity -enable
+sudo dscl . append /Groups/_developer GroupMembership $(whoami)
+
+
+if delve ever gives trouble
