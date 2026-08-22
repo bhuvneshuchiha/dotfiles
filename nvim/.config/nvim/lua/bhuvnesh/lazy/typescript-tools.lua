@@ -89,7 +89,8 @@ return {
             -- ✅ JS/JsDoc awareness
             quotePreference = "auto",
             includeCompletionsForModuleExports = true,
-            includeCompletionsWithInsertText = true,
+            includeCompletionsWithInsertText = false,
+            -- includeCompletionsWithInsertText = true,
             allowIncompleteCompletions = true,
           },
           tsserver_format_options = {

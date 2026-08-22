@@ -143,7 +143,8 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
-		"hrsh7th/nvim-cmp",
+        {"hrsh7th/nvim-cmp",
+        commit = "b356f2c"},
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"j-hui/fidget.nvim",
@@ -176,7 +177,7 @@ return {
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"lua_ls",
+				-- "lua_ls",
 				-- "ts_ls",
 				"gopls",
 				-- "pyright"
@@ -420,7 +421,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
-				{ name = "copilot", group_index = 2 },
+				-- { name = "copilot", group_index = 2 },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- For luasnip users.
 			}, {
